@@ -1,0 +1,2662 @@
+fileFormatVersion: 2
+guid: 9684c1e33384ae04087fb3dc11f2c46a
+timeCreated: 1504361655
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: GJSpriteSheet_0
+    21300002: GJSpriteSheet_1
+    21300004: GJSpriteSheet_2
+    21300006: GJSpriteSheet_3
+    21300008: GJSpriteSheet_4
+    21300010: GJSpriteSheet_5
+    21300012: GJSpriteSheet_6
+    21300014: GJSpriteSheet_7
+    21300016: GJSpriteSheet_8
+    21300018: GJSpriteSheet_9
+    21300020: GJSpriteSheet_10
+    21300022: GJSpriteSheet_11
+    21300024: GJSpriteSheet_12
+    21300026: GJSpriteSheet_13
+    21300028: GJSpriteSheet_14
+    21300030: GJSpriteSheet_15
+    21300032: GJSpriteSheet_16
+    21300034: GJSpriteSheet_17
+    21300036: GJSpriteSheet_18
+    21300038: GJSpriteSheet_19
+    21300040: GJSpriteSheet_20
+    21300042: GJSpriteSheet_21
+    21300044: GJSpriteSheet_22
+    21300046: GJSpriteSheet_23
+    21300048: GJSpriteSheet_24
+    21300050: GJSpriteSheet_25
+    21300052: GJSpriteSheet_26
+    21300054: GJSpriteSheet_27
+    21300056: GJSpriteSheet_28
+    21300058: GJSpriteSheet_29
+    21300060: GJSpriteSheet_30
+    21300062: GJSpriteSheet_31
+    21300064: GJSpriteSheet_32
+    21300066: GJSpriteSheet_33
+    21300068: GJSpriteSheet_34
+    21300070: GJSpriteSheet_35
+    21300072: GJSpriteSheet_36
+    21300074: GJSpriteSheet_37
+    21300076: GJSpriteSheet_38
+    21300078: GJSpriteSheet_39
+    21300080: GJSpriteSheet_40
+    21300082: GJSpriteSheet_41
+    21300084: GJSpriteSheet_42
+    21300086: GJSpriteSheet_43
+    21300088: GJSpriteSheet_44
+    21300090: GJSpriteSheet_45
+    21300092: GJSpriteSheet_46
+    21300094: GJSpriteSheet_47
+    21300096: GJSpriteSheet_48
+    21300098: GJSpriteSheet_49
+    21300100: GJSpriteSheet_50
+    21300102: GJSpriteSheet_51
+    21300104: GJSpriteSheet_52
+    21300106: GJSpriteSheet_53
+    21300108: GJSpriteSheet_54
+    21300110: GJSpriteSheet_55
+    21300112: GJSpriteSheet_56
+    21300114: GJSpriteSheet_57
+    21300116: GJSpriteSheet_58
+    21300118: GJSpriteSheet_59
+    21300120: GJSpriteSheet_60
+    21300122: GJSpriteSheet_61
+    21300124: GJSpriteSheet_62
+    21300126: GJSpriteSheet_63
+    21300128: GJSpriteSheet_64
+    21300130: GJSpriteSheet_65
+    21300132: GJSpriteSheet_66
+    21300134: GJSpriteSheet_67
+    21300136: GJSpriteSheet_68
+    21300138: GJSpriteSheet_69
+    21300140: GJSpriteSheet_70
+    21300142: GJSpriteSheet_71
+    21300144: GJSpriteSheet_72
+    21300146: GJSpriteSheet_73
+    21300148: GJSpriteSheet_74
+    21300150: GJSpriteSheet_75
+    21300152: GJSpriteSheet_76
+    21300154: GJSpriteSheet_77
+    21300156: GJSpriteSheet_78
+    21300158: GJSpriteSheet_79
+    21300160: GJSpriteSheet_80
+    21300162: GJSpriteSheet_81
+    21300164: GJSpriteSheet_82
+    21300166: GJSpriteSheet_83
+    21300168: GJSpriteSheet_84
+    21300170: GJSpriteSheet_85
+    21300172: GJSpriteSheet_86
+    21300174: GJSpriteSheet_87
+    21300176: GJSpriteSheet_88
+    21300178: GJSpriteSheet_89
+    21300180: GJSpriteSheet_90
+    21300182: GJSpriteSheet_91
+    21300184: GJSpriteSheet_92
+    21300186: GJSpriteSheet_93
+    21300188: GJSpriteSheet_94
+    21300190: GJSpriteSheet_95
+    21300192: GJSpriteSheet_96
+    21300194: GJSpriteSheet_97
+    21300196: GJSpriteSheet_98
+    21300198: GJSpriteSheet_99
+    21300200: GJSpriteSheet_100
+    21300202: GJSpriteSheet_101
+    21300204: GJSpriteSheet_102
+    21300206: GJSpriteSheet_103
+    21300208: GJSpriteSheet_104
+    21300210: GJSpriteSheet_105
+    21300212: GJSpriteSheet_106
+    21300214: GJSpriteSheet_107
+    21300216: GJSpriteSheet_108
+    21300218: GJSpriteSheet_109
+    21300220: GJSpriteSheet_110
+    21300222: GJSpriteSheet_111
+    21300224: GJSpriteSheet_112
+    21300226: GJSpriteSheet_113
+    21300228: GJSpriteSheet_114
+    21300230: GJSpriteSheet_115
+    21300232: GJSpriteSheet_116
+    21300234: GJSpriteSheet_117
+    21300236: GJSpriteSheet_118
+    21300238: GJSpriteSheet_119
+    21300240: GJSpriteSheet_120
+    21300242: GJSpriteSheet_121
+    21300244: GJSpriteSheet_122
+    21300246: GJSpriteSheet_123
+    21300248: GJSpriteSheet_124
+    21300250: GJSpriteSheet_125
+    21300252: GJSpriteSheet_126
+    21300254: GJSpriteSheet_127
+    21300256: GJSpriteSheet_128
+    21300258: GJSpriteSheet_129
+    21300260: GJSpriteSheet_130
+    21300262: GJSpriteSheet_131
+    21300264: GJSpriteSheet_132
+    21300266: GJSpriteSheet_133
+    21300268: GJSpriteSheet_134
+    21300270: GJSpriteSheet_135
+    21300272: GJSpriteSheet_136
+    21300274: GJSpriteSheet_137
+    21300276: GJSpriteSheet_138
+    21300278: GJSpriteSheet_139
+    21300280: GJSpriteSheet_140
+    21300282: GJSpriteSheet_141
+    21300284: GJSpriteSheet_142
+    21300286: GJSpriteSheet_143
+    21300288: GJSpriteSheet_144
+    21300290: GJSpriteSheet_145
+    21300292: GJSpriteSheet_146
+    21300294: GJSpriteSheet_147
+    21300296: GJSpriteSheet_148
+    21300298: GJSpriteSheet_149
+    21300300: GJSpriteSheet_150
+    21300302: GJSpriteSheet_151
+    21300304: GJSpriteSheet_152
+    21300306: GJSpriteSheet_153
+    21300308: GJSpriteSheet_154
+    21300310: GJSpriteSheet_155
+    21300312: GJSpriteSheet_156
+    21300314: GJSpriteSheet_157
+    21300316: GJSpriteSheet_158
+    21300318: GJSpriteSheet_159
+    21300320: GJSpriteSheet_160
+    21300322: GJSpriteSheet_161
+    21300324: GJSpriteSheet_162
+    21300326: GJSpriteSheet_163
+    21300328: GJSpriteSheet_164
+    21300330: GJSpriteSheet_165
+    21300332: GJSpriteSheet_166
+    21300334: GJSpriteSheet_167
+    21300336: GJSpriteSheet_168
+    21300338: GJSpriteSheet_169
+    21300340: GJSpriteSheet_170
+    21300342: GJSpriteSheet_171
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 8192
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GJSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1292
+        width: 152
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1292
+        width: 152
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1292
+        width: 152
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 1292
+        width: 152
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 1292
+        width: 156
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 1292
+        width: 156
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1292
+        width: 156
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 1292
+        width: 156
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 1292
+        width: 156
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 2388
+        y: 1292
+        width: 156
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 2644
+        y: 1292
+        width: 156
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 2900
+        y: 1292
+        width: 156
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 3156
+        y: 1292
+        width: 156
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 3412
+        y: 1292
+        width: 156
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 1292
+        width: 156
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 3924
+        y: 1292
+        width: 156
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 1292
+        width: 152
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 4436
+        y: 1292
+        width: 152
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 4692
+        y: 1292
+        width: 152
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 1292
+        width: 152
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 5204
+        y: 1292
+        width: 153
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 5452
+        y: 1292
+        width: 172
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 5708
+        y: 1292
+        width: 172
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 5964
+        y: 1292
+        width: 168
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 6220
+        y: 1292
+        width: 168
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 6476
+        y: 1292
+        width: 168
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 6732
+        y: 1292
+        width: 168
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 6988
+        y: 1292
+        width: 168
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 7244
+        y: 1292
+        width: 169
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 7500
+        y: 1292
+        width: 172
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1036
+        width: 172
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1036
+        width: 172
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1036
+        width: 172
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 1036
+        width: 172
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 1036
+        width: 65
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 1036
+        width: 65
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 1036
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 1036
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 1036
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 1036
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 2648
+        y: 1036
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 1036
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 1036
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 3416
+        y: 1036
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 1036
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 3928
+        y: 1036
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 4184
+        y: 1036
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 4440
+        y: 1036
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 4696
+        y: 1036
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 4952
+        y: 1036
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 5208
+        y: 1036
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 5464
+        y: 1036
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 5720
+        y: 1036
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 5976
+        y: 1036
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 6232
+        y: 1036
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 6488
+        y: 1036
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 6744
+        y: 1036
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 1036
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 7256
+        y: 1036
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 7512
+        y: 1036
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 780
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 780
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 780
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 780
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 780
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 780
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 780
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 780
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 780
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 780
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 2648
+        y: 780
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 780
+        width: 64
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 3176
+        y: 784
+        width: 57
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 3432
+        y: 784
+        width: 60
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 3688
+        y: 784
+        width: 60
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 3944
+        y: 784
+        width: 65
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 784
+        width: 72
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 4452
+        y: 784
+        width: 81
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 4708
+        y: 784
+        width: 85
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 4960
+        y: 784
+        width: 96
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 5212
+        y: 784
+        width: 108
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 5468
+        y: 784
+        width: 108
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_82
+      rect:
+        serializedVersion: 2
+        x: 5720
+        y: 784
+        width: 117
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 5972
+        y: 784
+        width: 125
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_84
+      rect:
+        serializedVersion: 2
+        x: 6224
+        y: 784
+        width: 129
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_85
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 784
+        width: 132
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_86
+      rect:
+        serializedVersion: 2
+        x: 6732
+        y: 784
+        width: 136
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_87
+      rect:
+        serializedVersion: 2
+        x: 6988
+        y: 784
+        width: 136
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_88
+      rect:
+        serializedVersion: 2
+        x: 7240
+        y: 784
+        width: 140
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_89
+      rect:
+        serializedVersion: 2
+        x: 7492
+        y: 784
+        width: 145
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_90
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 528
+        width: 148
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_91
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 528
+        width: 144
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_92
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 528
+        width: 148
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_93
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 528
+        width: 144
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_94
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 528
+        width: 148
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_95
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 528
+        width: 148
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_96
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 528
+        width: 144
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_97
+      rect:
+        serializedVersion: 2
+        x: 1852
+        y: 528
+        width: 136
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_98
+      rect:
+        serializedVersion: 2
+        x: 2108
+        y: 528
+        width: 136
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_99
+      rect:
+        serializedVersion: 2
+        x: 2364
+        y: 528
+        width: 133
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_100
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 528
+        width: 121
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_101
+      rect:
+        serializedVersion: 2
+        x: 2884
+        y: 528
+        width: 116
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_102
+      rect:
+        serializedVersion: 2
+        x: 3144
+        y: 532
+        width: 113
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_103
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 532
+        width: 108
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_104
+      rect:
+        serializedVersion: 2
+        x: 3664
+        y: 532
+        width: 96
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_105
+      rect:
+        serializedVersion: 2
+        x: 3924
+        y: 532
+        width: 92
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_106
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 532
+        width: 89
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_107
+      rect:
+        serializedVersion: 2
+        x: 4440
+        y: 532
+        width: 84
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_108
+      rect:
+        serializedVersion: 2
+        x: 4704
+        y: 532
+        width: 72
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_109
+      rect:
+        serializedVersion: 2
+        x: 4964
+        y: 532
+        width: 65
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_110
+      rect:
+        serializedVersion: 2
+        x: 5224
+        y: 532
+        width: 61
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_111
+      rect:
+        serializedVersion: 2
+        x: 5480
+        y: 532
+        width: 64
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_112
+      rect:
+        serializedVersion: 2
+        x: 5736
+        y: 532
+        width: 72
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_113
+      rect:
+        serializedVersion: 2
+        x: 5992
+        y: 532
+        width: 73
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_114
+      rect:
+        serializedVersion: 2
+        x: 6248
+        y: 532
+        width: 76
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_115
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 532
+        width: 84
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_116
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 532
+        width: 93
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_117
+      rect:
+        serializedVersion: 2
+        x: 7004
+        y: 532
+        width: 100
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_118
+      rect:
+        serializedVersion: 2
+        x: 7260
+        y: 532
+        width: 104
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_119
+      rect:
+        serializedVersion: 2
+        x: 7512
+        y: 532
+        width: 113
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_120
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 276
+        width: 120
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_121
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 276
+        width: 124
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_122
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 276
+        width: 129
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_123
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 276
+        width: 129
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_124
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 276
+        width: 136
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_125
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 276
+        width: 140
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_126
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 276
+        width: 140
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_127
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 276
+        width: 140
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_128
+      rect:
+        serializedVersion: 2
+        x: 2116
+        y: 276
+        width: 144
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_129
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 276
+        width: 148
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_130
+      rect:
+        serializedVersion: 2
+        x: 2624
+        y: 276
+        width: 144
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_131
+      rect:
+        serializedVersion: 2
+        x: 2876
+        y: 276
+        width: 148
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_132
+      rect:
+        serializedVersion: 2
+        x: 3132
+        y: 272
+        width: 145
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_133
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 272
+        width: 141
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_134
+      rect:
+        serializedVersion: 2
+        x: 3644
+        y: 272
+        width: 141
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_135
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 272
+        width: 137
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_136
+      rect:
+        serializedVersion: 2
+        x: 4160
+        y: 272
+        width: 128
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_137
+      rect:
+        serializedVersion: 2
+        x: 4420
+        y: 272
+        width: 124
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_138
+      rect:
+        serializedVersion: 2
+        x: 4676
+        y: 272
+        width: 120
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_139
+      rect:
+        serializedVersion: 2
+        x: 4932
+        y: 272
+        width: 120
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_140
+      rect:
+        serializedVersion: 2
+        x: 5196
+        y: 272
+        width: 108
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_141
+      rect:
+        serializedVersion: 2
+        x: 5452
+        y: 272
+        width: 105
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_142
+      rect:
+        serializedVersion: 2
+        x: 5712
+        y: 272
+        width: 97
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_143
+      rect:
+        serializedVersion: 2
+        x: 5972
+        y: 272
+        width: 93
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_144
+      rect:
+        serializedVersion: 2
+        x: 6232
+        y: 272
+        width: 85
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_145
+      rect:
+        serializedVersion: 2
+        x: 6492
+        y: 272
+        width: 76
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_146
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 272
+        width: 72
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_147
+      rect:
+        serializedVersion: 2
+        x: 7008
+        y: 272
+        width: 68
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_148
+      rect:
+        serializedVersion: 2
+        x: 7272
+        y: 272
+        width: 57
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_149
+      rect:
+        serializedVersion: 2
+        x: 7504
+        y: 272
+        width: 112
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_150
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 124
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_151
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 16
+        width: 140
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_152
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 20
+        width: 164
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_153
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 16
+        width: 164
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_154
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 20
+        width: 172
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_155
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 28
+        width: 168
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_156
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 24
+        width: 161
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_157
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 20
+        width: 156
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_158
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 20
+        width: 141
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_159
+      rect:
+        serializedVersion: 2
+        x: 2372
+        y: 20
+        width: 124
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_160
+      rect:
+        serializedVersion: 2
+        x: 2648
+        y: 20
+        width: 104
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_161
+      rect:
+        serializedVersion: 2
+        x: 2888
+        y: 20
+        width: 124
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_162
+      rect:
+        serializedVersion: 2
+        x: 3132
+        y: 20
+        width: 140
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_163
+      rect:
+        serializedVersion: 2
+        x: 3376
+        y: 20
+        width: 144
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_164
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 20
+        width: 160
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_165
+      rect:
+        serializedVersion: 2
+        x: 3876
+        y: 28
+        width: 161
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_166
+      rect:
+        serializedVersion: 2
+        x: 4132
+        y: 24
+        width: 161
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_167
+      rect:
+        serializedVersion: 2
+        x: 4392
+        y: 24
+        width: 157
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_168
+      rect:
+        serializedVersion: 2
+        x: 4652
+        y: 20
+        width: 137
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_169
+      rect:
+        serializedVersion: 2
+        x: 4916
+        y: 16
+        width: 117
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_170
+      rect:
+        serializedVersion: 2
+        x: 5184
+        y: 16
+        width: 113
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GJSpriteSheet_171
+      rect:
+        serializedVersion: 2
+        x: 5456
+        y: 16
+        width: 113
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

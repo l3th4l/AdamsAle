@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: 994fed6199e9ab64baf3a9e6164bab4b
+timeCreated: 1506769600
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: A box with a few buttons
+    100002: A server
+    100004: Box002.001
+    100006: Box003
+    100008: Box004.003
+    100010: Box005
+    100012: Box006.001
+    100014: Box007.001
+    100016: Box011.001
+    100018: Box014.001
+    100020: ceiling
+    100022: Console with a lever
+    100024: Cylinder001
+    100026: Cylinder002
+    100028: Cylinder003
+    100030: Cylinder004.001
+    100032: Cylinder005.001
+    100034: Cylinder006.001
+    100036: Cylinder007
+    100038: Digital pool table
+    100040: floor
+    100042: //RootNode
+    100044: Plane
+    100046: server 2
+    100048: Sphere001
+    100050: Sun
+    100052: walls
+    400000: A box with a few buttons
+    400002: A server
+    400004: Box002.001
+    400006: Box003
+    400008: Box004.003
+    400010: Box005
+    400012: Box006.001
+    400014: Box007.001
+    400016: Box011.001
+    400018: Box014.001
+    400020: ceiling
+    400022: Console with a lever
+    400024: Cylinder001
+    400026: Cylinder002
+    400028: Cylinder003
+    400030: Cylinder004.001
+    400032: Cylinder005.001
+    400034: Cylinder006.001
+    400036: Cylinder007
+    400038: Digital pool table
+    400040: floor
+    400042: //RootNode
+    400044: Plane
+    400046: server 2
+    400048: Sphere001
+    400050: Sun
+    400052: walls
+    2300000: A box with a few buttons
+    2300002: A server
+    2300004: Box002.001
+    2300006: Box003
+    2300008: Box004.003
+    2300010: Box005
+    2300012: Box006.001
+    2300014: Box007.001
+    2300016: Box011.001
+    2300018: Box014.001
+    2300020: ceiling
+    2300022: Console with a lever
+    2300024: Cylinder001
+    2300026: Cylinder002
+    2300028: Cylinder003
+    2300030: Cylinder004.001
+    2300032: Cylinder005.001
+    2300034: Cylinder006.001
+    2300036: Cylinder007
+    2300038: Digital pool table
+    2300040: floor
+    2300042: Plane
+    2300044: server 2
+    2300046: Sphere001
+    2300048: walls
+    3300000: A box with a few buttons
+    3300002: A server
+    3300004: Box002.001
+    3300006: Box003
+    3300008: Box004.003
+    3300010: Box005
+    3300012: Box006.001
+    3300014: Box007.001
+    3300016: Box011.001
+    3300018: Box014.001
+    3300020: ceiling
+    3300022: Console with a lever
+    3300024: Cylinder001
+    3300026: Cylinder002
+    3300028: Cylinder003
+    3300030: Cylinder004.001
+    3300032: Cylinder005.001
+    3300034: Cylinder006.001
+    3300036: Cylinder007
+    3300038: Digital pool table
+    3300040: floor
+    3300042: Plane
+    3300044: server 2
+    3300046: Sphere001
+    3300048: walls
+    4300000: Plane
+    4300002: Cylinder002
+    4300004: Digital pool table
+    4300006: Cylinder001
+    4300008: walls
+    4300010: A box with a few buttons
+    4300012: Box007.001
+    4300014: Box005
+    4300016: Box014.001
+    4300018: Cylinder005.001
+    4300020: Box011.001
+    4300022: Console with a lever
+    4300024: Cylinder003
+    4300026: ceiling
+    4300028: Sphere001
+    4300030: Cylinder007
+    4300032: Box003
+    4300034: Box004.003
+    4300036: Cylinder004.001
+    4300038: A server
+    4300040: Box002.001
+    4300042: Box006.001
+    4300044: Cylinder006.001
+    4300046: floor
+    4300048: server 2
+    10800000: Sun
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
