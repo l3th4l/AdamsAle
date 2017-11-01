@@ -4398,7 +4398,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4869397664287564, guid: 83d3fa7b9ba1cba44921eb109db1a8d9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 342.336
+      value: 374.02
       objectReference: {fileID: 0}
     - target: {fileID: 4869397664287564, guid: 83d3fa7b9ba1cba44921eb109db1a8d9, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4430,7 +4430,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4869397664287564, guid: 83d3fa7b9ba1cba44921eb109db1a8d9, type: 2}
       propertyPath: m_LocalScale.x
-      value: 4.334404
+      value: 25.569931
       objectReference: {fileID: 0}
     - target: {fileID: 1622032923027340, guid: 83d3fa7b9ba1cba44921eb109db1a8d9, type: 2}
       propertyPath: m_Layer
@@ -31337,6 +31337,7 @@ MonoBehaviour:
   range: 100
   damage: 10
   fireRate: 3
+  inaccuracy: 0
   weaponAnimator: {fileID: 1903189749}
   mask:
     serializedVersion: 2
