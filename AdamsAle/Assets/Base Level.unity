@@ -31337,7 +31337,7 @@ MonoBehaviour:
   range: 100
   damage: 10
   fireRate: 3
-  inaccuracy: 0
+  inaccuracy: 0.5
   weaponAnimator: {fileID: 1903189749}
   mask:
     serializedVersion: 2

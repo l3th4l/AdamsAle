@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
     //float crouchWalkSpeed = 1.5f;
     [SerializeField]
     float runSpeed = 9f;
-	bool InCover = false;
+	//bool InCover = false;
     //private CapsuleCollider myCollider;
    // private bool isCrouching = false;
 
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         //myCollider = GetComponent<CapsuleCollider>();
         animator = GetComponent<Animator>();
-		InCover = false;
+		//InCover = false;
     }
 	void Update()
 	{
@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour {
 
         transform.localRotation = rotation;
     }
-	void OnTriggerEnter(Collider Cover)
+	/*void OnTriggerEnter(Collider Cover)
 	{
 		if (Cover.CompareTag ("CoverCheck"))
 			InCover = true;
@@ -134,5 +134,5 @@ public class PlayerController : MonoBehaviour {
 			InCover = false;
         
 
-    }
+    }*/
 }
