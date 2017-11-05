@@ -36,5 +36,6 @@ public class Turret : MonoBehaviour
             Quaternion rot = Quaternion.Euler(new Vector3(0, 0, angle));
             transform.rotation = Quaternion.Lerp(transform.rotation, rot, 0.2f);
         }
+        
     }
 }

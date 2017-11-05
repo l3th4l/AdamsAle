@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 33090611804149364}
   - component: {fileID: 23334367124275126}
   - component: {fileID: 65810125220678602}
-  m_Layer: 0
+  - component: {fileID: 114149926662406098}
+  m_Layer: 2
   m_Name: LazerTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1759774004920390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 321.135, y: 75.73848, z: -4.9449997}
+  m_LocalPosition: {x: 66.01, y: -29.066816, z: -1.3788624}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4393212487683380}
@@ -66,8 +67,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1303574115562122}
   m_LocalRotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: -0}
-  m_LocalScale: {x: 0.09788862, y: 1, z: 5.253587}
+  m_LocalPosition: {x: -2.14, y: -2, z: 1.541}
+  m_LocalScale: {x: 0.09788862, y: 1.2460854, z: 1.8771921}
   m_Children: []
   m_Father: {fileID: 4138756000651514}
   m_RootOrder: 0
@@ -123,6 +124,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 4, z: 4}
   m_Center: {x: 0.0000005364418, y: 1.9999999, z: 0}
+--- !u!114 &114149926662406098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1303574115562122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911b851c90064ea42b763476d6fb6b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInTrig: 0
 --- !u!114 &114527367859158844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,5 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e0543e7cc02d74981e4b3240f0922e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SwitchTime: 4
+  SwitchTime: 2
   LazObj: {fileID: 1303574115562122}
+  Turrets:
+  - {fileID: 0}

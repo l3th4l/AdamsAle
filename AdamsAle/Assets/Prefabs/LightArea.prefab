@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23553151323911558}
   - component: {fileID: 65167212935430552}
   - component: {fileID: 114790025698912066}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LightArea
   m_TagString: LightArea
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1622032923027340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.96001, y: 0.40000004, z: -2.09}
+  m_LocalPosition: {x: 73.933685, y: -31.379425, z: 0.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
