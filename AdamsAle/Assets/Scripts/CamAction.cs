@@ -3,30 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CamAction : MonoBehaviour {
-    Plane[] CamPl;
     Collider PlayerCol;
     SecurityCam AttachedMovement;
+    GameObject Player;
     public GameObject Alarm;
 
 	void Start ()
     {
-        PlayerCol = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>();
+        Player = GameObject.FindGameObjectWithTag("Player");
+        PlayerCol = Player.GetComponent<Collider>();
         AttachedMovement = GetComponentInParent<SecurityCam>();
 	}
 
-	void Update ()
+    void FixedUpdate()
     {
-        print(Time.fixedDeltaTime);
-        CamPl = GeometryUtility.CalculateFrustumPlanes(this.GetComponent<Camera>());
-        if(GeometryUtility.TestPlanesAABB(CamPl,PlayerCol.bounds))
+
+        if (Player.activeInHierarchy)
         {
-            AttachedMovement.enabled = false;
-            AttachedMovement.Tm = (Mathf.Sin(AttachedMovement.Tm) * 90 > 0) ? 90 : 180;
-            Alarm.GetComponent<AlarmSyst>().Alert = true;
-        }
-        else
+            Plane[] CamPl;
+            CamPl = GeometryUtility.CalculateFrustumPlanes(this.GetComponent<Camera>());
+            if (GeometryUtility.TestPlanesAABB(CamPl, PlayerCol.bounds))
+            {
+                AttachedMovement.enabled = false;
+                AttachedMovement.Tm = (Mathf.Sin(AttachedMovement.Tm) * 90 > 0) ? 90 : 180;
+                Alarm.GetComponent<AlarmSyst>().Alert = true;
+            }
+            else
+            {
+                AttachedMovement.enabled = true;
+            }
+        }else
         {
-            AttachedMovement.enabled = true;
+            print("No player");
         }
-	}
+    }
 }

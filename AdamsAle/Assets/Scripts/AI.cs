@@ -73,10 +73,14 @@ public class AI : MonoBehaviour
 		}
 		Suspicious ();
 
-		Isleft = transform.localScale.x ;
+		Isleft = transform.localScale.x;
 
-		if (AIAnimControl.GetCurrentAnimatorStateInfo (0).IsName ("Go R")) 
+        if ((KnownPos.x - transform.position.x) * (KnownPos.x - transform.position.x) < 0.25)
+            AIAnimControl.SetTrigger("NfoundAtLP");
+
+        if (AIAnimControl.GetCurrentAnimatorStateInfo (0).IsName ("Go R")) 
 		{
+            print((KnownPos.x - transform.position.x) * (KnownPos.x - transform.position.x));
 			//print (KnownPos.x + "" + transform.position.x);
 			if ((KnownPos.x - transform.position.x) * (KnownPos.x - transform.position.x) < 0.25) 
 			{
@@ -121,7 +125,7 @@ public class AI : MonoBehaviour
 
 		if (HealthScr.health != InitalHealth) {
 			AIAnimControl.SetBool ("Aware", true);
-			KnownPos = PlayerPos;
+            KnownPos = PlayerPos;
 			InitalHealth = HealthScr.health;
 		}
 
