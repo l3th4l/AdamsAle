@@ -7,16 +7,11 @@ public class Lazer : MonoBehaviour {
     public float SwitchTime;
     float PassedTime;
     public GameObject LazObj;
-    public GameObject[] Turrets;
-	// Use this for initialization
+    public GameObject Alarm;
+
 	void Start ()
     {
 		PassedTime = Time.fixedTime;
-        foreach(GameObject Turr in Turrets)
-        {
-            Turret Tur_Sam = Turr.GetComponent<Turret>();
-            Tur_Sam.enabled = false;
-        }
 	}
     private void FixedUpdate()
     {
@@ -27,11 +22,8 @@ public class Lazer : MonoBehaviour {
         }
         if(LazObj.GetComponent<LazerTrigger>().playerInTrig)
         {
-            foreach (GameObject Turr in Turrets)
-            {
-                Turret Tur_Sam = Turr.GetComponent<Turret>();
-                Tur_Sam.enabled = true;
-            }
+            Alarm.GetComponent<AlarmSyst>().Alert = true;
+            Alarm.GetComponent<AlarmSyst>().AlertTime = 0.0f;
         }
     }
 }

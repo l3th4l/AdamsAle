@@ -33,6 +33,9 @@ public class AI : MonoBehaviour
 	public float SuspFarClipIncrease;
 	public float DetectedFarClipIncrease;
 
+    public bool Alarmed = false;
+
+
 	[SerializeField]
 	[Header("Weapon Info")]
 	private Transform weaponTransform;
@@ -124,6 +127,12 @@ public class AI : MonoBehaviour
 
 		if (player == null)
 			AIAnimControl.SetBool ("Detected", false);
+
+        if(Alarmed)
+        {
+            AIAnimControl.SetBool("Aware", true);
+            KnownPos = PlayerPos;
+        }
 
 	}
 
