@@ -6,6 +6,7 @@ public class CamAction : MonoBehaviour {
     Plane[] CamPl;
     Collider PlayerCol;
     SecurityCam AttachedMovement;
+    public GameObject Alarm;
 
 	void Start ()
     {
@@ -21,6 +22,7 @@ public class CamAction : MonoBehaviour {
         {
             AttachedMovement.enabled = false;
             AttachedMovement.Tm = (Mathf.Sin(AttachedMovement.Tm) * 90 > 0) ? 90 : 180;
+            Alarm.GetComponent<AlarmSyst>().Alert = true;
         }
         else
         {
