@@ -113,6 +113,86 @@ Transform:
   m_PrefabParentObject: {fileID: 4393212487683380, guid: 0802b26a59089154fa9821e34cec4787,
     type: 2}
   m_PrefabInternal: {fileID: 214647144}
+<<<<<<< HEAD
+=======
+--- !u!1 &39669414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 39669415}
+  - component: {fileID: 39669416}
+  - component: {fileID: 39669417}
+  m_Layer: 0
+  m_Name: CamTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &39669415
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 39669414}
+  m_LocalRotation: {x: 0, y: 0.98078537, z: -0.19509031, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 645662761}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 22.5, y: 180, z: 0}
+--- !u!20 &39669416
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 39669414}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0.001
+    height: 1.7
+  near clip plane: 0.67
+  far clip plane: 7.07
+  field of view: 45
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 7
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!114 &39669417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 39669414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d6f5757ade7f2a409bdefefe9cf4158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> parent of edf14d7... Added a FOV Visualizer to the security cam
 --- !u!1001 &93593584
 Prefab:
   m_ObjectHideFlags: 0
@@ -342,7 +422,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4138756000651514, guid: 0802b26a59089154fa9821e34cec4787, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 65.85
+=======
+      value: 66.01
+>>>>>>> parent of edf14d7... Added a FOV Visualizer to the security cam
       objectReference: {fileID: 0}
     - target: {fileID: 4138756000651514, guid: 0802b26a59089154fa9821e34cec4787, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1795,6 +1879,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 831c1389ceffed84d947c9aa3fc86ac2, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 --- !u!1001 &766111231
 Prefab:
   m_ObjectHideFlags: 0
@@ -1841,6 +1926,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a4a2fca2c9cc3364f836df1c5ded0889, type: 2}
   m_IsPrefabParent: 0
+=======
+>>>>>>> parent of edf14d7... Added a FOV Visualizer to the security cam
 --- !u!1001 &792661577
 Prefab:
   m_ObjectHideFlags: 0
@@ -4653,8 +4740,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1558154050}
+<<<<<<< HEAD
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 62.823654, y: -37.958977, z: -0.63038945}
+=======
+  m_LocalRotation: {x: -0.12970464, y: 0.22257003, z: 0.02989035, w: 0.9657877}
+  m_LocalPosition: {x: 52.739494, y: -51.45195, z: -19.336306}
+>>>>>>> parent of edf14d7... Added a FOV Visualizer to the security cam
   m_LocalScale: {x: 1.6785641, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4853,8 +4945,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1650201420}
+<<<<<<< HEAD
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 72.703735, y: -37.985863, z: -9.486841}
+=======
+  m_LocalRotation: {x: -0.08487069, y: 0.110367596, z: 0.009458858, w: 0.9902154}
+  m_LocalPosition: {x: 70.814865, y: -38.709446, z: -2.4088058}
+>>>>>>> parent of edf14d7... Added a FOV Visualizer to the security cam
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
