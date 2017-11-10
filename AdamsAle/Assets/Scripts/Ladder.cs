@@ -16,6 +16,7 @@ public class Ladder : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         if (inTrig)
         {
             if (other.gameObject.CompareTag("Player"))
