@@ -27,7 +27,7 @@ public class LightBasedClip : MonoBehaviour {
 
 	void Update () {
 
-		//Debug.Log (EntityCam.farClipPlane + ";" +BaseFarClip + ";" + AIAnimControl.GetCurrentAnimatorStateInfo (0).IsTag ("Detc")+";"+ ! AIAnimControl.GetCurrentAnimatorStateInfo (0).IsName ("SSP"));
+		Debug.Log (EntityCam.farClipPlane + ";" +BaseFarClip + ";" + AIAnimControl.GetCurrentAnimatorStateInfo (0).IsTag ("Detc")+";"+ ! AIAnimControl.GetCurrentAnimatorStateInfo (0).IsName ("SSP"));
 		
 		if (EntityCam != null) {
 

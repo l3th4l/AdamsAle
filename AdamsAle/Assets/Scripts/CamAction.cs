@@ -3,26 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CamAction : MonoBehaviour {
+    Plane[] CamPl;
     Collider PlayerCol;
     SecurityCam AttachedMovement;
 <<<<<<< HEAD
+<<<<<<< HEAD
     GameObject Player;
+=======
+>>>>>>> parent of 46063d9... Bug fixes
     public GameObject Alarm;
 =======
 >>>>>>> parent of edf14d7... Added a FOV Visualizer to the security cam
 
 	void Start ()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
-        PlayerCol = Player.GetComponent<Collider>();
+        PlayerCol = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>();
         AttachedMovement = GetComponentInParent<SecurityCam>();
 	}
 
-    void FixedUpdate()
+	void Update ()
     {
-
-        if (Player.activeInHierarchy)
+        print(Time.fixedDeltaTime);
+        CamPl = GeometryUtility.CalculateFrustumPlanes(this.GetComponent<Camera>());
+        if(GeometryUtility.TestPlanesAABB(CamPl,PlayerCol.bounds))
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
             Plane[] CamPl;
             CamPl = GeometryUtility.CalculateFrustumPlanes(this.GetComponent<Camera>());
@@ -43,8 +48,15 @@ public class CamAction : MonoBehaviour {
         }
         else
 >>>>>>> parent of edf14d7... Added a FOV Visualizer to the security cam
-        {
-            print("No player");
+=======
+            AttachedMovement.enabled = false;
+            AttachedMovement.Tm = (Mathf.Sin(AttachedMovement.Tm) * 90 > 0) ? 90 : 180;
+            Alarm.GetComponent<AlarmSyst>().Alert = true;
         }
-    }
+        else
+>>>>>>> parent of 46063d9... Bug fixes
+        {
+            AttachedMovement.enabled = true;
+        }
+	}
 }
