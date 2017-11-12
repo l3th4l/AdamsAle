@@ -15,7 +15,7 @@ public class AlarmSyst : MonoBehaviour {
 	void Update ()
     {
         print("S: " + GetComponent<BoxCollider>().size + "S/2: " + GetComponent<BoxCollider>().size / 2);
-        Collider[] EntInRad = Physics.OverlapBox(transform.position, GetComponent<BoxCollider>().size / 6, transform.rotation);
+        Collider[] EntInRad = Physics.OverlapBox(transform.position, GetComponent<BoxCollider>().size / 2, transform.rotation);
 
         if (Alert)
         {
