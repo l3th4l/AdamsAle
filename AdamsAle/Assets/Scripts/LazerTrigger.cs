@@ -7,10 +7,12 @@ public class LazerTrigger : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        playerInTrig = other.CompareTag("Player");
+        if (other.CompareTag("Player"))
+            playerInTrig = true;
     }
     private void OnTriggerExit(Collider other)
     {
-        playerInTrig = !other.CompareTag("Player");
+        if (other.CompareTag("Player"))
+            playerInTrig = false;
     }
 }

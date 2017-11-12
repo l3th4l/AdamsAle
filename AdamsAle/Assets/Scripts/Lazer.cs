@@ -15,15 +15,15 @@ public class Lazer : MonoBehaviour {
 	}
     private void FixedUpdate()
     {
-        if((Time.fixedTime - PassedTime) * (Time.fixedTime - PassedTime) >= SwitchTime * SwitchTime)
+        if ((Time.fixedTime - PassedTime) * (Time.fixedTime - PassedTime) >= SwitchTime * SwitchTime)
         {
             LazObj.SetActive(!LazObj.activeInHierarchy);
             PassedTime = Time.time;
         }
-        if(LazObj.GetComponent<LazerTrigger>().playerInTrig)
+        if (LazObj.GetComponent<LazerTrigger>().playerInTrig)
         {
             Alarm.GetComponent<AlarmSyst>().Alert = true;
-            Alarm.GetComponent<AlarmSyst>().AlertTime = 0.0f;
+            Alarm.GetComponent<AlarmSyst>().AlertTime = Time.deltaTime;
         }
     }
 }

@@ -14,22 +14,33 @@ public class AlarmSyst : MonoBehaviour {
 
 	void Update ()
     {
-        Collider[] EntInRad = Physics.OverlapSphere(transform.position, GetComponent<SphereCollider>().radius);
+        print("S: " + GetComponent<BoxCollider>().size + "S/2: " + GetComponent<BoxCollider>().size / 2);
+        Collider[] EntInRad = Physics.OverlapBox(transform.position, GetComponent<BoxCollider>().size / 6, transform.rotation);
 
         if (Alert)
         {
             foreach (Collider en in EntInRad)
             {
                 if (en.CompareTag("Turret"))
-                    en.gameObject.GetComponent<Turret>().enabled = true;
+                    en.gameObject.GetComponent<Turret>().enabled = AlertTime <= MaxAlertTime;
+
+                if (en.CompareTag("Alarm"))
+                {
+                    if(!en.GetComponent<AlarmSyst>().Alert && AlertTime <= 0.0f)
+                    en.GetComponent<AlarmSyst>().Alert = true;
+                }
 
                 if (en.CompareTag("AI"))
                 {
-                    AI enAI = en.gameObject.GetComponent<AI>();
-                    enAI.Alarmed = true;
+                    en.gameObject.GetComponent<AI>().Alarmed = AlertTime <= Time.deltaTime; 
                 }
-
-                print(en.name);
+                print(en.tag);
+            }
+            AlertTime += Time.deltaTime;
+            if(AlertTime >= MaxAlertTime)
+            {
+                Alert = false;
+                AlertTime = 0.0f;
             }
         }
 	}
