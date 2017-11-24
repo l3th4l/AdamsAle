@@ -23,7 +23,6 @@ public class SecurityCam : MonoBehaviour
         CamPlanes = GeometryUtility.CalculateFrustumPlanes(ChildCam);
         if (GeometryUtility.TestPlanesAABB(CamPlanes, Player.GetComponent<CapsuleCollider>().bounds) && Player.activeInHierarchy)
         {
-            print("Player Seen");
             Alarm.GetComponent<AlarmSyst>().Alert = true;
             Alarm.GetComponent<AlarmSyst>().AlertTime = Time.deltaTime;
         }

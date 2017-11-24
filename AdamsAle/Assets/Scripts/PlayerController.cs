@@ -38,10 +38,10 @@ public class PlayerController : MonoBehaviour {
         animator = GetComponent<Animator>();
 		//InCover = false;
     }
-	void Update()
+	void FixedUpdate()
 	{
 	}
-    private void FixedUpdate()
+    private void Update()
     {
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 

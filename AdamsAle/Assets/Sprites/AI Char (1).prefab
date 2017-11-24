@@ -163,7 +163,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1299572556703898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 123.59, y: -29.27, z: 0}
+  m_LocalPosition: {x: 147.32, y: -17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4293323181967684}
@@ -296,14 +296,16 @@ MonoBehaviour:
   TooNearDist: 3
   RunSusp: 10
   WalkSusp: 1.82
-  PatrolDistance: 7
+  PatrolDistance: 10
   AwarePatrolDistance: 10
   AIAnimControl: {fileID: 0}
   damage: 10
   range: 100
   impactForce: 20
-  SuspFarClipIncrease: 5
-  DetectedFarClipIncrease: 10
+  SuspFarClipIncrease: 2.5
+  DetectedFarClipIncrease: 5
+  Alarmed: 0
+  inZone: 0
   weaponTransform: {fileID: 4550412766289188}
   hitEffectPrefab: {fileID: 1620163511705914, guid: 18a4051fadd3cc942b86ed89084a335e,
     type: 2}

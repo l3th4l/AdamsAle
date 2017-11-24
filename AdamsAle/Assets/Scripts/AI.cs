@@ -7,25 +7,32 @@ public class AI : MonoBehaviour
 	GameObject player;
 	public Camera AICam;
 	Vector3 PlayerPos;
+
 	public int WalkSpeed;
 	public int RunSpeed;
 	public float TooNearDist;
 	public float RunSusp;
 	public float WalkSusp;
+
 	Plane[] CamPlanes;
 	Collider PlayerCollider;
+
 	public float PatrolDistance;
 	public float AwarePatrolDistance;
+
 	public Animator AIAnimControl;
 	Vector3 InitialPos;
 	Rigidbody RB;
 	Rigidbody RBx;
 	Rigidbody PlayerRB;
+
 	float Isleft;
 	bool flippable;
 	bool Aware;
+
 	Vector3 KnownPos;
 	Enemy HealthScr;
+
 	float InitalHealth;
 	public float damage = 10f;
 	public float range = 100f;
@@ -34,6 +41,10 @@ public class AI : MonoBehaviour
 	public float DetectedFarClipIncrease;
 
     public bool Alarmed = false;
+    public bool inZone = false;
+
+    private float EndCh;
+    private float grDist;
 
 
 	[SerializeField]
@@ -56,14 +67,41 @@ public class AI : MonoBehaviour
 		Aware = false;
 		HealthScr = GetComponent<Enemy>();
 		InitalHealth = HealthScr.health;
+        EndCh = GetComponent<CapsuleCollider>().radius * 1.5f;
+        RaycastHit g_hit;
+        if (Physics.Raycast(transform.position, Vector3.up * -1, out g_hit))
+            grDist = Vector3.SqrMagnitude(g_hit.point - transform.position);
 	}
-	
-	// Update is called once per frame
+
 	void Update () 
 	{
-		
-		PlayerPos = player.transform.position;
+        Debug.DrawRay(InitialPos, transform.up, Color.cyan);
+        
+
+
+        Vector3 castPos = transform.position + new Vector3(EndCh, 0.0f, 0.0f) * Isleft;
+
+        RaycastHit f_check;
+
+        if (Physics.Raycast(castPos, transform.up * -1, out f_check))
+        {
+            if (Vector3.SqrMagnitude(f_check.point - castPos) > grDist)
+            {
+                if (AIAnimControl.GetCurrentAnimatorStateInfo(0).IsName("Patrol R") || AIAnimControl.GetCurrentAnimatorStateInfo(0).IsName("AwarePatrolR"))
+                {
+                    Debug.Log("Stap muttafukkaaaaaa!!!!");
+                    AIAnimControl.SetInteger("MaxDist", 1);
+                    transform.position = transform.position - new Vector3(0.4f * Isleft, 0.0f, 0.0f);
+                    InitialPos = castPos - new Vector3(PatrolDistance * 1.01f * Isleft, 0.0f, 0.0f);
+                }
+            }
+        }
+
+        if (inZone)
+            PlayerPos = player.transform.position;
+
 		CamPlanes = GeometryUtility.CalculateFrustumPlanes (AICam);
+
 		if (GeometryUtility.TestPlanesAABB (CamPlanes, PlayerCollider.bounds) && player.activeInHierarchy) {
 			OnDetect ();
 			//print ("Detected Muttafuka!");
@@ -77,7 +115,7 @@ public class AI : MonoBehaviour
 
 		if (AIAnimControl.GetCurrentAnimatorStateInfo (0).IsName ("Go R")) 
 		{
-			//print (KnownPos.x + "" + transform.position.x);
+            //print (KnownPos.x + "" + transform.position.x);
 			if ((KnownPos.x - transform.position.x) * (KnownPos.x - transform.position.x) < 0.25) 
 			{
 				AIAnimControl.SetTrigger ("NfoundAtLP");
@@ -88,23 +126,26 @@ public class AI : MonoBehaviour
 			Aware = true;
 		}			
 		if(AIAnimControl.GetCurrentAnimatorStateInfo(0).IsTag("SoundD")){
-			if (Vector3.SqrMagnitude (PlayerPos - transform.position) < RunSusp*RunSusp) 
-			{
-				if (Vector3.SqrMagnitude (PlayerPos - transform.position) < WalkSusp*WalkSusp) 
-				{
-					if (PlayerRB.velocity.x >= 2.0f)
-						AIAnimControl.SetBool ("Detected", true);
-				}
-				else
-				{
-					if (PlayerRB.velocity.x >= 4.0f) 
-					{
-						if ((((transform.position - PlayerPos).x < 0) ? -1 : 1) - Isleft == 0)
-							transform.localScale = new Vector3 (-1 * Isleft, 1.0f, 1.0f);
-						AIAnimControl.SetBool ("Detected", true);
-					}
-				}
-			}
+            if (inZone)
+            {
+                if (Vector3.SqrMagnitude(PlayerPos - transform.position) < RunSusp * RunSusp)
+                {
+                    if (Vector3.SqrMagnitude(PlayerPos - transform.position) < WalkSusp * WalkSusp)
+                    {
+                        if (PlayerRB.velocity.x >= 4.0f)
+                            AIAnimControl.SetBool("Detected", true);
+                    }
+                    else
+                    {
+                        if (PlayerRB.velocity.x >= 8.0f)
+                        {
+                            if ((((transform.position - PlayerPos).x < 0) ? -1 : 1) - Isleft == 0)
+                                transform.localScale = new Vector3(-1 * Isleft, 1.0f, 1.0f);
+                            AIAnimControl.SetBool("Detected", true);
+                        }
+                    }
+                }
+            }
 		}
 
 		if (AIAnimControl.GetCurrentAnimatorStateInfo (0).IsName ("Attack")) {
@@ -131,6 +172,7 @@ public class AI : MonoBehaviour
         if(Alarmed)
         {
             AIAnimControl.SetBool("Aware", true);
+
             KnownPos = PlayerPos;
         }
 
@@ -138,7 +180,8 @@ public class AI : MonoBehaviour
 
 	void Patrol()
 	{
-		if (AIAnimControl.GetCurrentAnimatorStateInfo (0).IsName ("Patrol R")) {
+
+        if (AIAnimControl.GetCurrentAnimatorStateInfo (0).IsName ("Patrol R")) {
 			if ((transform.position.x - InitialPos.x) * (transform.position.x - InitialPos.x) >= PatrolDistance * PatrolDistance) {
 				AIAnimControl.SetInteger ("MaxDist", 1);
 				transform.position = transform.position - new Vector3 (0.4f * Isleft, 0.0f, 0.0f);
@@ -165,7 +208,9 @@ public class AI : MonoBehaviour
 	}
 	void AwarePatrol()
 	{
-		if (AIAnimControl.GetCurrentAnimatorStateInfo (0).IsName ("AwarePatrolR")) {
+
+        
+        if (AIAnimControl.GetCurrentAnimatorStateInfo (0).IsName ("AwarePatrolR")) {
 			if ((transform.position.x - InitialPos.x) * (transform.position.x - InitialPos.x) >= AwarePatrolDistance * AwarePatrolDistance) {
 				AIAnimControl.SetInteger ("MaxDist", 1);
 				transform.position = transform.position - new Vector3 (0.4f * Isleft, 0.0f, 0.0f);
@@ -207,7 +252,8 @@ public class AI : MonoBehaviour
 	void OnDetect()
 	{
 		AIAnimControl.SetBool ("Detected", true);
-		KnownPos = PlayerPos;
+        if (inZone)
+            KnownPos = PlayerPos;
 
 	}
 	void Suspicious()

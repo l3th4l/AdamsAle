@@ -16,15 +16,17 @@ public class PlayerShoot : MonoBehaviour {
     [SerializeField]
     private Animator weaponAnimator;
     [SerializeField]
-    private LayerMask mask;
+    public LayerMask mask;
 
     /*
+     
     [Space]
     [Header("Reload")]
     public int maxAmmo = 10;
     private int currentAmmo;
     public float reloadTime = 2f;
     private bool isReloading = false;
+
     */
 
     [Space]
@@ -33,7 +35,7 @@ public class PlayerShoot : MonoBehaviour {
     public GameObject hitEffectPrefab;
     public ParticleSystem muzzleFlash;
 
-
+    
     private bool isShooting = false;
 
     private void Start()
