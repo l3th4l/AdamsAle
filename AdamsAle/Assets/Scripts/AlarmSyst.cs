@@ -60,16 +60,18 @@ public class AlarmSyst : MonoBehaviour {
 
                     if (en.CompareTag("AI"))
                     {
-                        print(AlertTime <= MaxAlertTime * 0.01 + (Time.deltaTime + Time.fixedDeltaTime));
-                        en.gameObject.GetComponent<AI>().Alarmed = AlertTime <= MaxAlertTime * 0.01 + (Time.deltaTime + Time.fixedDeltaTime);
+                        en.gameObject.GetComponent<AI>().Alarmed = AlertTime <= Time.fixedDeltaTime;
                     }
                 }
+                Alert = false;
+                /*
                 AlertTime += Time.deltaTime;
                 if (AlertTime >= MaxAlertTime)
                 {
+                    Debug.Log("Alert End");
                     Alert = false;
                     AlertTime = 0.0f;
-                }
+                }*/
             }
         }
         else
