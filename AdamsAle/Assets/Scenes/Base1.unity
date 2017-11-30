@@ -467,7 +467,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 831c1389ceffed84d947c9aa3fc86ac2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 120.200005
+      value: 118.743
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 831c1389ceffed84d947c9aa3fc86ac2, type: 2}
       propertyPath: m_LocalPosition.y
@@ -503,7 +503,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 831c1389ceffed84d947c9aa3fc86ac2, type: 2}
       propertyPath: m_LocalScale.x
-      value: 11.517895
+      value: 10.789238
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 831c1389ceffed84d947c9aa3fc86ac2, type: 2}
       propertyPath: m_LocalScale.y
@@ -1602,7 +1602,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 2b127815fd0f2074eae3a0c6a4786d0b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 150.81
+      value: 147.17
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2b127815fd0f2074eae3a0c6a4786d0b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1918,7 +1918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tm: 0
-  Speed: 0.7
+  Speed: 0.5
   Alarm: {fileID: 675412592}
 --- !u!23 &1300827480
 MeshRenderer:
@@ -3568,6 +3568,11 @@ Prefab:
     - target: {fileID: 4393212487683380, guid: 0802b26a59089154fa9821e34cec4787, type: 2}
       propertyPath: m_LocalScale.x
       value: 0.097888604
+      objectReference: {fileID: 0}
+    - target: {fileID: 114527367859158844, guid: 0802b26a59089154fa9821e34cec4787,
+        type: 2}
+      propertyPath: SwitchTime
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0802b26a59089154fa9821e34cec4787, type: 2}
