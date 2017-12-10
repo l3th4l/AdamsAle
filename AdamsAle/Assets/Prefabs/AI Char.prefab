@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4493661906658670}
   - component: {fileID: 20391027347123094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 95226985037196644}
   - component: {fileID: 114396893198501078}
   - component: {fileID: 136779214081881636}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI Char
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5402f23117e2b914caed948aa4d8ede1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   AICam: {fileID: 20391027347123094}
+  PlayerPos: {x: 0, y: 0, z: 0}
   WalkSpeed: 1
   RunSpeed: 2
   TooNearDist: 3
@@ -161,6 +163,18 @@ MonoBehaviour:
   WalkSusp: 1.82
   PatrolDistance: 4
   AwarePatrolDistance: 0
+  AIAnimControl: {fileID: 0}
+  KnownPos: {x: 0, y: 0, z: 0}
+  damage: 10
+  range: 100
+  impactForce: 20
+  SuspFarClipIncrease: 0
+  DetectedFarClipIncrease: 0
+  Alarmed: 0
+  inZone: 0
+  weaponTransform: {fileID: 0}
+  hitEffectPrefab: {fileID: 0}
+  muzzleFlash: {fileID: 0}
 --- !u!136 &136779214081881636
 CapsuleCollider:
   m_ObjectHideFlags: 1

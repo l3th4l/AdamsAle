@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AI : MonoBehaviour 
 {
-	GameObject player;
+	public GameObject player;
 	public Camera AICam;
-	Vector3 PlayerPos;
+	public Vector3 PlayerPos;
 
 	public int WalkSpeed;
 	public int RunSpeed;
@@ -30,7 +30,7 @@ public class AI : MonoBehaviour
 	bool flippable;
 	bool Aware;
 
-	Vector3 KnownPos;
+	public Vector3 KnownPos;
 	Enemy HealthScr;
 
 	float InitalHealth;
@@ -57,7 +57,7 @@ public class AI : MonoBehaviour
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
 		PlayerCollider = player.GetComponent<CapsuleCollider> ();
-		AIAnimControl = this.gameObject.GetComponent<Animator> ();
+        AIAnimControl = GetComponentInChildren<Animator>();
 		RB = GetComponent<Rigidbody> ();
 		RBx = GetComponent<Rigidbody> ();
 		PlayerRB = player.GetComponent<Rigidbody> ();
@@ -97,7 +97,7 @@ public class AI : MonoBehaviour
             }
         }
 
-        if (inZone)
+        if (inZone && player.activeInHierarchy)
             PlayerPos = player.transform.position;
 
 		CamPlanes = GeometryUtility.CalculateFrustumPlanes (AICam);
@@ -176,7 +176,9 @@ public class AI : MonoBehaviour
             KnownPos = PlayerPos;
         }
 
-	}
+        //PrintVars();
+
+    }
 
 	void Patrol()
 	{
@@ -323,4 +325,12 @@ public class AI : MonoBehaviour
 		//Shoot Effect
 		muzzleFlash.Play();
 	}
+
+    public void PrintVars()
+    {
+        Debug.Log("PlayerP" + PlayerPos);
+        Debug.Log("KnownP" + KnownPos);
+        Debug.Log("InitialP" + InitialPos);
+        Debug.Log("Player" + player.name);
+    }
 }

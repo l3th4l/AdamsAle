@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     float runSpeed = 9f;
 	//bool InCover = false;
-    //private CapsuleCollider myCollider;
-   // private bool isCrouching = false;
+    private CapsuleCollider myCollider;
+    private bool isCrouching = false;
 
     private bool isFacingRight = true;
 
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour {
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //myCollider = GetComponent<CapsuleCollider>();
+        myCollider = GetComponent<CapsuleCollider>();
         animator = GetComponent<Animator>();
 		//InCover = false;
     }
@@ -81,7 +81,6 @@ public class PlayerController : MonoBehaviour {
             rb.AddForce(new Vector3(0f, jumpForce*50, 0f));
         }
         
-        /*
         if (Input.GetKeyDown(KeyCode.C))
         {
             isCrouching = true;
@@ -92,7 +91,6 @@ public class PlayerController : MonoBehaviour {
             isCrouching = false;
             myCollider.height = 2.23f;
         }
-        */
         
         if(movement > 0f && !isFacingRight)
         {

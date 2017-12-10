@@ -42,12 +42,12 @@ MonoBehaviour:
   ambientOcclusion:
     m_Enabled: 1
     m_Settings:
-      intensity: 3.19
-      radius: 0.64
+      intensity: 3.13
+      radius: 0.49
       sampleCount: 16
       downsampling: 1
       forceForwardCompatibility: 0
-      ambientOnly: 0
+      ambientOnly: 1
       highPrecision: 0
   screenSpaceReflection:
     m_Enabled: 1
@@ -55,19 +55,19 @@ MonoBehaviour:
       reflection:
         blendType: 0
         reflectionQuality: 0
-        maxDistance: 240
-        iterationCount: 318
+        maxDistance: 257
+        iterationCount: 520
         stepSize: 3
         widthModifier: 0.5
         reflectionBlur: 1
         reflectBackfaces: 0
       intensity:
-        reflectionMultiplier: 1.194
-        fadeDistance: 100
-        fresnelFade: 1
+        reflectionMultiplier: 1.39
+        fadeDistance: 142
+        fresnelFade: 0.88
         fresnelFadePower: 1
       screenEdgeMask:
-        intensity: 0.065
+        intensity: 0.31
   depthOfField:
     m_Enabled: 0
     m_Settings:
@@ -77,11 +77,11 @@ MonoBehaviour:
       useCameraFov: 0
       kernelSize: 1
   motionBlur:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
-      shutterAngle: 270
+      shutterAngle: 96
       sampleCount: 10
-      frameBlending: 0
+      frameBlending: 0.26
   eyeAdaptation:
     m_Enabled: 0
     m_Settings:
@@ -100,14 +100,14 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.25
-        threshold: 1.11
-        softKnee: 0.4
-        radius: 2.66
+        intensity: 0.13
+        threshold: 1.22
+        softKnee: 0.5
+        radius: 4
         antiFlicker: 0
       lensDirt:
-        texture: {fileID: 2800000, guid: 3884f7a2d04ffe8409ad9200b275896f, type: 3}
-        intensity: 30.57
+        texture: {fileID: 2800000, guid: a2960ffde020f27409e070d92fb2e00b, type: 3}
+        intensity: 7.89
   colorGrading:
     m_Enabled: 1
     m_Settings:
@@ -276,9 +276,9 @@ MonoBehaviour:
         e_CurveG: 0
         e_CurveB: 0
   userLut:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
-      lut: {fileID: 0}
+      lut: {fileID: 2800000, guid: e45483e270a314c4bbc6e317771d56ab, type: 3}
       contribution: 1
   chromaticAberration:
     m_Enabled: 1
@@ -286,10 +286,10 @@ MonoBehaviour:
       spectralTexture: {fileID: 0}
       intensity: 0.29
   grain:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       colored: 1
-      intensity: 0.07
+      intensity: 0.08
       size: 0.59
       luminanceContribution: 0.8
   vignette:

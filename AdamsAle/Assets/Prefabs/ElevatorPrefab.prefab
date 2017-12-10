@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23314566393600618}
   - component: {fileID: 65745116780593930}
   - component: {fileID: 114362858830604268}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: PlayerTrigger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 23122428357847494}
   - component: {fileID: 65786710858204448}
   - component: {fileID: 114036392472013756}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: PlayerTrigger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 33937291002994942}
   - component: {fileID: 23780223390732498}
   - component: {fileID: 65080906467696858}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: UpperStopTrigger
   m_TagString: up
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 33546859668351698}
   - component: {fileID: 23740437848652294}
   - component: {fileID: 65160782784586044}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: LowerStopTrigger
   m_TagString: lp
   m_Icon: {fileID: 0}

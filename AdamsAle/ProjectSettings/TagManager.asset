@@ -12,6 +12,8 @@ TagManager:
   - AI
   - Turret
   - Alarm
+  - Light
+  - Dummy
   layers:
   - Default
   - TransparentFX
@@ -21,8 +23,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - GhostCollision
+  - Player
   - 
   - 
   - 
