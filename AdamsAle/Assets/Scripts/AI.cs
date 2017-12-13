@@ -99,9 +99,12 @@ public class AI : MonoBehaviour
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         CamPlanes = GeometryUtility.CalculateFrustumPlanes (AICam);
 
+=======
+>>>>>>> parent of 76c4466... Bugged AI
 =======
 >>>>>>> parent of 76c4466... Bugged AI
         if (inZone && player.activeInHierarchy)
