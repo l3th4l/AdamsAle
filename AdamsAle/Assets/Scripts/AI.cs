@@ -97,20 +97,7 @@ public class AI : MonoBehaviour
             }
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        CamPlanes = GeometryUtility.CalculateFrustumPlanes (AICam);
-
-=======
->>>>>>> parent of 76c4466... Bugged AI
-=======
->>>>>>> parent of 76c4466... Bugged AI
         if (inZone && player.activeInHierarchy)
-=======
-        if (inZone)
->>>>>>> parent of 41622b6... Pickup objects + Light / Light Area interaction with AI
             PlayerPos = player.transform.position;
 
 		CamPlanes = GeometryUtility.CalculateFrustumPlanes (AICam);
