@@ -73,10 +73,10 @@ public class AI : MonoBehaviour
             grDist = Vector3.SqrMagnitude(g_hit.point - transform.position);
 	}
 
-	void Update () 
+	void LateUpdate () 
 	{
         Debug.DrawRay(InitialPos, transform.up, Color.cyan);
-        
+        Debug.DrawRay(KnownPos, transform.up, Color.green);
 
 
         Vector3 castPos = transform.position + new Vector3(EndCh, 0.0f, 0.0f) * Isleft;
@@ -97,31 +97,30 @@ public class AI : MonoBehaviour
             }
         }
 
+
+        CamPlanes = GeometryUtility.CalculateFrustumPlanes (AICam);
+
         if (inZone && player.activeInHierarchy)
             PlayerPos = player.transform.position;
 
-		CamPlanes = GeometryUtility.CalculateFrustumPlanes (AICam);
-
-		if (GeometryUtility.TestPlanesAABB (CamPlanes, PlayerCollider.bounds) && player.activeInHierarchy) {
+        if (GeometryUtility.TestPlanesAABB (CamPlanes, PlayerCollider.bounds) && player.activeInHierarchy) {
 			OnDetect ();
-			//print ("Detected Muttafuka!");
 		} else {
 			AIAnimControl.SetBool ("Detected", false);
-			//print ("were det muttafuka?");
 		}
 		Suspicious ();
 
-		Isleft = transform.localScale.x ;
+		Isleft = transform.localScale.x;        
 
-		if (AIAnimControl.GetCurrentAnimatorStateInfo (0).IsName ("Go R")) 
+        if (AIAnimControl.GetCurrentAnimatorStateInfo (0).IsName ("Go R")) 
 		{
             //print (KnownPos.x + "" + transform.position.x);
-			if ((KnownPos.x - transform.position.x) * (KnownPos.x - transform.position.x) < 0.25) 
-			{
-				AIAnimControl.SetTrigger ("NfoundAtLP");
+			if ((KnownPos.x - transform.position.x) * (KnownPos.x - transform.position.x) < 0.25)
+            {
+                AIAnimControl.SetTrigger ("NfoundAtLP");
 				InitialPos = KnownPos;
-				//print ("NotAtLP");
-			}
+                //print ("NotAtLP");
+            }
 
 			Aware = true;
 		}			
@@ -139,8 +138,6 @@ public class AI : MonoBehaviour
                     {
                         if (PlayerRB.velocity.x >= 8.0f)
                         {
-                            if ((((transform.position - PlayerPos).x < 0) ? -1 : 1) - Isleft == 0)
-                                transform.localScale = new Vector3(-1 * Isleft, 1.0f, 1.0f);
                             AIAnimControl.SetBool("Detected", true);
                         }
                     }
@@ -292,7 +289,7 @@ public class AI : MonoBehaviour
 		OnShoot();
 
 		RaycastHit _hit;
-		if (Physics.Raycast(weaponTransform.position, weaponTransform.forward, out _hit, range))
+		if (Physics.Raycast(weaponTransform.position, (GameObject.FindGameObjectWithTag("Player").transform.position - weaponTransform.position).normalized, out _hit, range))
 		{
 
 			//Debug.Log("We hit " + _hit.transform.name);

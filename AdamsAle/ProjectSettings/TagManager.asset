@@ -25,8 +25,8 @@ TagManager:
   - 
   - GhostCollision
   - Player
-  - 
-  - 
+  - Projectile
+  - Opaque
   - 
   - 
   - 

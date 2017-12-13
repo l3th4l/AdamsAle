@@ -85,8 +85,8 @@ Material:
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 0.95953345, g: 1, b: 0.8455882, a: 0.309}
-    - _EmissionColor: {r: 10, g: 10, b: 10, a: 1.3348337}
+    - _Color: {r: 0.95953345, g: 1, b: 0.8455882, a: 0.29}
+    - _EmissionColor: {r: 1.918, g: 1.918, b: 1.918, a: 1.3348337}
     - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.11764706, g: 0.11764706, b: 0.11764706, a: 0.091}
