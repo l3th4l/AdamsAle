@@ -39,26 +39,14 @@ public class Turret : MonoBehaviour
         {
             print("Hacked");
             GameObject[] Ent= GameObject.FindGameObjectsWithTag("AI");
-
-            foreach (GameObject entity in Ent)
+            foreach(GameObject entity in Ent)
             {
-                target = GameObject.FindGameObjectWithTag("Dummy").transform;
                 if ((transform.position - entity.transform.position).sqrMagnitude < TurretRadius)
                 {
-                    print(entity.name);
-
-                    RaycastHit _hit_ent;
-                    if (Physics.Raycast(transform.position, (entity.transform.position - transform.position).normalized, out _hit_ent, range))
-                    {
-                        print(_hit_ent.transform.name);
-                        if (_hit_ent.transform.gameObject.name == entity.name)
-                        {
-                            target = entity.transform;
-                            print(entity.tag);
-                            //Breaks the loop after shooting a single entity
-                            break;
-                        }
-                    }
+                    target = entity.transform;
+                    print(entity.tag);
+                    //Breaks the loop after shooting a single entity
+                    break;
                 }
             }
         }
@@ -81,38 +69,35 @@ public class Turret : MonoBehaviour
     void Shoot()
     {
         //Debug.Log("Shoot" + nextTimeToFire);
-
+        
         //Debug.Log("Shooting");
 
         //We are shooting, calling OnShoot method
-        if (target != null)
+        OnShoot();
+
+        RaycastHit _hit;
+        Debug.Log("Hit created" + target.position);
+
+        Debug.DrawRay(weaponTransform.position, (target.position - transform.position).normalized, Color.red);
+
+        if (Physics.Raycast(weaponTransform.position, (target.position-transform.position).normalized, out _hit, range ))
         {
-            OnShoot();
 
-            RaycastHit _hit;
-            Debug.Log("Hit created" + target.position);
+            Debug.Log("Hit" + target.position);
 
-            Debug.DrawRay(weaponTransform.position, (target.position - transform.position).normalized, Color.red);
-
-            if (Physics.Raycast(weaponTransform.position, (target.position - transform.position).normalized, out _hit, range))
+            Enemy DMG_target = _hit.transform.GetComponent<Enemy>();
+            if (DMG_target != null)
             {
-
-                Debug.Log("Hit" + target.position);
-
-                Enemy DMG_target = _hit.transform.GetComponent<Enemy>();
-                if (DMG_target != null)
-                {
-                    DMG_target.TakeDamage(damage);
-                }
-
-                if (_hit.rigidbody != null)
-                {
-                    _hit.rigidbody.AddForce(-_hit.normal * impactForce);
-                }
-
-                //we hit something, calling onHit method
-                OnHit(_hit.point, _hit.normal);
+                DMG_target.TakeDamage(damage);
             }
+
+            if (_hit.rigidbody != null)
+            {
+                _hit.rigidbody.AddForce(-_hit.normal * impactForce);
+            }
+
+            //we hit something, calling onHit method
+            OnHit(_hit.point, _hit.normal);
         }
     }
 

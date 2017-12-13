@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4785601072260452}
   - component: {fileID: 114958430972382468}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: RotationObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4219625743809932}
   - component: {fileID: 198964486870251264}
   - component: {fileID: 199234478734116902}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 114266262667650376}
   - component: {fileID: 95924918953032660}
   - component: {fileID: 114904091523876232}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4173107326298896}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: GroundCheckTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 65644540202641658}
   - component: {fileID: 23390262925490738}
   - component: {fileID: 95943947256029158}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 4329861953979204}
   - component: {fileID: 198446819908054898}
   - component: {fileID: 199609220366005314}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: muzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 4423009847649310}
   - component: {fileID: 198544717845660848}
   - component: {fileID: 199966990917124330}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,11 +377,10 @@ MonoBehaviour:
   range: 100
   damage: 10
   fireRate: 3
-  inaccuracy: 0
   weaponAnimator: {fileID: 95943947256029158}
   mask:
     serializedVersion: 2
-    m_Bits: 4294966779
+    m_Bits: 4294967039
   impactForce: 75
   hitEffectPrefab: {fileID: 1620163511705914, guid: 18a4051fadd3cc942b86ed89084a335e,
     type: 2}
@@ -400,7 +399,6 @@ MonoBehaviour:
   radius: 3
   player: {fileID: 0}
   health: 300
-  L_Area: {fileID: 0}
 --- !u!114 &114958430972382468
 MonoBehaviour:
   m_ObjectHideFlags: 1

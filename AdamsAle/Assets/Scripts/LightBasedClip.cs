@@ -13,10 +13,7 @@ public class LightBasedClip : MonoBehaviour {
 	Animator AIAnimControl;
 	float SuspFCI;
 	float DetcFCI;
-	AI AIcomp;
-
-    string LI_Name = "";
-    float LI_pr_Intensity;
+	AI AIcomp; 
 
 	void Start () {
 		
@@ -25,7 +22,7 @@ public class LightBasedClip : MonoBehaviour {
 		BaseFarClip = EntityCam.farClipPlane;	
 		SuspFCI = AIcomp.SuspFarClipIncrease;
 		DetcFCI = AIcomp.DetectedFarClipIncrease;
-		AIAnimControl = GetComponentInChildren<Animator> ();
+		AIAnimControl = GetComponent<Animator> ();
 	}
 
 	void Update () {
@@ -47,24 +44,6 @@ public class LightBasedClip : MonoBehaviour {
 					EntityCam.farClipPlane = BaseFarClip + IntensityFactor * LI.Intensity;
 			}
 		}
-
-        if(LI_Name == LI.name)
-        {
-            if(LI_pr_Intensity != LI.Intensity)
-            {
-                AIcomp.player = LI.light;
-                AIcomp.AIAnimControl.SetBool("Aware", true);
-                AIcomp.KnownPos = LI.light.transform.position;
-            }
-            else
-            {
-                if (GameObject.FindGameObjectWithTag("Player") != null)
-                    AIcomp.player = GameObject.FindGameObjectWithTag("Player");
-            }
-        }
-
-        LI_Name = LI.name;
-        LI_pr_Intensity = LI.Intensity;
 		
 	}
 

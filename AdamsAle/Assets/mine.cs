@@ -8,9 +8,6 @@ public class mine : MonoBehaviour
     GameObject BlastRad_obj;
     float BlastRad;
 
-    public GameObject explosion_particle;
-    public Transform world;
-
     public float Damage;
 
     public bool Blast;
@@ -27,20 +24,14 @@ public class mine : MonoBehaviour
     {
         Blast = false;
         BlastRad_obj = this.transform.GetChild(0).gameObject;
-        BlastRad = BlastRad_obj.GetComponent<SphereCollider>().radius;
+        BlastRad = BlastRad_obj.transform.localScale.x / 2;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
 
-        if(Hacked)
-        {
-            foreach (GameObject M in M_Net)
-                M.GetComponent<mine>().Hacked = true;
-        }
-
-		if(Blast || Blast_all)
+		if(Blast)
         {
             Collider[] BlastEnt = Physics.OverlapSphere(transform.position, BlastRad);
             foreach(Collider Ent in BlastEnt)
@@ -54,13 +45,7 @@ public class mine : MonoBehaviour
                 if (Ent_rb != null)
                     Ent_rb.AddExplosionForce(Damage * 10, transform.position, BlastRad);
             }
-            if(Blast_all)
-            {
-                foreach (GameObject M in M_Net)
-                    M.GetComponent<mine>().Blast = true;
-            }
             Destroy(this.gameObject);
-            GameObject.Instantiate(explosion_particle,transform.position,transform.rotation,world);
         }
 	}
 

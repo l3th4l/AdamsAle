@@ -4,16 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - AI
+  - Ladder
   - CoverTrigger
+  - Turret
   - lp
   - up
-  - LightArea
-  - Ladder
-  - AI
-  - Turret
-  - Alarm
-  - Light
-  - Dummy
   layers:
   - Default
   - TransparentFX
@@ -23,10 +19,10 @@ TagManager:
   - UI
   - 
   - 
-  - GhostCollision
-  - Player
-  - Projectile
-  - Opaque
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

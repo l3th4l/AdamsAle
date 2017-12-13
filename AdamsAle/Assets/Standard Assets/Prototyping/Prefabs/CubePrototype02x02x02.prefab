@@ -10,7 +10,7 @@ GameObject:
   - component: {fileID: 400000}
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CubePrototype02x02x02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4561610172259090}
   - component: {fileID: 33040480178514688}
   - component: {fileID: 23494199811758774}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: CoverPosVol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4153155177053060}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CoverPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4918077146616262}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CoverPosition
   m_TagString: CoverTrigger
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 4692452679512772}
   - component: {fileID: 33141748289731740}
   - component: {fileID: 23103887991486538}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CoverSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 4023494679999422}
   - component: {fileID: 65333692759634544}
   - component: {fileID: 114248655509716084}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CoverTrigger
   m_TagString: CoverTrigger
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4026136449444924}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CoverPrefab (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 4040766975873904}
   - component: {fileID: 33744629072361352}
   - component: {fileID: 23332974283553130}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CoverSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4720885856178288}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CoverPosition
   m_TagString: CoverTrigger
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 4997776912518040}
   - component: {fileID: 33001497542773816}
   - component: {fileID: 23253519314324568}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: CoverPosVol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 4723382930739450}
   - component: {fileID: 65415680211749250}
   - component: {fileID: 114853149701201516}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CoverTrigger
   m_TagString: CoverTrigger
   m_Icon: {fileID: 0}

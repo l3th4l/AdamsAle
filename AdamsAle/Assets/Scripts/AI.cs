@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AI : MonoBehaviour 
 {
-	public GameObject player;
+	GameObject player;
 	public Camera AICam;
-	public Vector3 PlayerPos;
+	Vector3 PlayerPos;
 
 	public int WalkSpeed;
 	public int RunSpeed;
@@ -30,7 +30,7 @@ public class AI : MonoBehaviour
 	bool flippable;
 	bool Aware;
 
-	public Vector3 KnownPos;
+	Vector3 KnownPos;
 	Enemy HealthScr;
 
 	float InitalHealth;
@@ -57,7 +57,7 @@ public class AI : MonoBehaviour
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
 		PlayerCollider = player.GetComponent<CapsuleCollider> ();
-        AIAnimControl = GetComponentInChildren<Animator>();
+		AIAnimControl = this.gameObject.GetComponent<Animator> ();
 		RB = GetComponent<Rigidbody> ();
 		RBx = GetComponent<Rigidbody> ();
 		PlayerRB = player.GetComponent<Rigidbody> ();
@@ -97,10 +97,14 @@ public class AI : MonoBehaviour
             }
         }
 
+<<<<<<< HEAD
 
         CamPlanes = GeometryUtility.CalculateFrustumPlanes (AICam);
 
         if (inZone && player.activeInHierarchy)
+=======
+        if (inZone)
+>>>>>>> parent of 41622b6... Pickup objects + Light / Light Area interaction with AI
             PlayerPos = player.transform.position;
 
         if (GeometryUtility.TestPlanesAABB (CamPlanes, PlayerCollider.bounds) && player.activeInHierarchy) {
@@ -173,9 +177,7 @@ public class AI : MonoBehaviour
             KnownPos = PlayerPos;
         }
 
-        //PrintVars();
-
-    }
+	}
 
 	void Patrol()
 	{
@@ -322,12 +324,4 @@ public class AI : MonoBehaviour
 		//Shoot Effect
 		muzzleFlash.Play();
 	}
-
-    public void PrintVars()
-    {
-        Debug.Log("PlayerP" + PlayerPos);
-        Debug.Log("KnownP" + KnownPos);
-        Debug.Log("InitialP" + InitialPos);
-        Debug.Log("Player" + player.name);
-    }
 }
