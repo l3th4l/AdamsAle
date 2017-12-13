@@ -19,8 +19,13 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< HEAD
   - 
   - 
+=======
+  - GhostCollision
+  - Player
+>>>>>>> parent of 76c4466... Bugged AI
   - 
   - 
   - 

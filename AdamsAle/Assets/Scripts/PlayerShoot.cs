@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour {
 
-    bool looking_forward;
-
     [SerializeField]
     [Header("Weapon Info")]
     private Transform weaponTransform;
@@ -37,13 +35,7 @@ public class PlayerShoot : MonoBehaviour {
     public GameObject hitEffectPrefab;
     public ParticleSystem muzzleFlash;
 
-    [Space]
-    [Header("Noisemakers")]
-    public int NM_count;
-    public float Throw_force;
-    public GameObject Noisemaker_obj;
-
-
+    
     private bool isShooting = false;
 
     private void Start()
@@ -59,8 +51,6 @@ public class PlayerShoot : MonoBehaviour {
 
     private void Update()
     {
-        looking_forward = !((transform.rotation.y == 0.0f) ^ (weaponTransform.right.x > 0.0f));
-        Debug.Log(looking_forward);
         //if (isReloading)
         //    return;
 
@@ -70,23 +60,17 @@ public class PlayerShoot : MonoBehaviour {
         //}
         float rand = Random.Range(0.0f, 0.5f);
         float a =  rand - (rand*Input.GetAxis("Fire2"));
-        randomOffset = new Vector3(0.0f, a , 0.0f)*inaccuracy*((looking_forward)?1:3);
+        randomOffset = new Vector3(0.0f, a , 0.0f)*inaccuracy;
 
-        Debug.DrawRay(weaponTransform.position, (weaponTransform.right + randomOffset).normalized, Color.red);
+        Debug.DrawRay(transform.position, (weaponTransform.right + randomOffset).normalized, Color.red);
 
         if(Input.GetMouseButton(0) && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1 / fireRate;
             Shoot();
         }
-
-        /*if (Input.GetKeyDown(KeyCode.E) && Time.time >= nextTimeToFire)
-        {
-            nextTimeToFire = Time.time + 1 / (fireRate/4);
-            Throw(Noisemaker_obj);
-        }*/
-
-        if (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.E))
+        
+        if(Input.GetMouseButton(0))
         {
             isShooting = true;
         }
@@ -121,7 +105,7 @@ public class PlayerShoot : MonoBehaviour {
         OnShoot();
 
         RaycastHit _hit;
-        if (Physics.Raycast(weaponTransform.position, (weaponTransform.right + randomOffset ).normalized, out _hit, range, mask))
+        if (Physics.Raycast(weaponTransform.position, (weaponTransform.right + randomOffset).normalized, out _hit, range, mask))
         {
 
             //Debug.Log("We hit " + _hit.transform.name);
@@ -171,21 +155,5 @@ public class PlayerShoot : MonoBehaviour {
 
         //Shoot Effect
         muzzleFlash.Play();
-    }
-    void Throw(GameObject Input_NM)
-    {
-        if(NM_count > 0)
-        {
-            if (looking_forward)
-            {
-                NM_count--;
-                GameObject NM = GameObject.Instantiate(Input_NM, transform.position + Vector3.up + Vector3.right * ((transform.rotation.y == 0.0f) ? 1 : -1)/2, weaponTransform.rotation);
-
-            
-                Vector3 Throw_Impulse = new Vector3(weaponTransform.right.x * Throw_force / 2, weaponTransform.right.y * Throw_force / 1.5f, 0.0f);
-                NM.GetComponent<Rigidbody>().AddForce(Throw_Impulse, ForceMode.Impulse);
-            }
-
-        }
     }
 }
