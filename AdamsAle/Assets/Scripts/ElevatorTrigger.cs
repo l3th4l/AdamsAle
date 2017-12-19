@@ -6,18 +6,9 @@ public class ElevatorTrigger : MonoBehaviour {
 
 	public Elevator El;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	void OnTriggerEnter(Collider Player)
 	{
+        print(Player.tag);
 		if (Player.CompareTag ("Player"))
 			El.onElev = true;
 	}	
