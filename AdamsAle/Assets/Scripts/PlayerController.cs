@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
     //[SerializeField]
     //float crouchWalkSpeed = 1.5f;
     [SerializeField]
-    float runSpeed = 9f;
+    public float runSpeed = 9f;
 	//bool InCover = false;
     //private CapsuleCollider myCollider;
    // private bool isCrouching = false;

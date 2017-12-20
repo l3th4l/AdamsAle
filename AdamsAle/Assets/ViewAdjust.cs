@@ -16,7 +16,7 @@ public class ViewAdjust : MonoBehaviour
         base_FOV = GetComponent<Camera>().fieldOfView;
     }
 	
-	void LateUpdate ()
+	void Update ()
     {
         switch (ViewType)
         {
@@ -31,12 +31,12 @@ public class ViewAdjust : MonoBehaviour
                 break;
 
             case 3: // Distracted
-                GetComponent<Camera>().farClipPlane = base_FCP + LI_Inc*LI_Factor;
+                GetComponent<Camera>().farClipPlane = base_FCP + LI_Inc * LI_Factor;
                 GetComponent<Camera>().fieldOfView = base_FOV/1.5f;
                 break;
 
             case 4: // Suspicious
-                GetComponent<Camera>().farClipPlane = base_FCP * 1.25f + LI_Inc*LI_Factor;
+                GetComponent<Camera>().farClipPlane = base_FCP * 1.25f + LI_Inc * LI_Factor;
                 GetComponent<Camera>().fieldOfView = base_FOV / 2f;
                 break;
 
