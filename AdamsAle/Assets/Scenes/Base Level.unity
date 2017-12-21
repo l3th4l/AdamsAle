@@ -28765,6 +28765,46 @@ Prefab:
       propertyPath: RunVelocity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114530303611459880, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
+        type: 2}
+      propertyPath: suspectTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530303611459880, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
+        type: 2}
+      propertyPath: maxDistractedTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530303611459880, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
+        type: 2}
+      propertyPath: maxExploreTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530303611459880, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
+        type: 2}
+      propertyPath: maxSearchTime
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530303611459880, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
+        type: 2}
+      propertyPath: maxWaitTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530303611459880, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
+        type: 2}
+      propertyPath: A_SuspectTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530303611459880, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
+        type: 2}
+      propertyPath: A_MaxDistractedTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530303611459880, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
+        type: 2}
+      propertyPath: A_MaxExploreTime
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5f97bcbbdf99e64fa086adcc24f3f61, type: 2}
   m_IsPrefabParent: 0
