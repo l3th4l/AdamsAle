@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour {
 		animator = GetComponent<Animator>();
 	}
 
-	private void FixedUpdate() {
+	private void Update() {
 
 		// X movement
 		float x = Input.GetAxis("Horizontal");
