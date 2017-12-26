@@ -19,7 +19,7 @@ public class cameraFollow : MonoBehaviour {
         a = 0;
     }
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         a = (Input.GetAxisRaw("Horizontal")!=0)? Input.GetAxisRaw("Horizontal") : a;
         Vector3 M_off = new Vector3(offset.x * a, offset.y, offset.z);
