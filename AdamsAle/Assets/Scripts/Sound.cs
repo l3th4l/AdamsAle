@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
-    Rigidbody RB;
+    CharacterController controller;
     float RunSpeed;
     float RunTime = 0.0f;
     [SerializeField]
@@ -18,8 +18,8 @@ public class Sound : MonoBehaviour
 
     void Start ()
     {
-        RB = GetComponent<Rigidbody>();
-        RunSpeed = GetComponent<PlayerController>().runSpeed;
+        controller = GetComponent<CharacterController>();
+        RunSpeed = GetComponent<PlayerMovement>().sprintSpeed;
         RaycastHit R_hit;
         if(Physics.Raycast(transform.position,-transform.up,out R_hit))
         {
@@ -29,7 +29,7 @@ public class Sound : MonoBehaviour
 	
 	void FixedUpdate ()
     {
-        if (RB.velocity.x * RB.velocity.x == RunSpeed * RunSpeed && RB.velocity.y <= RunSpeed)// if running
+        if (controller.velocity.x * controller.velocity.x == RunSpeed * RunSpeed && controller.velocity.y <= RunSpeed)// if running
         {
             RunTime += Time.fixedDeltaTime;
             if (Mathf.RoundToInt(RunTime * 100) % interval == 0)// If stepping 

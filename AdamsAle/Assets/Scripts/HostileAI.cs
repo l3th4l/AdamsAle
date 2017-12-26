@@ -77,7 +77,10 @@ public class HostileAI : MonoBehaviour
         bool PlayerNotObstructed = true;// Variable to check if player is obstructed or not 
         RaycastHit _P_Hit;// Player hit info
         if (Physics.Raycast(AICam.transform.position, (Player.transform.position - AICam.transform.position).normalized, out _P_Hit, RaycastMask))// Raycasts to the player
+        {
             PlayerNotObstructed = (_P_Hit.collider.CompareTag("Player")|| (Vector3.SqrMagnitude((transform.position - Player.transform.position).x*Vector3.right) <= AICam.nearClipPlane*AICam.nearClipPlane && Player.gameObject.activeInHierarchy) ) ;// If player isn't obstructed, becomes true
+        }
+            
 
 
         PassedTime += Time.deltaTime;// increases with time

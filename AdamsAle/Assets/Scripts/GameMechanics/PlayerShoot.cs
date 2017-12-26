@@ -81,11 +81,11 @@ public class PlayerShoot : MonoBehaviour {
 
         if(isShooting)
         {
-            GetComponent<PlayerController>().enabled = false;
+            GetComponent<PlayerMovement>().enabled = false;
         }
         else
         {
-            GetComponent<PlayerController>().enabled = true;
+            GetComponent<PlayerMovement>().enabled = true;
         }
 
        // if(Input.GetKeyDown(KeyCode.R) && currentAmmo < maxAmmo)
