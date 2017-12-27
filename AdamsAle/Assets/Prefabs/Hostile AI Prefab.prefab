@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 23949717577470504}
   - component: {fileID: 114530303611459880}
   - component: {fileID: 54340154364723784}
+  - component: {fileID: 114619555452905640}
   m_Layer: 8
   m_Name: Hostile AI Prefab
   m_TagString: Untagged
@@ -73,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780751733783014}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 360.82, y: 74.73, z: 0}
+  m_LocalPosition: {x: 368.38, y: 74.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4300671557769234}
@@ -121,7 +122,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.39
+    width: 0.415
     height: 1
   near clip plane: 0.5
   far clip plane: 5
@@ -142,7 +143,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!23 &23949717577470504
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -152,6 +152,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -167,6 +168,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -219,7 +221,7 @@ Light:
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
-  m_Cookie: {fileID: 2800000, guid: f7b5b2f217b6ad648b1d63d068bdac82, type: 3}
+  m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
@@ -246,6 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ViewType: 0
   LI_Inc: 0
+  LI_Factor: 1
 --- !u!114 &114331497526545240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,14 +287,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PassedTime: 0
   WalkVelocity: 3
-  RunVelocity: 7
-  maxDisp: 10
+  RunVelocity: 5
+  maxDisp: 15
   maxWaitTime: 3
   stopDistance: 2
-  suspectTime: 0.5
-  maxDistractedTime: 1
-  maxExploreTime: 2
-  maxSearchTime: 8
+  suspectTime: 1
+  maxDistractedTime: 0.5
+  maxExploreTime: 4
+  maxSearchTime: 12
   RaycastMask:
     serializedVersion: 2
     m_Bits: 256
@@ -303,9 +306,9 @@ MonoBehaviour:
   inSearch: 0
   distractionPos: {x: 388.74, y: 74.71, z: 0}
   knownPos: {x: 0, y: 0, z: 0}
-  A_SuspectTime: 0.25
-  A_MaxDistractedTime: 0.25
-  A_MaxExploreTime: 3
+  A_SuspectTime: 0.5
+  A_MaxDistractedTime: 0.5
+  A_MaxExploreTime: 5
   TestTransform: {fileID: 0}
   fireRate: 2
   range: 100
@@ -318,6 +321,19 @@ MonoBehaviour:
     type: 2}
   muzzleFlashPrefab: {fileID: 1620163511705914, guid: 18a4051fadd3cc942b86ed89084a335e,
     type: 2}
+--- !u!114 &114619555452905640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1780751733783014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877ff1212ebb5614d96610ce5cecaef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  DestroyedMat: {fileID: 0}
 --- !u!114 &114879527356859142
 MonoBehaviour:
   m_ObjectHideFlags: 1
