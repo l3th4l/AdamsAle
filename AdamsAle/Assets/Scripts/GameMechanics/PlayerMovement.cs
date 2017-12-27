@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour {
 
 	private void Update() {
 
+        Debug.Log(1/120.0f + ":" + Time.deltaTime*120/100);
+
 		// X movement
 		float x = Input.GetAxis("Horizontal");
 
@@ -43,16 +45,16 @@ public class PlayerMovement : MonoBehaviour {
 		// Jumping
 		if(controller.isGrounded)
 		{
-			verticalSpeed = -gravity * Time.deltaTime;
+			verticalSpeed = -gravity * Time.fixedDeltaTime;
 			if(Input.GetButtonDown("Jump"))
 			{
 				animator.SetTrigger("Jump");
-				verticalSpeed = jumpForce * Time.deltaTime;
+				verticalSpeed = jumpForce * Time.fixedDeltaTime;
 			}
 		}
 		else
 		{
-			verticalSpeed -= gravity * Time.deltaTime;
+			verticalSpeed -= gravity * Time.fixedDeltaTime;
 		}
 
 		if(x > 0f && !isFacingRight)
