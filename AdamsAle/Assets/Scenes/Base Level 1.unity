@@ -26001,6 +26001,11 @@ Prefab:
       propertyPath: inaccuracy
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 143922579413962628, guid: 3415e6f45521ab34da85eb38665c8518,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3415e6f45521ab34da85eb38665c8518, type: 2}
   m_IsPrefabParent: 0
