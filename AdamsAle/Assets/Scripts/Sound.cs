@@ -5,7 +5,6 @@ using UnityEngine;
 public class Sound : MonoBehaviour
 {
     CharacterController controller;
-    float RunSpeed;
     float RunTime = 0.0f;
     [SerializeField]
     float interval;
@@ -19,7 +18,6 @@ public class Sound : MonoBehaviour
     void Start ()
     {
         controller = GetComponent<CharacterController>();
-        RunSpeed = GetComponent<PlayerMovement>().sprintSpeed;
         RaycastHit R_hit;
         if(Physics.Raycast(transform.position,-transform.up,out R_hit))
         {
@@ -29,7 +27,7 @@ public class Sound : MonoBehaviour
 	
 	void FixedUpdate ()
     {
-        if (controller.velocity.x * controller.velocity.x == RunSpeed * RunSpeed && controller.velocity.y <= RunSpeed)// if running
+        if (GetComponent<PlayerMovement>().sprinting)// if running
         {
             RunTime += Time.fixedDeltaTime;
             if (Mathf.RoundToInt(RunTime * 100) % interval == 0)// If stepping 

@@ -4,117 +4,58 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
+    public bool Alert = false;
+    public Vector3 AlertPos = Vector3.zero;
+    public bool isCam = false;
+    public bool isGuard = false;
 
-    private Transform target;
-    public bool IsHacked;
-    public float TurretRadius;
+    public float maxSearchAngle = 360.0f;
 
-    //For shooting
-    float nextTimeToFire = 0.0f;
-    public float fireRate;
-    public Transform weaponTransform;
-    public float range = 100f;
-    public float damage = 10f;
+    Camera TurretCam;
 
-    [SerializeField]
-    public LayerMask mask;
+    Collider Player;
 
+    Plane[] CamPlanes;
 
-    [Space]
-    [Header("Effects")]
-    public float impactForce = 20f;
-    public GameObject hitEffectPrefab;
-    public ParticleSystem muzzleFlash;
+    public LayerMask RaycastMask;
 
-
-    void Start ()
+    private void Start()
     {
-        IsHacked = false;
-        target = GameObject.FindGameObjectWithTag("Player").transform;
-	}
-
-	void Update ()
-    {
-        if(IsHacked)
-        {
-            print("Hacked");
-            GameObject[] Ent= GameObject.FindGameObjectsWithTag("AI");
-            foreach(GameObject entity in Ent)
-            {
-                if ((transform.position - entity.transform.position).sqrMagnitude < TurretRadius)
-                {
-                    target = entity.transform;
-                    print(entity.tag);
-                    //Breaks the loop after shooting a single entity
-                    break;
-                }
-            }
-        }
-        if ((transform.position - target.position).sqrMagnitude < TurretRadius)
-        {
-            //Look
-            float angle = Mathf.Atan2((transform.position - target.position).y, (transform.position - target.position).x) * Mathf.Rad2Deg;
-            Quaternion rot = Quaternion.Euler(new Vector3(0, 0, angle));
-            transform.rotation = Quaternion.Lerp(transform.rotation, rot, 0.2f);
-
-            //Shoot
-            if (Time.time >= nextTimeToFire)
-            {
-                nextTimeToFire = Time.time + 1 / fireRate;
-                Shoot();
-            }
-        }
-        
-    }
-    void Shoot()
-    {
-        //Debug.Log("Shoot" + nextTimeToFire);
-        
-        //Debug.Log("Shooting");
-
-        //We are shooting, calling OnShoot method
-        OnShoot();
-
-        RaycastHit _hit;
-        Debug.Log("Hit created" + target.position);
-
-        Debug.DrawRay(weaponTransform.position, (target.position - transform.position).normalized, Color.red);
-
-        if (Physics.Raycast(weaponTransform.position, (target.position-transform.position).normalized, out _hit, range ))
-        {
-
-            Debug.Log("Hit" + target.position);
-
-            Enemy DMG_target = _hit.transform.GetComponent<Enemy>();
-            if (DMG_target != null)
-            {
-                DMG_target.TakeDamage(damage);
-            }
-
-            if (_hit.rigidbody != null)
-            {
-                _hit.rigidbody.AddForce(-_hit.normal * impactForce);
-            }
-
-            //we hit something, calling onHit method
-            OnHit(_hit.point, _hit.normal);
-        }
+        TurretCam = GetComponentInChildren<Camera>();
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
     }
 
-    void OnHit(Vector3 _hitPos, Vector3 _normal)
+    private void Update()
     {
 
-        //Hit Effect
-        GameObject hitEffect = (GameObject)Instantiate(hitEffectPrefab, _hitPos, Quaternion.LookRotation(_normal));
-        Destroy(hitEffect, 2f);
+        bool PlayerNotObstructed = true;// Variable to check if player is obstructed or not 
+        RaycastHit _P_Hit;// Player hit info
+        if (Physics.Raycast(TurretCam.transform.position, (Player.transform.position - TurretCam.transform.position).normalized, out _P_Hit, RaycastMask))// Raycasts to the player
+        {
+            PlayerNotObstructed = (_P_Hit.collider.CompareTag("Player") || (Vector3.SqrMagnitude((transform.position - Player.transform.position).x * Vector3.right) <= TurretCam.nearClipPlane * TurretCam.nearClipPlane && Player.gameObject.activeInHierarchy));// If player isn't obstructed, becomes true
+        }
+
+        if (isCam || isGuard)
+        {
+            CamPlanes = GeometryUtility.CalculateFrustumPlanes(TurretCam);
+            if (GeometryUtility.TestPlanesAABB(CamPlanes, Player.bounds) && Player.gameObject.activeInHierarchy && PlayerNotObstructed)// Checks if player is in LOS
+            {
+                Alert = true;
+            }
+        }
+
+        if(Alert)
+        {
+            CamPlanes = GeometryUtility.CalculateFrustumPlanes(TurretCam);
+            if (GeometryUtility.TestPlanesAABB(CamPlanes, Player.bounds) && Player.gameObject.activeInHierarchy && PlayerNotObstructed)// Checks if player is in LOS
+            {
+                float Angle = Vector3.Angle(Vector3.right, (Player.transform.position - transform.position).normalized);// Angle between Camera and player's position
+                transform.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle / 4) * 4, -maxSearchAngle, 90)); // makes the camera look at player's position
+            }
+        }
     }
-
-    void OnShoot()
+    void search()
     {
-        // We are shooting, subtracting ammo
-        //currentAmmo--;
 
-        //Shoot Effect
-        muzzleFlash.Play();
     }
 }

@@ -60,7 +60,7 @@ public class HostileAI : MonoBehaviour
         RB = this.GetComponent<Rigidbody>();
         maxWalkTime = maxDisp / WalkVelocity;
         AICam = transform.GetChild(0).GetComponentInChildren<Camera>();
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<CapsuleCollider>();
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
     }
     
     // Update is called once per frame

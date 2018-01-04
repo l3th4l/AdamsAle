@@ -14,16 +14,18 @@ public class PlayerMovement : MonoBehaviour {
 	CharacterController controller;
 	private Animator animator;
 	private bool isFacingRight = true;
-	
 
-	private void Start() {
+    public bool sprinting = false;
+
+
+    private void Start() {
 		controller = GetComponent<CharacterController>();
 		animator = GetComponent<Animator>();
+        sprinting = false;
 	}
 
 	private void Update() {
 
-        Debug.Log(1/120.0f + ":" + Time.deltaTime*120/100);
 
 		// X movement
 		float x = Input.GetAxis("Horizontal");
@@ -34,11 +36,13 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			// Sprinting
 			x = x  * sprintSpeed * Time.deltaTime;
+            sprinting = true && x!= 0;
 		}
 		else
 		{
 			// Normal walking
 			x = x * normalSpeed * Time.deltaTime;
+            sprinting = false;
 		}
 
 
