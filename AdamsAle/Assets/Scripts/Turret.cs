@@ -4,58 +4,43 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    public bool Alert = false;
-    public Vector3 AlertPos = Vector3.zero;
-    public bool isCam = false;
-    public bool isGuard = false;
-
-    public float maxSearchAngle = 360.0f;
-
-    Camera TurretCam;
-
-    Collider Player;
-
+    [Header("Private Variables")]
+    Camera AICam;
     Plane[] CamPlanes;
+    Collider Player;
+    public bool alert;
 
-    public LayerMask RaycastMask;
+    float time;
+    public float crisp_factor;
+
+    public Transform Parent;
+
+    public float offset;
+    public float maxSearchAngle; // maximum rotation of camera while searching
 
     private void Start()
     {
-        TurretCam = GetComponentInChildren<Camera>();
+        AICam = transform.GetChild(0).GetComponentInChildren<Camera>();
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
-    }
 
+        time = 0.0f;
+    }
     private void Update()
     {
 
-        bool PlayerNotObstructed = true;// Variable to check if player is obstructed or not 
-        RaycastHit _P_Hit;// Player hit info
-        if (Physics.Raycast(TurretCam.transform.position, (Player.transform.position - TurretCam.transform.position).normalized, out _P_Hit, RaycastMask))// Raycasts to the player
-        {
-            PlayerNotObstructed = (_P_Hit.collider.CompareTag("Player") || (Vector3.SqrMagnitude((transform.position - Player.transform.position).x * Vector3.right) <= TurretCam.nearClipPlane * TurretCam.nearClipPlane && Player.gameObject.activeInHierarchy));// If player isn't obstructed, becomes true
-        }
+       time += Time.deltaTime; 
 
-        if (isCam || isGuard)
-        {
-            CamPlanes = GeometryUtility.CalculateFrustumPlanes(TurretCam);
-            if (GeometryUtility.TestPlanesAABB(CamPlanes, Player.bounds) && Player.gameObject.activeInHierarchy && PlayerNotObstructed)// Checks if player is in LOS
-            {
-                Alert = true;
-            }
-        }
-
-        if(Alert)
-        {
-            CamPlanes = GeometryUtility.CalculateFrustumPlanes(TurretCam);
-            if (GeometryUtility.TestPlanesAABB(CamPlanes, Player.bounds) && Player.gameObject.activeInHierarchy && PlayerNotObstructed)// Checks if player is in LOS
-            {
-                float Angle = Vector3.Angle(Vector3.right, (Player.transform.position - transform.position).normalized);// Angle between Camera and player's position
-                transform.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle / 4) * 4, -maxSearchAngle, 90)); // makes the camera look at player's position
-            }
-        }
+       if (alert)// Look at player if alert 
+       {
+            float Angle = Vector3.Angle(transform.right, (Player.transform.position - transform.position));// Angle between Camera and distraction position
+            AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle / crisp_factor) * crisp_factor, -maxSearchAngle, maxSearchAngle)); // makes the camera look at distraction position
+            time = 0.0f;
+       }
+        else
+            Idle(true, time);
     }
-    void search()
+    void Idle(bool Guard , float TM)
     {
-
+        AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Round((Mathf.Clamp(Mathf.Sin(TM)*5,-1,1)*90 + offset)/crisp_factor)*crisp_factor ) ; // makes the camera look at distraction position
     }
 }

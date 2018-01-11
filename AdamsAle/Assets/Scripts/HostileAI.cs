@@ -152,11 +152,7 @@ public class HostileAI : MonoBehaviour
                 {
                     Search_Time += Time.deltaTime;
 
-                    /////////////////////////// Search look
-                    float Angle = Vector3.Angle(transform.right, (knownPos + transform.right*AICam.farClipPlane - transform.position).normalized);// Angle between Camera and last known position
-                    float Inc = Mathf.Clamp(Mathf.Sin(Search_Time * 2) * maxCamAngle * 4, -maxCamAngle / 2, maxCamAngle / 2);
-                    AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle + Mathf.RoundToInt(Inc/2)*2 ),-maxSearchAngle,90)); // makes the camera look at last known position and wiggle
-                    ///////////////////////////
+                    Search(false, knownPos, maxSearchTime, Search_Time);
 
                     if (Search_Time >= maxSearchTime * 0.75)// If Entitity has finished searching and couldn't find player, reset to undetected                        
                         AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
@@ -164,6 +160,9 @@ public class HostileAI : MonoBehaviour
                     if (Search_Time >= maxSearchTime)// If Entitity has finished searching and couldn't find player, reset to undetected 
                     {
                         AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+
+                        transform.Rotate(transform.up, 180);// Flips the entity
+
                         detected = false;
                     }
 
@@ -190,21 +189,26 @@ public class HostileAI : MonoBehaviour
                                 RunTo(distractionPos,WalkVelocity);// Walks up to the distraction object if Entity is unaware
                             else
                                 RunTo(distractionPos,RunVelocity);// Runs up to the distraction object if Entitiy is aware
+
+                            /////////////////////////// Distracted look
+                            float Angle = Vector3.Angle(transform.right, (distractionPos + transform.right * AICam.farClipPlane - transform.position).normalized);// Angle between Camera and distraction position
+                            if (Angle > 90)
+                                transform.Rotate(transform.up, 180);
+                            AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle / 4) * 4, -maxSearchAngle, 90)); // makes the camera look at distraction position
+                            ///////////////////////////
+
                         }
                         else
                         {
                             RB.velocity = RB.velocity.y*Vector3.up + Vector3.zero;//Stops movement when Entity reaches distraction Pos
                             Explore_Time += Time.deltaTime;// Time after starting exploring
-                            if (Explore_Time >= maxExploreTime)// End exploring after maxExploreTime
+
+                            Search(true, distractionPos, maxExploreTime, Explore_Time);
+
+                            if (Explore_Time > maxExploreTime)// End exploring after maxExploreTime
                                 distracted = false;// Set entity to not distract after completing exploration 
                         }
                     }
-                    /////////////////////////// Distracted look
-                    float Angle = Vector3.Angle(transform.right, (distractionPos + transform.right * AICam.farClipPlane - transform.position).normalized);// Angle between Camera and distraction position
-                    if (Angle > 90)
-                        transform.Rotate(transform.up, 180);
-                    AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle/4)*4, -maxSearchAngle, 90)); // makes the camera look at distraction position
-                    ///////////////////////////
                     
                     AICam.GetComponent<ViewAdjust>().ViewType = 3;// Camera View type
                 }
@@ -331,4 +335,39 @@ public class HostileAI : MonoBehaviour
         GameObject MuzzleFlash = (GameObject)Instantiate(muzzleFlashPrefab, AICam.transform.position+ transform.right*AICam.nearClipPlane, Quaternion.LookRotation(AICam.transform.right));
         Destroy(MuzzleFlash, 2f);
     }
+
+    bool flip = true;
+    unsafe void Search(bool Partial, Vector3 SearchPos, float Duration, float Time)
+    {
+        if (Time == UnityEngine.Time.deltaTime)
+            flip = true;
+
+        if (Partial)
+        {
+            if (Time <= Duration)
+            {
+
+                /////////////////////////// Partial search
+                float Angle = Vector3.Angle(transform.right, (SearchPos + transform.right * AICam.farClipPlane - transform.position).normalized);// Angle between Camera and pos
+                if (Angle > 90)
+                    transform.Rotate(transform.up, 180);
+                AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round((Angle + Mathf.Clamp((Mathf.Sin((Time / Duration * 8.38f) - 2.618f) + 0.5f) * 4, 0, 1) * 30) / 10) * 10, -maxSearchAngle, 90)); // makes the camera look at pos
+                ///////////////////////////
+            }
+        }
+        else
+        {
+
+            /////////////////////////// Complete search
+            float Angle = Vector3.Angle(transform.right, (SearchPos + transform.right * AICam.farClipPlane - transform.position).normalized);// Angle between Camera and pos
+            if (Time >= Duration / 2 && flip)
+                transform.Rotate(transform.up, 180);
+            AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round((Angle + Mathf.Clamp((Mathf.Sin((Time / Duration * 8.38f * 2f) - 2.618f) + 0.5f) * 4, 0, 1) * 30) / 10) * 10, -maxSearchAngle, 90)); // makes the camera look at pos
+            ///////////////////////////
+
+            if (Time >= Duration / 2)
+                flip = false;
+        }
+    }
+        
 }
