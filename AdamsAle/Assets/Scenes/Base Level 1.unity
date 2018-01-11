@@ -9836,7 +9836,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4726839663032478, guid: 92d6a98bb0d28f94aa63411cc721499a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 337.24
+      value: 337.47
       objectReference: {fileID: 0}
     - target: {fileID: 4726839663032478, guid: 92d6a98bb0d28f94aa63411cc721499a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -12494,7 +12494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &941170952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19068,7 +19068,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4248515210129246, guid: c5f97bcbbdf99e64fa086adcc24f3f61, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 368.38
+      value: 352.13
       objectReference: {fileID: 0}
     - target: {fileID: 4248515210129246, guid: c5f97bcbbdf99e64fa086adcc24f3f61, type: 2}
       propertyPath: m_LocalPosition.y
@@ -19132,6 +19132,11 @@ Prefab:
         type: 2}
       propertyPath: suspectTime
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 20350474928412014, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
+        type: 2}
+      propertyPath: near clip plane
+      value: 0.53
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5f97bcbbdf99e64fa086adcc24f3f61, type: 2}
@@ -25432,7 +25437,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4726839663032478, guid: 92d6a98bb0d28f94aa63411cc721499a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 340.48
+      value: 340.28
       objectReference: {fileID: 0}
     - target: {fileID: 4726839663032478, guid: 92d6a98bb0d28f94aa63411cc721499a, type: 2}
       propertyPath: m_LocalPosition.y

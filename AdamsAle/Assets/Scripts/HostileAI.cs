@@ -195,6 +195,7 @@ public class HostileAI : MonoBehaviour
                             if (Angle > 90)
                                 transform.Rotate(transform.up, 180);
                             AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle / 4) * 4, -maxSearchAngle, 90)); // makes the camera look at distraction position
+                            Debug.Log(Angle);
                             ///////////////////////////
 
                         }
