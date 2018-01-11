@@ -191,7 +191,7 @@ public class HostileAI : MonoBehaviour
                                 RunTo(distractionPos,RunVelocity);// Runs up to the distraction object if Entitiy is aware
 
                             /////////////////////////// Distracted look
-                            float Angle = Vector3.Angle(transform.right, (distractionPos + transform.right * AICam.farClipPlane - transform.position).normalized);// Angle between Camera and distraction position
+                            float Angle = Vector3.Angle(transform.right, (distractionPos - transform.position).normalized);// Angle between Camera and distraction position
                             if (Angle > 90)
                                 transform.Rotate(transform.up, 180);
                             AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle / 4) * 4, -maxSearchAngle, 90)); // makes the camera look at distraction position
