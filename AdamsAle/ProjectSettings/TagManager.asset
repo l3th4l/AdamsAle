@@ -8,6 +8,7 @@ TagManager:
   - lp
   - up
   - LightArea
+  - vent_ground
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - 
   - GhostCollision
   - Player
-  - 
+  - vent_ground
   - 
   - 
   - 

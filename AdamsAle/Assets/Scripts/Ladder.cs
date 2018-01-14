@@ -6,20 +6,40 @@ public class Ladder : MonoBehaviour
 {
 
     public float ClimbSpeed;
-    private Collider other;
+    [SerializeField]
+    bool NotLadder;
+
+    private CharacterController other;
     private bool inTrig;
+
+    Vector3 pos;
 
     private void Start()
     {
-        other = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>();
+        other = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
     }
-
     private void FixedUpdate()
     {
+    }
+    private void Update()
+    {
+        
         if (inTrig)
         {
             if (other.gameObject.CompareTag("Player"))
-                other.attachedRigidbody.velocity = new Vector3(other.attachedRigidbody.velocity.x, 0.0f, other.attachedRigidbody.velocity.z) + transform.up * Input.GetAxisRaw("Vertical") * ClimbSpeed;
+            {
+                //other.transform.position = new Vector3(other.transform.position.x, pos.y, other.transform.position.z) + transform.up * Input.GetAxisRaw("Vertical") * ClimbSpeed;
+                if (!NotLadder)
+                {
+                    other.GetComponent<PlayerMovement>().verticalSpeed = -other.GetComponent<PlayerMovement>().gravity * Time.fixedDeltaTime;
+                    other.transform.Translate(Input.GetAxisRaw("Vertical") * ClimbSpeed * transform.up * Time.deltaTime);
+                }
+                else
+                {
+                    other.transform.Translate(Input.GetAxisRaw("Vertical") * ClimbSpeed * Vector3.back * Time.deltaTime);
+                }
+            }
+            pos = other.transform.position;
         }
 
     }

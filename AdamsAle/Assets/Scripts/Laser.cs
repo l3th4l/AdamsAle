@@ -27,7 +27,7 @@ public class Laser : MonoBehaviour
             LineRend = gameObject.AddComponent<LineRenderer>();
 
         LineRend.SetVertexCount(2);
-        LineRend.SetWidth(0.25f,0.25f);
+        LineRend.SetWidth(0.1f,0.1f);
 
     }
 

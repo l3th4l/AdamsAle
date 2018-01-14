@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: 0a905034a91d8f14caf3829f3ce233c6
+timeCreated: 1515935351
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: collider
+    100002: collider_1
+    100004: collider_2
+    100006: Empty
+    100008: NurbsPath
+    100010: Pole
+    100012: Railing
+    100014: Roof
+    100016: Stairs
+    100018: Support
+    100020: Upper Platform
+    100022: Upper watchtower
+    100024: Walls
+    100026: //RootNode
+    400000: collider
+    400002: collider_1
+    400004: collider_2
+    400006: Empty
+    400008: NurbsPath
+    400010: Pole
+    400012: Railing
+    400014: Roof
+    400016: Stairs
+    400018: Support
+    400020: Upper Platform
+    400022: Upper watchtower
+    400024: Walls
+    400026: //RootNode
+    2300000: collider
+    2300002: collider_1
+    2300004: collider_2
+    2300006: NurbsPath
+    2300008: Pole
+    2300010: Railing
+    2300012: Roof
+    2300014: Stairs
+    2300016: Support
+    2300018: Upper Platform
+    2300020: Upper watchtower
+    2300022: Walls
+    3300000: collider
+    3300002: collider_1
+    3300004: collider_2
+    3300006: NurbsPath
+    3300008: Pole
+    3300010: Railing
+    3300012: Roof
+    3300014: Stairs
+    3300016: Support
+    3300018: Upper Platform
+    3300020: Upper watchtower
+    3300022: Walls
+    4300000: collider_2
+    4300002: Pole
+    4300004: Stairs
+    4300006: NurbsPath
+    4300008: Railing
+    4300010: Support
+    4300012: Roof
+    4300014: Walls
+    4300016: Upper watchtower
+    4300018: Upper Platform
+    4300020: collider
+    4300022: collider_1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 9bf36cae330e74c45ab3fe3e9022dff7, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 2
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public KeyCode Crouch;
 
-	float verticalSpeed;
+	public float verticalSpeed;
 	CharacterController controller;
 	private Animator animator;
 	private bool isFacingRight = true;

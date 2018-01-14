@@ -18,6 +18,7 @@ public class HostileAI : MonoBehaviour
 
     [Space]
     [Header("Parameteres")]
+    
     public float PassedTime = 0.0f; //Time passes since last patrol clip
     public float WalkVelocity;
     public float RunVelocity;
@@ -30,6 +31,7 @@ public class HostileAI : MonoBehaviour
     public float maxSearchTime;// TIme for which Entity swats at player's last known position
 
     public LayerMask RaycastMask;
+    public LayerMask VentRMask;
 
     private float maxWalkTime;// Time for which the Entitiy patrols before stopping and turning back 
 
@@ -54,18 +56,26 @@ public class HostileAI : MonoBehaviour
     [Header("Test variables")]
     public Transform TestTransform;
 
-    // Use this for initialization
+
+    public float CrouchHeight;//Height while crouching
+    private float InitHeight;// Original height of the Entity
+    private CapsuleCollider EntCol;
+    
+
     void Start()
     {
         RB = this.GetComponent<Rigidbody>();
         maxWalkTime = maxDisp / WalkVelocity;
         AICam = transform.GetChild(0).GetComponentInChildren<Camera>();
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
+
+        EntCol = GetComponent<CapsuleCollider>();
+        InitHeight = EntCol.height;
     }
     
-    // Update is called once per frame
     void Update()
     {
+        EntCol.height = InitHeight;// Resets height every frame
 
         if(aware) // Set everything to aware state
         {
@@ -89,47 +99,56 @@ public class HostileAI : MonoBehaviour
         {
             LOS_Time += Time.deltaTime;// Time after being in LOS
             inSearch = false;
-
-            if (detected)// Shoots if detected and in LOS
+            if (!distracted)// if not distracted
             {
-                /////////////////////////// Shooting look
-                float Angle = Vector3.Angle(transform.right, (Player.transform.position - transform.position).normalized);// Angle between Camera and player's position
-                AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle/4)*4, -maxSearchAngle, 90)); // makes the camera look at player's position
-                ///////////////////////////
-                if (Angle >= 90)
-                    transform.Rotate(Vector3.up * 180);
-
-                knownPos = Player.transform.position;// Updates last known position if player is in line of sight
-                PassedTime = 0.0f;//Reset
-
-                //Shoot
-                if (Time.time >= nextTimeToFire)
+                if (detected)// Shoots if detected and in LOS
                 {
-                    nextTimeToFire = Time.time + 1 / fireRate;
-                    Shoot(knownPos);// Shoots at the player
-                }
+                    /////////////////////////// Shooting look
+                    float Angle = Vector3.Angle(transform.right, (Player.transform.position - transform.position).normalized);// Angle between Camera and player's position
+                    AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle / 4) * 4, -maxSearchAngle, 90)); // makes the camera look at player's position
+                                                                                                                                                       ///////////////////////////
+                    if (Angle >= 90)
+                        transform.Rotate(Vector3.up * 180);
 
-                AICam.GetComponent<ViewAdjust>().ViewType = 2;// Camera View type
+                    knownPos = Player.transform.position;// Updates last known position if player is in line of sight
+                    PassedTime = 0.0f;//Reset
+
+                    //Shoot
+                    if (Time.time >= nextTimeToFire)
+                    {
+                        nextTimeToFire = Time.time + 1 / fireRate;
+                        Shoot(knownPos);// Shoots at the player
+                    }
+
+                    AICam.GetComponent<ViewAdjust>().ViewType = 2;// Camera View type
+                }
+                else
+                {
+                    PassedTime -= Time.deltaTime;
+
+                    /////////////////////////// Suspicious look
+                    float Angle = Vector3.Angle(transform.right, (Player.transform.position - transform.position).normalized);// Angle between Camera and player's position
+                    AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle / 4) * 4, -maxSearchAngle, 90)); // makes the camera look at player's position
+                                                                                                                                                       ///////////////////////////
+                    if (Angle >= 90)
+                        transform.Rotate(Vector3.up * 180);
+
+                    if (LOS_Time >= suspectTime)// detects the player if player in LOS for >= suspectTime
+                    {
+                        detected = true;
+                        aware = true; // Alerts the entity. [Changes all parameteres to aware state]
+                        knownPos = Player.transform.position;// Sets the known position of player 
+                    }
+
+                    AICam.GetComponent<ViewAdjust>().ViewType = 4;// Camera View type
+                }
             }
             else
             {
-                PassedTime -= Time.deltaTime;
-
-                /////////////////////////// Suspicious look
-                float Angle = Vector3.Angle(transform.right, (Player.transform.position - transform.position).normalized);// Angle between Camera and player's position
-                AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle/4)*4, -maxSearchAngle, 90)); // makes the camera look at player's position
-                ///////////////////////////
-                if (Angle >= 90)
-                    transform.Rotate(Vector3.up * 180);
-
-                if (LOS_Time >= suspectTime)// detects the player if player in LOS for >= suspectTime
-                {
-                    detected = true;
-                    aware = true; // Alerts the entity. [Changes all parameteres to aware state]
-                    knownPos = Player.transform.position;// Sets the known position of player 
-                }
-
-                AICam.GetComponent<ViewAdjust>().ViewType = 4;// Camera View type
+                detected = true;
+                aware = true;
+                PassedTime = 0.0f;//Reset
+                knownPos = distractionPos;
             }
             distracted = false;
         }
@@ -178,40 +197,117 @@ public class HostileAI : MonoBehaviour
 
                 if (distracted)// If Entity is distracted by an object
                 {
-                    Debug.DrawRay(distractionPos, Vector3.up);
-                    Distracted_Time += Time.deltaTime;// Time after being distracted
-                    if (Distracted_Time >= maxDistractedTime)
+
+                    
+                    RaycastHit _vent_check;// Raycast to distraction pos
+                    if (Physics.Raycast(AICam.transform.position, (distractionPos - AICam.transform.position).normalized, out _vent_check, VentRMask))
                     {
-                        if (Vector3.SqrMagnitude((distractionPos - transform.position).x*Vector3.right) >= stopDistance * stopDistance)// if the Entitity is not near to the distraction object
+                        Debug.DrawRay(distractionPos, Vector3.up);
+                        Distracted_Time += Time.deltaTime;// Time after being distracted
+
+                        //Check if distraction pos is in a vent
+                        if (_vent_check.collider.CompareTag("vent_ground"))
                         {
-                            Explore_Time = 0.0f;//Reset
-                            if (!aware)
-                                RunTo(distractionPos,WalkVelocity);// Walks up to the distraction object if Entity is unaware
+                            if (Distracted_Time < maxDistractedTime)
+                            {
+                                if (!aware) // If entity is in unaware state
+                                {
+                                    /////////////////////////// Look at vent
+                                    float Angle = Vector3.Angle(transform.right, (_vent_check.point - transform.position).normalized);// Angle between Camera and distraction position
+                                    if (Angle > 90)
+                                        transform.Rotate(transform.up, 180);
+                                    AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle / 4) * 4, -maxSearchAngle, 90)); // makes the camera look at distraction position
+                                    ///////////////////////////
+                                }
+                                else // if entity is in aware state
+                                {
+
+                                    /////////////////////////// Look at vent
+                                    float Angle = Vector3.Angle(transform.right, (_vent_check.point - transform.position).normalized);// Angle between Camera and distraction position
+                                    if (Angle > 90)
+                                        transform.Rotate(transform.up, 180);
+                                    AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle / 4) * 4, -maxSearchAngle, 90)); // makes the camera look at distraction position
+                                    /////////////////////////// Shoot at vent
+                                    if (Time.time >= nextTimeToFire)
+                                    {
+                                        nextTimeToFire = Time.time + 1 / fireRate;
+                                        Shoot(knownPos);// Shoots at the player
+                                    }
+                                }
+                            }
                             else
-                                RunTo(distractionPos,RunVelocity);// Runs up to the distraction object if Entitiy is aware
+                            {
+                                if (Vector3.SqrMagnitude((_vent_check.point - transform.position).x * Vector3.right) >= stopDistance * stopDistance)// if the Entitity is not near to the distraction object
+                                {
+                                    Explore_Time = 0.0f;//Reset
+                                    if (!aware)
+                                        RunTo(_vent_check.point, WalkVelocity);// Walks up to the distraction object if Entity is unaware
+                                    else
+                                        RunTo(_vent_check.point, RunVelocity);// Runs up to the distraction object if Entitiy is aware
 
-                            /////////////////////////// Distracted look
-                            float Angle = Vector3.Angle(transform.right, (distractionPos - transform.position).normalized);// Angle between Camera and distraction position
-                            if (Angle > 90)
-                                transform.Rotate(transform.up, 180);
-                            AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle / 4) * 4, -maxSearchAngle, 90)); // makes the camera look at distraction position
-                            Debug.Log(Angle);
-                            ///////////////////////////
+                                    /////////////////////////// Distracted look
+                                    float Angle = Vector3.Angle(transform.right, (distractionPos - transform.position).normalized);// Angle between Camera and distraction position
+                                    if (Angle > 90)
+                                        transform.Rotate(transform.up, 180);
+                                    AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle / 4) * 4, -maxSearchAngle, 90)); // makes the camera look at distraction position
+                                    ///////////////////////////
+                                }
+                                else
+                                {
+                                    RB.velocity = RB.velocity.y * Vector3.up + Vector3.zero;//Stops movement when Entity reaches distraction Pos
+                                    Explore_Time += Time.deltaTime;// Time after starting exploring
 
+                                    /////////////////////////// Vent look
+                                    float Angle = Vector3.Angle(transform.right, (distractionPos - transform.position).normalized);// Angle between Camera and distraction position
+                                    if (Angle > 90)
+                                        transform.Rotate(transform.up, 180);
+                                    AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle / 4) * 4, -maxSearchAngle, 90)); // makes the camera look at distraction position
+                                    ///////////////////////////
+
+                                    if (Explore_Time >= 0.1f * maxExploreTime)
+                                        EntCol.height = CrouchHeight;
+
+                                    if (Explore_Time > maxExploreTime * 1.25f)// End exploring after maxExploreTime
+                                        distracted = false;// Set entity to not distract after completing exploration
+                                }
+
+                            }
                         }
                         else
                         {
-                            RB.velocity = RB.velocity.y*Vector3.up + Vector3.zero;//Stops movement when Entity reaches distraction Pos
-                            Explore_Time += Time.deltaTime;// Time after starting exploring
+                            if (Distracted_Time >= maxDistractedTime)
+                            {
+                                if (Vector3.SqrMagnitude((distractionPos - transform.position).x * Vector3.right) >= stopDistance * stopDistance)// if the Entitity is not near to the distraction object
+                                {
+                                    Explore_Time = 0.0f;//Reset
+                                    if (!aware)
+                                        RunTo(distractionPos, WalkVelocity);// Walks up to the distraction object if Entity is unaware
+                                    else
+                                        RunTo(distractionPos, RunVelocity);// Runs up to the distraction object if Entitiy is aware
 
-                            Search(true, distractionPos, maxExploreTime, Explore_Time);
+                                    /////////////////////////// Distracted look
+                                    float Angle = Vector3.Angle(transform.right, (distractionPos - transform.position).normalized);// Angle between Camera and distraction position
+                                    if (Angle > 90)
+                                        transform.Rotate(transform.up, 180);
+                                    AICam.transform.parent.localRotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp(Mathf.Round(Angle / 4) * 4, -maxSearchAngle, 90)); // makes the camera look at distraction position
+                                    ///////////////////////////
 
-                            if (Explore_Time > maxExploreTime)// End exploring after maxExploreTime
-                                distracted = false;// Set entity to not distract after completing exploration 
+                                }
+                                else
+                                {
+                                    RB.velocity = RB.velocity.y * Vector3.up + Vector3.zero;//Stops movement when Entity reaches distraction Pos
+                                    Explore_Time += Time.deltaTime;// Time after starting exploring
+
+                                    Search(true, distractionPos, maxExploreTime, Explore_Time);
+
+                                    if (Explore_Time > maxExploreTime)// End exploring after maxExploreTime
+                                        distracted = false;// Set entity to not distract after completing exploration 
+                                }
+                            }
                         }
+
+                        AICam.GetComponent<ViewAdjust>().ViewType = 3;// Camera View type
                     }
-                    
-                    AICam.GetComponent<ViewAdjust>().ViewType = 3;// Camera View type
                 }
                 else
                 {
