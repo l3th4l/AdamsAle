@@ -36,7 +36,7 @@ public class Ladder : MonoBehaviour
                 }
                 else
                 {
-                    other.transform.Translate(Input.GetAxisRaw("Vertical") * ClimbSpeed * Vector3.back * Time.deltaTime);
+                    other.transform.Translate(Input.GetAxisRaw("Vertical") * ClimbSpeed * transform.up * Time.deltaTime * ((other.transform.rotation.y != 0)? -1:1));
                 }
             }
             pos = other.transform.position;
