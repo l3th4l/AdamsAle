@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public bool sprinting = false;
 
+    bool Pulling;
 
     private void Start() {
 		controller = GetComponent<CharacterController>();
@@ -30,6 +31,8 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	private void Update() {
+
+        Pulling = false; // reset
 
 
 		// X movement
@@ -49,10 +52,29 @@ public class PlayerMovement : MonoBehaviour {
 			x = x * normalSpeed * Time.deltaTime;
             sprinting = false;
 		}
-        
 
-		// Jumping
-		if(controller.isGrounded)
+
+        // Push/pull//////////////////
+        RaycastHit _PHit;
+        if (Physics.Raycast(transform.position, transform.right, out _PHit, armsLength, armsMask))
+        {
+            Debug.Log(_PHit.transform.name);
+            movableObj MovObj;
+
+            MovObj = _PHit.transform.GetComponent<movableObj>();
+
+            if (MovObj != null)
+            {
+                if (Input.GetKey(PushPull))
+                {
+                    MovObj.push(x * Vector3.right * MovObj.speed);
+                    Pulling = true;
+                }
+            }
+        }/////////////////////////////
+
+        // Jumping
+        if (controller.isGrounded)
 		{
 			verticalSpeed = -gravity * Time.fixedDeltaTime;
 			if(Input.GetButtonDown("Jump"))
@@ -74,20 +96,24 @@ public class PlayerMovement : MonoBehaviour {
 			verticalSpeed -= gravity * Time.fixedDeltaTime;
 		}
 
-		if(x > 0f && !isFacingRight)
+		if(x > 0f && !isFacingRight && !Pulling)
         {
             Flip();
         }
 
-        if(x <0f && isFacingRight)
+        if(x <0f && isFacingRight && !Pulling)
         {
             Flip();
         }
 
-		Vector3 moveDelta = new Vector3(x, verticalSpeed, 0f);
+        Vector3 moveDelta = new Vector3(x * ((Pulling) ? _PHit.transform.GetComponent<movableObj>().speed : 1), verticalSpeed, 0f);
 
 		controller.Move(moveDelta);
+
 	}
+    public float armsLength;
+    public LayerMask armsMask;
+    public KeyCode PushPull;
 
 	void Flip()
     {
