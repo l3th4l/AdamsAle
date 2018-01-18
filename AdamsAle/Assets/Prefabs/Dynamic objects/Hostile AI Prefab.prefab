@@ -298,6 +298,9 @@ MonoBehaviour:
   RaycastMask:
     serializedVersion: 2
     m_Bits: 256
+  VentRMask:
+    serializedVersion: 2
+    m_Bits: 0
   maxCamAngle: 10
   maxSearchAngle: 80
   detected: 0
@@ -310,6 +313,7 @@ MonoBehaviour:
   A_MaxDistractedTime: 0.5
   A_MaxExploreTime: 5
   TestTransform: {fileID: 0}
+  CrouchHeight: 0
   fireRate: 2
   range: 100
   damage: 10

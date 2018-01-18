@@ -9,54 +9,55 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1665503855090602}
+  m_RootGameObject: {fileID: 1622032923027340}
   m_IsPrefabParent: 1
---- !u!1 &1665503855090602
+--- !u!1 &1622032923027340
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4098366140863986}
-  - component: {fileID: 33176469312181492}
-  - component: {fileID: 65544536636945298}
-  - component: {fileID: 23996620321208048}
-  - component: {fileID: 114293258532212306}
-  m_Layer: 0
-  m_Name: Ladder
-  m_TagString: Untagged
+  - component: {fileID: 4869397664287564}
+  - component: {fileID: 33628319341582074}
+  - component: {fileID: 23553151323911558}
+  - component: {fileID: 65167212935430552}
+  - component: {fileID: 114790025698912066}
+  m_Layer: 2
+  m_Name: LightArea
+  m_TagString: LightArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4098366140863986
+--- !u!4 &4869397664287564
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1665503855090602}
+  m_GameObject: {fileID: 1622032923027340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.3}
-  m_LocalScale: {x: 1, y: 5.914728, z: 1}
+  m_LocalPosition: {x: 73.933685, y: -31.379425, z: 0.87}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23996620321208048
+--- !u!23 &23553151323911558
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1665503855090602}
+  m_GameObject: {fileID: 1622032923027340}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 94678f332d28cb348b9888d0598f75f7, type: 2}
+  - {fileID: 2100000, guid: fb2ff508153a4c142947516c5d2fc310, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -64,9 +65,10 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -75,34 +77,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33176469312181492
+--- !u!33 &33628319341582074
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1665503855090602}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65544536636945298
+  m_GameObject: {fileID: 1622032923027340}
+  m_Mesh: {fileID: 4300002, guid: c09052c9b19f0ea4987bc4f4f981252f, type: 3}
+--- !u!65 &65167212935430552
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1665503855090602}
+  m_GameObject: {fileID: 1622032923027340}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114293258532212306
+  m_Size: {x: 8, y: 8, z: 8}
+  m_Center: {x: 0, y: 4, z: 0}
+--- !u!114 &114790025698912066
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1665503855090602}
+  m_GameObject: {fileID: 1622032923027340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fb53439700de5f468b3443691babea2, type: 3}
+  m_Script: {fileID: 11500000, guid: 82368e271b5916542b9e2877aefe5294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClimbSpeed: 10
+  Intensity: 0.5
