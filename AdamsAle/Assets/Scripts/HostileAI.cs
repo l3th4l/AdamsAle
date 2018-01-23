@@ -33,7 +33,7 @@ public class HostileAI : MonoBehaviour
     public LayerMask RaycastMask;
     public LayerMask VentRMask;
 
-    private float maxWalkTime;// Time for which the Entitiy patrols before stopping and turning back 
+    public float maxWalkTime;// Time for which the Entitiy patrols before stopping and turning back 
 
     public float maxCamAngle; // maximum rotation of camera for looking around
     public float maxSearchAngle; // maximum rotation of camera while searching
@@ -88,15 +88,16 @@ public class HostileAI : MonoBehaviour
         RaycastHit _P_Hit;// Player hit info
         if (Physics.Raycast(AICam.transform.position, (Player.transform.position - AICam.transform.position).normalized, out _P_Hit, RaycastMask))// Raycasts to the player
         {
-            PlayerNotObstructed = (_P_Hit.collider.CompareTag("Player")|| (Vector3.SqrMagnitude((transform.position - Player.transform.position).x*Vector3.right) <= AICam.nearClipPlane*AICam.nearClipPlane && Player.gameObject.activeInHierarchy) ) ;// If player isn't obstructed, becomes true
-        }
             
+        }
+        PlayerNotObstructed = (_P_Hit.collider.CompareTag("Player") || (Vector3.SqrMagnitude((transform.position - Player.transform.position).x * Vector3.right) <= AICam.nearClipPlane * AICam.nearClipPlane && Player.gameObject.activeInHierarchy));// If player isn't obstructed, becomes true
 
 
         PassedTime += Time.deltaTime;// increases with time
         CamPlanes = GeometryUtility.CalculateFrustumPlanes(AICam);
         if (GeometryUtility.TestPlanesAABB(CamPlanes, Player.bounds) && Player.gameObject.activeInHierarchy && PlayerNotObstructed)// Checks if player is in LOS
         {
+            Debug.Log(PlayerNotObstructed + "KYS");
             LOS_Time += Time.deltaTime;// Time after being in LOS
             inSearch = false;
             if (!distracted)// if not distracted

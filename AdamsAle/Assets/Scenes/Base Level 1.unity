@@ -11193,7 +11193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &815457779
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19421,60 +19421,6 @@ Prefab:
     - target: {fileID: 4248515210129246, guid: c5f97bcbbdf99e64fa086adcc24f3f61, type: 2}
       propertyPath: m_RootOrder
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 20350474928412014, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
-        type: 2}
-      propertyPath: m_AllowMSAA
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20350474928412014, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
-        type: 2}
-      propertyPath: m_HDR
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20350474928412014, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
-        type: 2}
-      propertyPath: m_OcclusionCulling
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20350474928412014, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
-        type: 2}
-      propertyPath: m_RenderingPath
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20350474928412014, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
-        type: 2}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114530303611459880, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
-        type: 2}
-      propertyPath: maxExploreTime
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114530303611459880, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
-        type: 2}
-      propertyPath: suspectTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 20350474928412014, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
-        type: 2}
-      propertyPath: near clip plane
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 1780751733783014, guid: c5f97bcbbdf99e64fa086adcc24f3f61, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114530303611459880, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
-        type: 2}
-      propertyPath: VentRMask.m_Bits
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 114530303611459880, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
-        type: 2}
-      propertyPath: aware
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5f97bcbbdf99e64fa086adcc24f3f61, type: 2}

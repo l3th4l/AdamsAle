@@ -74,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780751733783014}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 368.38, y: 74.73, z: 0}
+  m_LocalPosition: {x: 352.13, y: 74.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4300671557769234}
@@ -122,9 +122,9 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.415
+    width: 1
     height: 1
-  near clip plane: 0.5
+  near clip plane: 0.53
   far clip plane: 5
   field of view: 45
   orthographic: 0
@@ -133,12 +133,12 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 0
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 7
   m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
+  m_HDR: 0
+  m_AllowMSAA: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -291,16 +291,16 @@ MonoBehaviour:
   maxDisp: 15
   maxWaitTime: 3
   stopDistance: 2
-  suspectTime: 1
+  suspectTime: 0.5
   maxDistractedTime: 0.5
-  maxExploreTime: 4
+  maxExploreTime: 8
   maxSearchTime: 12
   RaycastMask:
     serializedVersion: 2
     m_Bits: 256
   VentRMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   maxCamAngle: 10
   maxSearchAngle: 80
   detected: 0

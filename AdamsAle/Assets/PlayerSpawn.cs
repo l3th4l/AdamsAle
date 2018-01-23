@@ -7,7 +7,7 @@ public class PlayerSpawn : MonoBehaviour
     public Transform PlayerSpawnPos;
     public GameObject PlayerPrefab;
     
-	void Start ()
+	void Awake ()
     {
         GameObject.Instantiate(PlayerPrefab, PlayerSpawnPos.position, PlayerPrefab.transform.rotation);		
 	}

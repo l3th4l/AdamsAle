@@ -276,9 +276,9 @@ MonoBehaviour:
         e_CurveG: 0
         e_CurveB: 0
   userLut:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
-      lut: {fileID: 0}
+      lut: {fileID: 2800000, guid: e45483e270a314c4bbc6e317771d56ab, type: 3}
       contribution: 1
   chromaticAberration:
     m_Enabled: 0

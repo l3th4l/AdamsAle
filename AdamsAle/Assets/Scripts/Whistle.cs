@@ -49,11 +49,11 @@ public class Whistle : MonoBehaviour
 
     void Draw()
     {
-        for (int i = 0; i < Mathf.Clamp(Vector3.Magnitude(targetPos - transform.position - 0.75f * transform.up), 0, maxDistance) * res; i++)
+        /*for (int i = 0; i < Mathf.Clamp(Vector3.Magnitude(targetPos - transform.position - 0.75f * transform.up), 0, maxDistance) * res; i++)
         {
             if (i >= start)
                 GameObject.Instantiate(PixelObj, transform.position + 0.75f * transform.up + i * (targetPos - transform.position - 0.75f * transform.up).normalized / res, Quaternion.identity);
-        }
+        }*/
 
         for (int i = 0; i <= 360; i += step) 
         {
