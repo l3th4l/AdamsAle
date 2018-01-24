@@ -30,6 +30,7 @@ public class Sound : MonoBehaviour
         if (GetComponent<PlayerMovement>().sprinting)// if running
         {
             RunTime += Time.fixedDeltaTime;
+            Debug.Log(CurrentHeight + "" + GroundHeight);
             if (Mathf.RoundToInt(RunTime * 100) % interval == 0)// If stepping 
             {
 
@@ -37,8 +38,8 @@ public class Sound : MonoBehaviour
                 if (Physics.Raycast(transform.position, -transform.up, out R_hit))
                     CurrentHeight = (transform.position - R_hit.point).y;
 
-                if (CurrentHeight <= GroundHeight)
-                {
+                //if (CurrentHeight <= GroundHeight)
+                //{
                     Instantiate(Ripple, transform.position + transform.right, Ripple.transform.rotation);
                     Collider[] Entities = Physics.OverlapSphere(transform.position, Ripple.transform.localScale.x);
                     foreach (Collider Ent in Entities)
@@ -57,7 +58,7 @@ public class Sound : MonoBehaviour
                             }
                         }
                     }
-                }
+                //}
             }
         }
         else

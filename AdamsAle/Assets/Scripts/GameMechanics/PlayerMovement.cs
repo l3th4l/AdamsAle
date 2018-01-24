@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+    //[HideInInspector]
+    public bool lit = false;
+
 	public float normalSpeed = 7f;
 	public float sprintSpeed = 12f;
 	public float jumpForce = 16f;
@@ -58,7 +61,7 @@ public class PlayerMovement : MonoBehaviour {
         RaycastHit _PHit;
         if (Physics.Raycast(transform.position, transform.right, out _PHit, armsLength, armsMask))
         {
-            Debug.Log(_PHit.transform.name);
+
             movableObj MovObj;
 
             MovObj = _PHit.transform.GetComponent<movableObj>();

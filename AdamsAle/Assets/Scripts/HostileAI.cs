@@ -72,7 +72,7 @@ public class HostileAI : MonoBehaviour
         EntCol = GetComponent<CapsuleCollider>();
         InitHeight = EntCol.height;
     }
-    
+    public bool PLSeen;
     void Update()
     {
         EntCol.height = InitHeight;// Resets height every frame
@@ -91,7 +91,7 @@ public class HostileAI : MonoBehaviour
             
         }
         PlayerNotObstructed = (_P_Hit.collider.CompareTag("Player") || (Vector3.SqrMagnitude((transform.position - Player.transform.position).x * Vector3.right) <= AICam.nearClipPlane * AICam.nearClipPlane && Player.gameObject.activeInHierarchy));// If player isn't obstructed, becomes true
-
+        PLSeen = PlayerNotObstructed;
 
         PassedTime += Time.deltaTime;// increases with time
         CamPlanes = GeometryUtility.CalculateFrustumPlanes(AICam);
