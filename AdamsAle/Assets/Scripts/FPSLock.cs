@@ -7,5 +7,6 @@ public class FPSLock : MonoBehaviour
 	void Update ()
     {
         Application.targetFrameRate = 120;
+        Screen.SetResolution(320, 240, true);
     }
 }
