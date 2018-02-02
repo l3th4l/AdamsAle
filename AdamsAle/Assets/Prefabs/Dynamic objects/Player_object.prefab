@@ -132,6 +132,8 @@ GameObject:
   - component: {fileID: 114505243276071228}
   - component: {fileID: 143997805216824038}
   - component: {fileID: 114626329539920890}
+  - component: {fileID: 114975337798876798}
+  - component: {fileID: 114037058304631594}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -235,7 +237,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1468444163689576}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.2900085, y: 0, z: -6.73}
+  m_LocalPosition: {x: 4.81, y: 0, z: -9.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4093291595942570}
@@ -316,7 +318,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 80
+  field of view: 73
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -434,6 +436,24 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114037058304631594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1514764678712620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62672b0e4c89dfd4fb5d3e0b6f357f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerClass: {fileID: 11400000, guid: 8ab5420209c6dba47a856e7d791196dd, type: 2}
+  Arm: {fileID: 4192830526660234}
+  UseKey: 101
+  armsLength: 1
+  armsMask:
+    serializedVersion: 2
+    m_Bits: 2304
 --- !u!114 &114097040456518982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -462,14 +482,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  Dead: 0
   DestroyedMat: {fileID: 0}
+  DestroyedLayer: 0
 --- !u!114 &114242537375402126
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1468444163689576}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
@@ -525,6 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e66a8c47b38108440ad69210d68c943a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lit: 0
   normalSpeed: 4
   sprintSpeed: 8
   jumpForce: 12
@@ -535,7 +558,7 @@ MonoBehaviour:
   armsLength: 1
   armsMask:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 2304
   PushPull: 101
 --- !u!114 &114678632531840274
 MonoBehaviour:
@@ -588,6 +611,19 @@ MonoBehaviour:
   meleeRange: 2.2
   meleeKeycode: 101
   MeleeDamage: 14
+--- !u!114 &114975337798876798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1514764678712620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea9a40a855346a409cd6b59fa2af8f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjClass: {fileID: 11400000, guid: 8ab5420209c6dba47a856e7d791196dd, type: 2}
+  isDetected: 0
 --- !u!124 &124699314349420228
 Behaviour:
   m_ObjectHideFlags: 1

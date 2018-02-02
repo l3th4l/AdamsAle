@@ -11,7 +11,6 @@ public class AIVisibility : MonoBehaviour {
     Plane[] CamPlanes;
 
 	void Start () {
-        Debug.Log("Got cam" + LightCam.name);
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
         AttachedAI = GetComponent<HostileAI>();
     }

@@ -22,7 +22,7 @@ public class playerMelee : MonoBehaviour {
             if(enemy != null)
             {
 
-                if(Input.GetKeyDown(meleeKeycode))
+                if(Input.GetKeyDown(meleeKeycode) && !enemy.GetComponent<Enemy>().Dead)
                 {
                     anim.SetTrigger("Melee");
 					enemy.TakeDamage(MeleeDamage);

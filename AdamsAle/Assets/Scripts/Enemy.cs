@@ -8,10 +8,14 @@ public class Enemy : MonoBehaviour {
 
     Light LightComp;
 
-    bool Dead = false;
+    [HideInInspector]
+    public bool Dead = false;
 
     [SerializeField]
     Material DestroyedMat;
+
+    [SerializeField]
+    int DestroyedLayer;
 
     private void Start()
     {
@@ -30,12 +34,11 @@ public class Enemy : MonoBehaviour {
 
     void Die()
     {
-        if (LightComp == null)
-            Destroy(gameObject);
-        else
+
+        if (LightComp != null)
         {
             LightComp.intensity = 0.0f;
-            if(!Dead)// Alerts enemies
+            if (!Dead)// Alerts enemies
             {
                 GetComponent<MeshRenderer>().material = DestroyedMat;
                 Collider[] Entities = Physics.OverlapSphere(transform.position, LightComp.range);
@@ -58,6 +61,27 @@ public class Enemy : MonoBehaviour {
             }
             Dead = true;
         }
+        if (this.GetComponent<ObjectClass>() != null)
+        {
+            if (!Dead)
+            {
+                this.GetComponent<HostileAI>().enabled = false;
+                this.GetComponent<AIVisibility>().enabled = false;
+
+                this.GetComponent<MeshRenderer>().material = DestroyedMat;
+                //gameObject.layer = DestroyedLayer;
+
+                GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+
+                transform.eulerAngles = Vector3.zero;
+
+                movableObj DeadBody = gameObject.AddComponent<movableObj>();
+
+
+                Dead = true;
+            }
+        }
+
     }
 
 

@@ -4,16 +4,8 @@ using UnityEngine;
 
 public class ObjectClass : MonoBehaviour
 {
+    public CharacterClass ObjClass;
 
-	// Use this for initialization
-	void Start ()
-    {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
+    [HideInInspector]
+    public bool isDetected = false;
 }

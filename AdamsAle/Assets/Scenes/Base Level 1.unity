@@ -12691,7 +12691,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  Dead: 0
   DestroyedMat: {fileID: 0}
+  DestroyedLayer: 0
 --- !u!54 &941170954
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16343,6 +16345,16 @@ Prefab:
       propertyPath: aware
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114619555452905640, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
+        type: 2}
+      propertyPath: DestroyedLayer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114619555452905640, guid: c5f97bcbbdf99e64fa086adcc24f3f61,
+        type: 2}
+      propertyPath: DestroyedMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e31a71aa9ae5274191bc4287e54e68d, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5f97bcbbdf99e64fa086adcc24f3f61, type: 2}
   m_IsPrefabParent: 0
@@ -23077,7 +23089,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  Dead: 0
   DestroyedMat: {fileID: 0}
+  DestroyedLayer: 0
 --- !u!23 &1796017287
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23850,7 +23864,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  Dead: 0
   DestroyedMat: {fileID: 0}
+  DestroyedLayer: 0
 --- !u!23 &1819501067
 MeshRenderer:
   m_ObjectHideFlags: 0

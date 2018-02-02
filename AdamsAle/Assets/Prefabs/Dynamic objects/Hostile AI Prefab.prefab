@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 54340154364723784}
   - component: {fileID: 114619555452905640}
   - component: {fileID: 114413659059406470}
+  - component: {fileID: 114677343162678698}
   m_Layer: 8
   m_Name: Hostile AI Prefab
   m_TagString: Untagged
@@ -103,8 +104,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780751733783014}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.0899963, y: -1.2768542, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 352.13, y: 74.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4300671557769234}
@@ -405,6 +406,9 @@ MonoBehaviour:
     type: 2}
   muzzleFlashPrefab: {fileID: 1620163511705914, guid: 18a4051fadd3cc942b86ed89084a335e,
     type: 2}
+  KnownPlayerClass: {fileID: 11400000, guid: 8ab5420209c6dba47a856e7d791196dd, type: 2}
+  KnownPlayerDisguise: {fileID: 11400000, guid: 8ab5420209c6dba47a856e7d791196dd,
+    type: 2}
 --- !u!114 &114569809270339640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -428,7 +432,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  DestroyedMat: {fileID: 0}
+  Dead: 0
+  DestroyedMat: {fileID: 2100000, guid: 5e31a71aa9ae5274191bc4287e54e68d, type: 2}
+  DestroyedLayer: 11
+--- !u!114 &114677343162678698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1780751733783014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea9a40a855346a409cd6b59fa2af8f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjClass: {fileID: 11400000, guid: 0f88833f549fce44da3c1caca720091b, type: 2}
+  isDetected: 0
 --- !u!136 &136786490451181028
 CapsuleCollider:
   m_ObjectHideFlags: 1

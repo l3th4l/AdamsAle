@@ -30,7 +30,6 @@ public class Sound : MonoBehaviour
         if (GetComponent<PlayerMovement>().sprinting)// if running
         {
             RunTime += Time.fixedDeltaTime;
-            Debug.Log(CurrentHeight + "" + GroundHeight);
             if (Mathf.RoundToInt(RunTime * 100) % interval == 0)// If stepping 
             {
 

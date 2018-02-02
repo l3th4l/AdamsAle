@@ -95,9 +95,8 @@ public class HostileAI : MonoBehaviour
 
         PassedTime += Time.deltaTime;// increases with time
         CamPlanes = GeometryUtility.CalculateFrustumPlanes(AICam);
-        if (GeometryUtility.TestPlanesAABB(CamPlanes, Player.bounds) && Player.gameObject.activeInHierarchy && PlayerNotObstructed)// Checks if player is in LOS
+        if (GeometryUtility.TestPlanesAABB(CamPlanes, Player.bounds) && Player.gameObject.activeInHierarchy && PlayerNotObstructed && RecognisePlayer() )// Checks if player is in LOS
         {
-            Debug.Log(PlayerNotObstructed + "KYS");
             LOS_Time += Time.deltaTime;// Time after being in LOS
             inSearch = false;
             if (!distracted)// if not distracted
@@ -137,6 +136,9 @@ public class HostileAI : MonoBehaviour
                     if (LOS_Time >= suspectTime)// detects the player if player in LOS for >= suspectTime
                     {
                         detected = true;
+                        Player.GetComponent<ObjectClass>().isDetected = true;
+                        //insert network alert
+                        KnownPlayerDisguise = Player.GetComponent<ObjectClass>().ObjClass;
                         aware = true; // Alerts the entity. [Changes all parameteres to aware state]
                         knownPos = Player.transform.position;// Sets the known position of player 
                     }
@@ -147,6 +149,9 @@ public class HostileAI : MonoBehaviour
             else
             {
                 detected = true;
+                Player.GetComponent<ObjectClass>().isDetected = true;
+                //Insert network alert
+                KnownPlayerDisguise = Player.GetComponent<ObjectClass>().ObjClass;
                 aware = true;
                 PassedTime = 0.0f;//Reset
                 knownPos = distractionPos;
@@ -398,8 +403,6 @@ public class HostileAI : MonoBehaviour
         if (Physics.Raycast(AICam.transform.position, (target - AICam.transform.position).normalized, out _hit, range))
         {
 
-            Debug.Log("Hit" + target);
-
             Enemy DMG_target = _hit.transform.GetComponent<Enemy>();
             if (DMG_target != null)
             {
@@ -466,6 +469,27 @@ public class HostileAI : MonoBehaviour
             if (Time >= Duration / 2)
                 flip = false;
         }
+    }
+
+    [Space]
+    [SerializeField]
+    CharacterClass KnownPlayerClass;
+
+    [SerializeField]
+    CharacterClass KnownPlayerDisguise;
+
+    bool RecognisePlayer()
+    {
+        CharacterClass Pl = Player.GetComponent<ObjectClass>().ObjClass;
+        CharacterClass Ent = GetComponent<ObjectClass>().ObjClass;
+
+        if (!Player.GetComponent<ObjectClass>().isDetected || Pl.CharClass == KnownPlayerClass.CharClass || Pl.CharClass == KnownPlayerDisguise.CharClass)
+            if (Pl.CharClass == Ent.CharClass)
+                return true;
+            else
+                return false;
+        else
+            return true;
     }
         
 }
