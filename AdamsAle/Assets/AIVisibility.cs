@@ -20,7 +20,7 @@ public class AIVisibility : MonoBehaviour {
         
         CamPlanes = GeometryUtility.CalculateFrustumPlanes(LightCam);
 
-        if (GeometryUtility.TestPlanesAABB(CamPlanes, Player.bounds) && Player.gameObject.activeInHierarchy && AttachedAI.PLSeen)// Checks if player is in LOS
+        if (GeometryUtility.TestPlanesAABB(CamPlanes, Player.bounds) && Player.gameObject.activeInHierarchy && AttachedAI.PLSeen )// Checks if player is in LOS
         {
             if (Player.GetComponent<PlayerMovement>().lit)
             {

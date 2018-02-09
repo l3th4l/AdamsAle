@@ -6,6 +6,14 @@ public class ObjectClass : MonoBehaviour
 {
     public CharacterClass ObjClass;
 
+    public SpriteRenderer SR;
+
+    private void Update()
+    {
+        if (SR != null)
+            SR.sprite = ObjClass.CharSprite;
+    }
+
     [HideInInspector]
     public bool isDetected = false;
 }

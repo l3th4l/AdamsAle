@@ -95,7 +95,7 @@ public class HostileAI : MonoBehaviour
 
         PassedTime += Time.deltaTime;// increases with time
         CamPlanes = GeometryUtility.CalculateFrustumPlanes(AICam);
-        if (GeometryUtility.TestPlanesAABB(CamPlanes, Player.bounds) && Player.gameObject.activeInHierarchy && PlayerNotObstructed && RecognisePlayer() )// Checks if player is in LOS
+        if (GeometryUtility.TestPlanesAABB(CamPlanes, Player.bounds) && Player.gameObject.activeInHierarchy && PlayerNotObstructed  && RecognisePlayer() )// Checks if player is in LOS
         {
             LOS_Time += Time.deltaTime;// Time after being in LOS
             inSearch = false;
@@ -478,12 +478,12 @@ public class HostileAI : MonoBehaviour
     [SerializeField]
     CharacterClass KnownPlayerDisguise;
 
-    bool RecognisePlayer()
+    public bool RecognisePlayer()
     {
         CharacterClass Pl = Player.GetComponent<ObjectClass>().ObjClass;
         CharacterClass Ent = GetComponent<ObjectClass>().ObjClass;
 
-        if (!Player.GetComponent<ObjectClass>().isDetected || Pl.CharClass == KnownPlayerClass.CharClass || Pl.CharClass == KnownPlayerDisguise.CharClass)
+        if ( !(Player.GetComponent<ObjectClass>().isDetected || Pl.CharClass == KnownPlayerClass.CharClass || Pl.CharClass == KnownPlayerDisguise.CharClass))
             if (Pl.CharClass == Ent.CharClass)
                 return true;
             else

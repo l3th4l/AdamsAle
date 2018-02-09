@@ -1,0 +1,32 @@
+newmtl Bush
+Kd 0.1545639 0.5 0.01838234
+illum 2
+
+newmtl New Material
+Kd 1 1 1
+illum 2
+
+newmtl Camera
+Kd 0 0.462069 1
+illum 2
+
+newmtl Default-Material
+Kd 1 1 1
+illum 2
+
+newmtl Tree
+Kd 0.2827586 1 0
+illum 2
+
+newmtl Window
+Kd 1 0.475862 0
+illum 2
+
+newmtl Vents
+Kd 1 0 0
+illum 2
+
+newmtl Door
+Kd 1 0.475862 0
+illum 2
+
