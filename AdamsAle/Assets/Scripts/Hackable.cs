@@ -22,15 +22,18 @@ public class Hackable : MonoBehaviour
     public Material HackedMat;
     void MatSwitch()
     {
-        if(!Hacked)
+        if (!Hacked)
         {
-            if(HackProgression > 0)
+            if (HackProgression > 0)
                 GetComponent<MeshRenderer>().material = HackingMat;
             else
                 GetComponent<MeshRenderer>().material = DefaultMat;
         }
         else
+        {
+            HackProgression = HackLimit;
             GetComponent<MeshRenderer>().material = HackedMat;
+        }
     }
 
     public void DispHack()

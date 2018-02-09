@@ -9,6 +9,7 @@ TagManager:
   - up
   - LightArea
   - vent_ground
+  - Crosshair
   layers:
   - Default
   - TransparentFX
