@@ -447,6 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjClass: {fileID: 11400000, guid: 0f88833f549fce44da3c1caca720091b, type: 2}
+  SR: {fileID: 0}
   isDetected: 0
 --- !u!136 &136786490451181028
 CapsuleCollider:
