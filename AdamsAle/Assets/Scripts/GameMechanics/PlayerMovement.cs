@@ -74,6 +74,22 @@ public class PlayerMovement : MonoBehaviour {
                     Pulling = true;
                 }
             }
+            else
+            {
+                InteractableDoor IntDoor;
+                IntDoor = _PHit.transform.GetComponent<InteractableDoor>();
+
+                if (IntDoor != null)
+                {
+                    if (Input.GetKey(PushPull))
+                    {
+                        if(!IntDoor.Locked)
+                        {
+                            IntDoor.Closed = !IntDoor.Closed; //open or close
+                        }
+                    }
+                }
+            }
         }/////////////////////////////
 
         // Jumping
