@@ -28,6 +28,9 @@ public class ScriptEvents : MonoBehaviour
             case 2:
                 StartAfter();
                 break;
+            case 3:
+                EnableScript();
+                break;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -110,5 +113,11 @@ public class ScriptEvents : MonoBehaviour
                 }
             }
         }
+    }
+    eventAct ActComp;
+    void EnableScript()
+    {
+        if (StartEvent)
+            Objects[0].GetComponent<eventAct>().active = true;
     }
 }
