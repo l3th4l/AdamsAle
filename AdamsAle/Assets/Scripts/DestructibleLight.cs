@@ -31,14 +31,18 @@ public class DestructibleLight : MonoBehaviour
 
             Debug.DrawRay(transform.position,DirToAngle( Vector3.Angle(-Vector3.up, dir),true));
 
-            if (Vector3.Angle(-Vector3.up, dir) <= Angle/2)
-                pl.GetComponent<PlayerMovement>().lit = true;
+            if (Vector3.Angle(-Vector3.up, dir) <= Angle / 2)
+                if (!isCamera)
+                    pl.GetComponent<PlayerMovement>().lit = true;
+                else
+                    print("KYS");
             else
                 pl.GetComponent<PlayerMovement>().lit = false;
         }
 
     }
-
+    [SerializeField]
+    bool isCamera;
     private void Start()
     {
         visMesh = new Mesh();

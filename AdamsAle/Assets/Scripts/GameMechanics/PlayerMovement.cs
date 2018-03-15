@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour {
     float InitHeight;
 
     public KeyCode Crouch;
+    public bool crouching;
 
 	public float verticalSpeed;
 	CharacterController controller;
@@ -32,8 +33,7 @@ public class PlayerMovement : MonoBehaviour {
 
         InitHeight = controller.height;
 	}
-
-	private void Update() {
+    private void Update() {
 
         Pulling = false; // reset
 
@@ -92,6 +92,13 @@ public class PlayerMovement : MonoBehaviour {
             }
         }/////////////////////////////
 
+        ///////////Temp crouch
+        if (Input.GetKey(Crouch) || crouching)
+            controller.height = InitHeight / 2;
+        else
+            controller.height = InitHeight;
+        ///////////
+
         // Jumping
         if (controller.isGrounded)
 		{
@@ -101,14 +108,6 @@ public class PlayerMovement : MonoBehaviour {
 				animator.SetTrigger("Jump");
 				verticalSpeed = jumpForce * Time.fixedDeltaTime;
 			}
-
-            ///////////Temp crouch
-            if (Input.GetKey(Crouch))
-                controller.height = InitHeight / 2;
-            else
-                controller.height = InitHeight;
-            ///////////
-
 		}
 		else
 		{

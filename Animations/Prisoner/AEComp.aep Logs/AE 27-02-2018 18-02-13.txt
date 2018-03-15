@@ -1,0 +1,12 @@
+Adobe After Effects v13.5 Windows 64 render log for project “AEComp.aep”
+
+Rendering started on 27/02/2018 at 18:02:13
+
+  27/02/2018 18:02:13: Starting composition “Man_Walking_06”.
+
+  Output To: F:\GHAdamsAle\Animations\Prisoner\Seq\Man_Walking_06\Prisoner_[#####].png  After Effects warning: Undo group mismatch, will attempt to fix.  27/02/2018 18:02:14: Finished composition “Man_Walking_06”.
+
+
+  Total Time Elapsed: 1 Seconds
+Log closed on 27/02/2018 at 18:02:14
+

@@ -29,7 +29,7 @@ MonoBehaviour:
     m_Settings:
       excludeSkybox: 1
   antialiasing:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       method: 0
       fxaaSettings:
@@ -47,8 +47,8 @@ MonoBehaviour:
       sampleCount: 16
       downsampling: 0
       forceForwardCompatibility: 0
-      ambientOnly: 0
-      highPrecision: 0
+      ambientOnly: 1
+      highPrecision: 1
   screenSpaceReflection:
     m_Enabled: 1
     m_Settings:
@@ -62,20 +62,20 @@ MonoBehaviour:
         reflectionBlur: 1
         reflectBackfaces: 0
       intensity:
-        reflectionMultiplier: 1
+        reflectionMultiplier: 1.19
         fadeDistance: 100
         fresnelFade: 1
         fresnelFadePower: 1
       screenEdgeMask:
         intensity: 0.03
   depthOfField:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
-      focusDistance: 9.94
-      aperture: 19.4
-      focalLength: 280
+      focusDistance: 24.53
+      aperture: 22.5
+      focalLength: 239
       useCameraFov: 0
-      kernelSize: 1
+      kernelSize: 3
   motionBlur:
     m_Enabled: 0
     m_Settings:
@@ -100,16 +100,16 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.09
+        intensity: 0.72
         threshold: 1.1
         softKnee: 0.5
         radius: 4
         antiFlicker: 1
       lensDirt:
         texture: {fileID: 2800000, guid: 7a051dbda2d7bc447bee412427cd311e, type: 3}
-        intensity: 9.2
+        intensity: 9.09
   colorGrading:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       tonemapping:
         tonemapper: 1
@@ -281,7 +281,7 @@ MonoBehaviour:
       lut: {fileID: 2800000, guid: e45483e270a314c4bbc6e317771d56ab, type: 3}
       contribution: 1
   chromaticAberration:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       spectralTexture: {fileID: 0}
       intensity: 0.217
@@ -293,7 +293,7 @@ MonoBehaviour:
       size: 0.64
       luminanceContribution: 0.8
   vignette:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 1}

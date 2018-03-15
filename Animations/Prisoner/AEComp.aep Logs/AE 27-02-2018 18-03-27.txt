@@ -1,0 +1,12 @@
+Adobe After Effects v13.5 Windows 64 render log for project “AEComp.aep”
+
+Rendering started on 27/02/2018 at 18:03:27
+
+  27/02/2018 18:03:27: Starting composition “Man_Walking_06”.
+
+  Output To: F:\GHAdamsAle\Animations\Prisoner\Seq\Man_Walking_06\Man_Walking_06_[#####].png    27/02/2018 18:03:27: Finished composition “Man_Walking_06”.
+
+
+  Total Time Elapsed: 0 Seconds
+Log closed on 27/02/2018 at 18:03:27
+

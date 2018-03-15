@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Lazer : MonoBehaviour {
 
-    public float SwitchTime;
+   /* public float SwitchTime;
     float PassedTime;
     public GameObject LazObj;
     public GameObject Alarm;
@@ -25,6 +25,6 @@ public class Lazer : MonoBehaviour {
             Alarm.GetComponent<AlarmSyst>().Alert = true;
             Alarm.GetComponent<AlarmSyst>().AlertTime = Time.deltaTime;
         }
-    }
+    }*/
 }
 

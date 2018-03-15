@@ -1,0 +1,532 @@
+fileFormatVersion: 2
+guid: 72b48ead13a2a49498380c627a1a2be5
+timeCreated: 1519735932
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Pris_char_spritesheet_0
+    21300002: Pris_char_spritesheet_1
+    21300004: Pris_char_spritesheet_2
+    21300006: Pris_char_spritesheet_3
+    21300008: Pris_char_spritesheet_4
+    21300010: Pris_char_spritesheet_5
+    21300012: Pris_char_spritesheet_6
+    21300014: Pris_char_spritesheet_7
+    21300016: Pris_char_spritesheet_8
+    21300018: Pris_char_spritesheet_9
+    21300020: Pris_char_spritesheet_10
+    21300022: Pris_char_spritesheet_11
+    21300024: Pris_char_spritesheet_12
+    21300026: Pris_char_spritesheet_13
+    21300028: Pris_char_spritesheet_14
+    21300030: Pris_char_spritesheet_15
+    21300032: Pris_char_spritesheet_16
+    21300034: Pris_char_spritesheet_17
+    21300036: Pris_char_spritesheet_18
+    21300038: Pris_char_spritesheet_19
+    21300040: Pris_char_spritesheet_20
+    21300042: Pris_char_spritesheet_21
+    21300044: Pris_char_spritesheet_22
+    21300046: Pris_char_spritesheet_23
+    21300048: Pris_char_spritesheet_24
+    21300050: Pris_char_spritesheet_25
+    21300052: Pris_char_spritesheet_26
+    21300054: Pris_char_spritesheet_27
+    21300056: Pris_char_spritesheet_28
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 300
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 1916
+        width: 288
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1916
+        width: 288
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 1916
+        width: 288
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2716
+        y: 1916
+        width: 268
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 3356
+        y: 1926
+        width: 258
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 4044
+        y: 1916
+        width: 218
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 4646
+        y: 1916
+        width: 268
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 1276
+        width: 258
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 1276
+        width: 238
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 1306
+        width: 318
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 1316
+        width: 308
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 3416
+        y: 1276
+        width: 248
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 3966
+        y: 1286
+        width: 308
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 4626
+        y: 1326
+        width: 328
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 666
+        width: 318
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 726
+        width: 438
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 636
+        width: 268
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 736
+        width: 448
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 2746
+        y: 636
+        width: 238
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 3296
+        y: 726
+        width: 438
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 4006
+        y: 636
+        width: 298
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 4576
+        y: 736
+        width: 448
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 308
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 0
+        width: 278
+        height: 544
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 0
+        width: 258
+        height: 524
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 2746
+        y: 0
+        width: 208
+        height: 544
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 3446
+        y: 0
+        width: 138
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 4026
+        y: 0
+        width: 298
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pris_char_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 4666
+        y: 0
+        width: 198
+        height: 544
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

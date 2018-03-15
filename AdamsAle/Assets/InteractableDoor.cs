@@ -6,18 +6,29 @@ public class InteractableDoor : MonoBehaviour {
 
     public bool Locked;
     public bool Closed;
+    public float closeTime;
+    float pTime;
 
-	void Start () {
-		
+	void Start ()
+    {
+        pTime = 0;
 	}
 	
 	void Update ()
     {
+        pTime += Time.deltaTime;
         if (!Locked)
             if (Closed)
+            {
                 GetComponent<Collider>().enabled = true;
+                pTime = 0;
+            }
             else
+            {
                 GetComponent<Collider>().enabled = false;
+                if (pTime > closeTime)
+                    Closed = true;
+            }
         else
         {
             gameObject.AddComponent<Hackable>();

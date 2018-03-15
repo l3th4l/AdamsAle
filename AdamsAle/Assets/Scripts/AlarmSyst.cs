@@ -1,86 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[RequireComponent(typeof(SphereCollider))]
+public class AlarmSyst : MonoBehaviour
+{
+    public bool hacked;
+    public LayerMask AlarmMask;
+    SphereCollider SphereCol;
+    float alarmRadius;
 
-public class AlarmSyst : MonoBehaviour {
-    public bool Alert;
-    public float AlertTime;
-    public float MaxAlertTime;
+    public bool alarmed;
 
-    GameObject Player;
-
-    void Start ()
+    private void Start()
     {
-        AlertTime = 0.0f;
-        Player = GameObject.FindGameObjectWithTag("Player");
-	}
-
-	void Update ()
+        SphereCol = GetComponent<SphereCollider>();
+        alarmRadius = SphereCol.radius;
+    }
+    private void Update()
     {
-        bool inZone = false;
-        Collider[] EntInRad = Physics.OverlapBox(transform.position, GetComponent<BoxCollider>().size / 2, transform.rotation);
-
-        foreach (Collider en in EntInRad)
-        { 
-            if (en.CompareTag("Player"))
-                inZone = true;
-        }
-        if(inZone)
+        if (alarmed)
         {
-            foreach (Collider en in EntInRad)
+            Collider[] Entities;
+            Entities = Physics.OverlapSphere(transform.position, alarmRadius, AlarmMask);
+            foreach (Collider col in Entities)
             {
-                if (en.CompareTag("AI"))
-                    en.GetComponent<AI>().inZone = true;
-            }
-        }
-        else
-        {
-            foreach (Collider en in EntInRad)
-            {
-                if (en.CompareTag("AI"))
-                    en.GetComponent<AI>().inZone = false;
-            }
-        }
-
-        if (Alert)
-        {
-            foreach (Collider en in EntInRad)
-            {
-
-                if (Player.activeInHierarchy)
+                HostileAI EntAI = col.GetComponent<HostileAI>();
+                EntAI.aware = true;
+                if (EntAI.distractionPos != transform.position)
                 {
-                    if (en.CompareTag("Turret"))
-                        en.gameObject.GetComponent<Turret>().enabled = AlertTime <= MaxAlertTime;
-
-                    if (en.CompareTag("Alarm"))
-                    {
-                        if (!en.GetComponent<AlarmSyst>().Alert && AlertTime <= 0.0f)
-                            en.GetComponent<AlarmSyst>().Alert = true;
-                    }
-
-                    if (en.CompareTag("AI"))
-                    {
-                        en.gameObject.GetComponent<AI>().Alarmed = AlertTime <= Time.fixedDeltaTime;
-                    }
+                    EntAI.distracted = true;
+                    EntAI.distractionPos = this.transform.position;
                 }
-                Alert = false;
-                /*
-                AlertTime += Time.deltaTime;
-                if (AlertTime >= MaxAlertTime)
-                {
-                    Debug.Log("Alert End");
-                    Alert = false;
-                    AlertTime = 0.0f;
-                }*/
             }
         }
-        else
-        {
-            foreach (Collider en in EntInRad)
-            {
-                if (en.CompareTag("AI"))
-                    en.gameObject.GetComponent<AI>().Alarmed = false;
-            }
-        }
-	}
+    }
+
 }

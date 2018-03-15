@@ -1,0 +1,51 @@
+newmtl Props
+Kd 0.1738307 0.1040225 0.5441177
+illum 2
+
+newmtl Dockside_Pavement
+Kd 0.3823529 0.3598616 0.3598616
+illum 2
+
+newmtl Crate
+Kd 0.6544117 0.5052443 0.5052443
+map_Kd null
+illum 2
+
+newmtl Light
+Kd 0.9905679 1 0.3161764
+Tr 1
+d 0
+illum 2
+
+newmtl Dockside_Foundation_Brick
+Kd 0.6029412 0.2513274 0.09310121
+illum 2
+
+newmtl Door_Interactable
+Kd 0.340872 0.2867647 1
+illum 2
+
+newmtl Buildings
+Kd 0.5808823 0.3055228 0.09396622
+illum 2
+
+newmtl Barrel
+Kd 0.1829584 0.2426918 0.5294118
+illum 2
+
+newmtl Wharf
+Kd 0.5147058 0.4463742 0.2232915
+illum 2
+
+newmtl Ladder_Interactable
+Kd 0.4926471 0.9160243 1
+illum 2
+
+newmtl CityWalls_ConcreteBricks
+Kd 0.5735295 0.5735295 0.5735295
+illum 2
+
+newmtl Sewage_Entrance
+Kd 0.2216755 0.2720588 0.1060229
+illum 2
+

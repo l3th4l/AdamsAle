@@ -1,0 +1,12 @@
+Adobe After Effects v13.5 Windows 64 render log for project “AEComp.aep”
+
+Rendering started on 27/02/2018 at 18:08:52
+
+  27/02/2018 18:08:52: Starting composition “Man_Crouching_04”.
+
+  Output To: F:\GHAdamsAle\Animations\Prisoner\Seq\Man_Crouching_04\kys_[#####].png    27/02/2018 18:08:54: Finished composition “Man_Crouching_04”.
+
+
+  Total Time Elapsed: 2 Seconds
+Log closed on 27/02/2018 at 18:08:54
+
