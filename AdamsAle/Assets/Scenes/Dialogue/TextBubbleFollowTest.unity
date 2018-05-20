@@ -339,7 +339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 387.9706, y: 281.50937}
+  m_AnchoredPosition: {x: 301.9066, y: 178.5734}
   m_SizeDelta: {x: -424.4, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &527746623
@@ -676,9 +676,9 @@ GameObject:
   - component: {fileID: 1723528327}
   - component: {fileID: 1723528326}
   - component: {fileID: 1723528325}
-  - component: {fileID: 1723528324}
   - component: {fileID: 1723528323}
   - component: {fileID: 1723528329}
+  - component: {fileID: 1723528324}
   m_Layer: 0
   m_Name: DialogueContainer
   m_TagString: Untagged
@@ -707,56 +707,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1723528322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d1d98c677775d14095382da23d9fcbb, type: 3}
+  m_Script: {fileID: 11500000, guid: ac5551b442eec26459382d1e99aa74ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text:
-  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at accumsan
-    lorem. Nunc auctor, urna a semper tempus, sapien nisi fermentum tortor, ac congue
-    justo tellus eget turpis. Duis elementum neque id erat aliquet, quis congue lorem
-    aliquet. Duis dictum finibus lectus nec sodales. Vivamus imperdiet, erat a dignissim
-    finibus, orci risus porta metus, sed tempus elit libero ut elit. Duis eget libero
-    convallis, vulputate massa ac, faucibus orci. Cras at quam a turpis egestas malesuada.
-    Suspendisse potenti. Fusce et finibus eros. In dictum libero ligula, at convallis
-    arcu consectetur quis. Mauris at orci leo. Aliquam at eros nulla. Sed quis mollis
-    tellus, et bibendum nulla. Integer eget elit quis nulla scelerisque suscipit non
-    eget justo. Nunc vel justo sed enim vehicula sodales id eget odio.
-  - Nam dapibus erat diam, eu tincidunt mi viverra suscipit. Aliquam eu semper massa,
-    eu tincidunt eros. Sed vel nibh eget ligula blandit feugiat vitae vitae neque.
-    Curabitur ut odio non justo euismod mollis vitae vitae odio. Pellentesque habitant
-    morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean
-    ipsum turpis, aliquam eget mi sit amet, tempus bibendum lectus. Phasellus eget
-    quam tempus, sodales tellus et, faucibus odio. Vestibulum dictum mauris sed leo
-    venenatis, id pharetra eros faucibus. Aenean iaculis hendrerit massa, id suscipit
-    ex fringilla sit amet. Phasellus suscipit sem porta erat placerat tincidunt rhoncus
-    et leo.
-  - Donec in sem at nulla consectetur pretium. Etiam vestibulum faucibus mi nec fringilla.
-    Etiam sed massa tempor, mattis nisl ut, congue leo. In a est nec ligula consequat
-    tristique quis quis libero. Sed consequat neque quis quam commodo, in elementum
-    quam accumsan. Cras id mollis sapien. Proin nec lorem eu ex pulvinar ultrices.
-    Praesent et convallis mauris, a scelerisque dui.
-  - Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-    Curae; Sed vestibulum magna tortor, a tincidunt est placerat nec. Aliquam erat
-    volutpat. Maecenas varius sapien a condimentum pulvinar. In purus arcu, mattis
-    quis bibendum at, mollis at turpis. Aenean ultricies non massa in gravida. Quisque
-    lobortis tortor et massa dignissim, vel pretium erat efficitur. Vestibulum non
-    auctor sem. Vestibulum semper, nunc non rhoncus feugiat, diam augue viverra tortor,
-    quis aliquam est mauris in erat. Quisque hendrerit purus sed libero volutpat feugiat.
-    Nullam id purus urna. Donec consectetur massa ac risus pharetra ornare. Duis et
-    interdum dolor. Aenean tincidunt libero et pellentesque consequat. Vestibulum
-    vel magna nec magna ultrices interdum sit amet efficitur velit. Phasellus elementum
-    metus sit amet quam convallis dictum.
-  - Quisque at hendrerit mauris. Praesent ut elit commodo leo consectetur euismod
-    id nec enim. In et consectetur mi. Morbi at dignissim lectus. Integer laoreet
-    molestie dui, at tempor tortor porttitor sed. Pellentesque lobortis, dui at pellentesque
-    suscipit, ante erat imperdiet dolor, mattis accumsan tellus purus vitae elit.
-    Vivamus nec nisi molestie, efficitur mauris non, vulputate massa. Quisque ullamcorper
-    facilisis risus, vitae volutpat metus rutrum vitae. Fusce imperdiet placerat magna
-    id lobortis. Pellentesque ut magna a magna accumsan vehicula. Fusce id nisl feugiat,
-    vulputate nunc dapibus, sodales mi. Phasellus luctus felis nec quam efficitur,
-    ac ultrices tortor cursus. Phasellus sit amet congue neque. Phasellus egestas
-    sed magna eu ullamcorper. Nullam vehicula ut elit quis porta. Pellentesque convallis
-    vitae mauris ut dapibus.
+  - Lorem
+  - ipsum
+  - dolor...
 --- !u!136 &1723528325
 CapsuleCollider:
   m_ObjectHideFlags: 0
