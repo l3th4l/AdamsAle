@@ -8,7 +8,7 @@
         private DialogueDisplay display;
 
         [SerializeField]
-        private DialogueProvider provider;
+        private DialogueProvider[] providers;
 
         public void ContinueDialogue()
         {
@@ -18,10 +18,14 @@
         public bool TryContinueDialogue()
         {
             string text;
-            if (this.provider.TryGetNext(out text))
+
+            for (int i = 0; i < this.providers.Length; i++)
             {
-                this.display.Text = text;
-                return true;
+                if (this.providers[i].TryGetNext(out text))
+                {
+                    this.display.Text = text;
+                    return true;
+                }
             }
 
             return false;
