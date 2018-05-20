@@ -272,13 +272,14 @@ GameObject:
   - component: {fileID: 527746625}
   - component: {fileID: 527746627}
   - component: {fileID: 527746626}
+  - component: {fileID: 527746628}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &527746622
 RectTransform:
   m_ObjectHideFlags: 0
@@ -295,8 +296,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 274.8, y: 159.14372}
-  m_SizeDelta: {x: -424.4, y: 0}
+  m_AnchoredPosition: {x: 356.3, y: 232.72849}
+  m_SizeDelta: {x: -424.4, y: -402}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &527746623
 MonoBehaviour:
@@ -379,6 +380,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!114 &527746628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 527746621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf23994957b19224389707ad8d54b9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 1366648744}
 --- !u!1 &1151973395
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +496,6 @@ GameObject:
   - component: {fileID: 1366648742}
   - component: {fileID: 1366648745}
   - component: {fileID: 1366648744}
-  - component: {fileID: 1366648743}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -504,22 +516,11 @@ RectTransform:
   m_Father: {fileID: 527746622}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 117.8, y: -21}
+  m_SizeDelta: {x: 215.6, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1366648743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1366648741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf23994957b19224389707ad8d54b9c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1366648744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,7 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a484db55b6393b54f9e958267a32c1aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 1366648743}
+  display: {fileID: 527746628}
   providers:
   - {fileID: 1723528324}
 --- !u!114 &1723528324
@@ -667,39 +668,125 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1d98c677775d14095382da23d9fcbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text:
-  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in congue justo.
-    Praesent eu rutrum odio. Class aptent taciti sociosqu ad litora torquent per conubia
-    nostra, per inceptos himenaeos. Nulla tempus, ligula vitae ullamcorper pulvinar,
-    neque justo imperdiet libero, sit amet venenatis elit arcu id odio. Sed maximus
-    consectetur neque et lacinia. Proin luctus porttitor odio, tristique porttitor
-    velit consequat ut. Nunc nec magna porta, finibus tortor a, lobortis ex. Etiam
-    et sem vitae tellus varius pulvinar eu a sapien. Proin at egestas ipsum. Etiam
-    finibus cursus nisi.
-  - Ut et purus ullamcorper quam mattis rhoncus. Mauris aliquet purus non metus feugiat
-    semper. Mauris nec nisl varius, lobortis turpis ac, eleifend lectus. Duis nec
-    nibh nulla. Praesent iaculis quis mauris ac feugiat. Vestibulum eleifend efficitur
-    quam ac aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-    habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-  - Donec feugiat risus nibh, in porta mauris congue vitae. Praesent cursus, neque
-    tristique iaculis commodo, nisl lorem commodo lacus, in facilisis eros lacus vitae
-    ipsum. Phasellus at dui et enim aliquam consectetur. Etiam pretium dui et odio
-    bibendum ultricies. Donec eu egestas mauris, ac convallis magna. Donec nec aliquet
-    sem. Suspendisse consectetur efficitur faucibus. Pellentesque vehicula nec lorem
-    in consectetur. Pellentesque habitant morbi tristique senectus et netus et malesuada
-    fames ac turpis egestas. Etiam a nisl nec enim varius efficitur ac sit amet diam.
-    Fusce placerat tristique magna quis scelerisque.
-  - Etiam eget risus tempus, malesuada lectus vitae, elementum ex. Interdum et malesuada
-    fames ac ante ipsum primis in faucibus. Nam eu quam in nunc tristique sagittis.
-    Vivamus eget molestie neque, eget sollicitudin elit. Aliquam maximus leo in auctor
-    lobortis. Etiam auctor neque a porta sagittis. Sed lacinia fermentum porttitor.
-  - Donec dictum tincidunt aliquet. In a malesuada ipsum, vel molestie dolor. Sed
-    sit amet felis est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-    posuere cubilia Curae; Nam eu magna ut ipsum dictum semper. Vivamus consequat
-    feugiat condimentum. Phasellus at ligula enim. Integer convallis libero vitae
-    egestas maximus. Aliquam imperdiet, turpis nec viverra dapibus, arcu lectus pharetra
-    ipsum, vitae vestibulum odio neque ac ipsum. Nam porta in sem nec pharetra. Maecenas
-    gravida leo sit amet sem pulvinar sodales.
+  items:
+  - Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies
+      velit in iaculis euismod. Nullam posuere tortor sit amet magna facilisis, ac
+      maximus mi iaculis. Proin sit amet erat risus. In pellentesque luctus enim,
+      ac accumsan ligula congue id. Cras dignissim libero dui, ut euismod odio sollicitudin
+      quis. Mauris ac faucibus tellus, vitae sollicitudin arcu. Integer posuere molestie
+      pretium. Sed commodo hendrerit nisl sit amet condimentum. Aenean molestie sem
+      ligula, sit amet finibus nunc accumsan varius. Nunc a rutrum dolor. Quisque
+      ex orci, condimentum sed dignissim in, porttitor sit amet tellus. Etiam non
+      lacus non arcu pretium porta eget sed massa. Fusce libero orci, pulvinar vitae
+      elit a, tempus malesuada eros. Orci varius natoque penatibus et magnis dis parturient
+      montes, nascetur ridiculus mus. Maecenas nec blandit eros, ac fermentum quam.
+      Phasellus non nisl a neque placerat tempus.
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 527746628}
+          m_MethodName: Open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Text: Ut vel condimentum dolor. Nulla facilisi. Morbi gravida ante ligula, at
+      interdum libero ullamcorper in. Duis vehicula lacus odio, et condimentum nunc
+      gravida non. Donec id lobortis nisl. Vivamus id sem elementum, tempus metus
+      eu, sagittis velit. Aliquam quis malesuada lacus, sit amet elementum odio. Morbi
+      vulputate ullamcorper libero id interdum. Vivamus bibendum tellus sit amet diam
+      porttitor, quis vulputate turpis laoreet. Mauris rhoncus pellentesque velit.
+      Aenean consectetur id erat vitae molestie.
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 527746628}
+          m_MethodName: Open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Text: Donec blandit congue turpis. Donec posuere lacus eu lorem tempor, porttitor
+      faucibus nulla sodales. Etiam sapien orci, porttitor id mollis at, tincidunt
+      vel nisi. Mauris et euismod tellus. Ut pulvinar sed ligula a porta. Duis pulvinar
+      ex velit, non mollis nibh luctus ac. Donec purus mi, eleifend sit amet elit
+      ut, suscipit efficitur purus. In volutpat at ligula id posuere.
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 527746628}
+          m_MethodName: Open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Text: Aliquam sed dictum nisi, commodo laoreet mauris. Duis id sodales nisl. Vivamus
+      efficitur massa ac euismod tempus. Duis ac iaculis ligula, ac bibendum sem.
+      Ut eu blandit sem, id elementum velit. Nullam enim augue, ullamcorper tristique
+      pulvinar non, dictum eget augue. Sed ac felis enim. Aliquam mattis quam non
+      aliquet tempus. Phasellus dapibus turpis a lacus sagittis condimentum. Praesent
+      hendrerit porta nibh eget aliquet. Suspendisse imperdiet ultrices augue, at
+      semper purus dictum eget. Vivamus scelerisque est eget scelerisque elementum.
+      Ut imperdiet ex at volutpat gravida. Mauris ornare gravida metus. Sed viverra
+      viverra euismod.
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 527746628}
+          m_MethodName: Open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Text: Etiam egestas efficitur eros id pellentesque. Suspendisse ante lorem, scelerisque
+      et ex vitae, volutpat efficitur enim. Morbi elit nulla, elementum pretium venenatis
+      at, efficitur at mauris. Praesent imperdiet erat quam, eget pulvinar orci fermentum
+      eget. Quisque rhoncus orci nec aliquam auctor. Maecenas varius ullamcorper arcu,
+      sollicitudin malesuada risus posuere et. Proin vestibulum vulputate porttitor.
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 527746628}
+          m_MethodName: Open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
 --- !u!136 &1723528325
 CapsuleCollider:
   m_ObjectHideFlags: 0

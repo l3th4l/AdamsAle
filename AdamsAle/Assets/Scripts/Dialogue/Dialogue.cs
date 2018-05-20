@@ -17,13 +17,14 @@
 
         public bool TryContinueDialogue()
         {
-            string text;
+            DialogueItem item;
 
             for (int i = 0; i < this.providers.Length; i++)
             {
-                if (this.providers[i].TryGetNext(out text))
+                if (this.providers[i].TryGetNext(out item))
                 {
-                    this.display.Text = text;
+                    this.display.Text = item.Text;
+                    item.Event.Invoke();
                     return true;
                 }
             }

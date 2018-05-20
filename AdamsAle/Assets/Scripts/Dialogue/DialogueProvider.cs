@@ -4,6 +4,6 @@
 
     public abstract class DialogueProvider : MonoBehaviour
     {
-        public abstract bool TryGetNext(out string text);
+        public abstract bool TryGetNext(out DialogueItem text);
     }
 }

@@ -272,13 +272,14 @@ GameObject:
   - component: {fileID: 527746625}
   - component: {fileID: 527746627}
   - component: {fileID: 527746626}
+  - component: {fileID: 527746628}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &527746622
 RectTransform:
   m_ObjectHideFlags: 0
@@ -295,8 +296,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 274.8, y: 159.14372}
-  m_SizeDelta: {x: -424.4, y: 0}
+  m_AnchoredPosition: {x: 79.883606, y: 111.60615}
+  m_SizeDelta: {x: -243.12, y: -402}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &527746623
 MonoBehaviour:
@@ -379,6 +380,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!114 &527746628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 527746621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf23994957b19224389707ad8d54b9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 1366648744}
 --- !u!1 &1151973395
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +496,6 @@ GameObject:
   - component: {fileID: 1366648742}
   - component: {fileID: 1366648745}
   - component: {fileID: 1366648744}
-  - component: {fileID: 1366648743}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -504,22 +516,11 @@ RectTransform:
   m_Father: {fileID: 527746622}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105.44, y: -21}
+  m_SizeDelta: {x: 190.88, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1366648743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1366648741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf23994957b19224389707ad8d54b9c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1366648744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,7 +655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a484db55b6393b54f9e958267a32c1aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 1366648743}
+  display: {fileID: 527746628}
   providers:
   - {fileID: 1723528330}
   - {fileID: 1723528324}
@@ -669,12 +670,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1d98c677775d14095382da23d9fcbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text:
-  - What are you looking at?
-  - Shoo!
-  - '...'
-  - Do I have to tell you again?
-  - I won't repeat myself.
+  items:
+  - Text: These random items will all have to call Open, since we won't know their
+      actual order.
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 527746628}
+          m_MethodName: Open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Text: So I'm thinking I'll add a DefaultEvent or something like that. That should
+      be possible.
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 527746628}
+          m_MethodName: Open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Text: 
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 527746628}
+          m_MethodName: Close
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
 --- !u!136 &1723528325
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -737,7 +786,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1723528322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.51, y: -3.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -766,7 +815,109 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac5551b442eec26459382d1e99aa74ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text:
-  - Welcome to the test!
-  - You've probably already passed it, though.
-  - So you can go on your merry way.
+  items:
+  - Text: When this pops up, I call the Open method.
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 527746628}
+          m_MethodName: Open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Text: You can then write as many pieces of text as you want - on multiple lines.
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Text: I'll show you something cool.
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Text: Please keep clicking through until I say stop, even if the bubble is gone,
+      okay?
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Text: Trust me on this.
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Text: We hopefully won't see this text...
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 527746628}
+          m_MethodName: Close
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Text: '... nor this text...'
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Text: '... but we''ll definitely see this text.'
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 527746628}
+          m_MethodName: Open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Text: Thanks for playing along with me!
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Text: 
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 527746628}
+          m_MethodName: Close
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null

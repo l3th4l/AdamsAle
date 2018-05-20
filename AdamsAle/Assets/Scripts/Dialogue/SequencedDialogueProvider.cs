@@ -5,19 +5,19 @@
     public sealed class SequencedDialogueProvider : DialogueProvider
     {
         [SerializeField]
-        private string[] text;
+        private DialogueItem[] items;
 
         private int lastIndex = -1;
 
-        public override bool TryGetNext(out string text)
+        public override bool TryGetNext(out DialogueItem item)
         {
-            if (this.lastIndex < this.text.Length - 1)
+            if (this.lastIndex < this.items.Length - 1)
             {
-                text = this.text[++this.lastIndex];
+                item = this.items[++this.lastIndex];
                 return true;
             }
 
-            text = string.Empty;
+            item = new DialogueItem();
             return false;
         }
     }
