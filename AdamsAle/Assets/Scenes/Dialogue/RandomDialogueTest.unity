@@ -259,50 +259,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &492907075
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 492907077}
-  - component: {fileID: 492907076}
-  m_Layer: 0
-  m_Name: Mover
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &492907076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 492907075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82019cd61d3666540be7fe5377ea659a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  executeInEditMode: 0
-  transforms:
-  - {fileID: 1723528328}
-  speed: 0.01
---- !u!4 &492907077
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 492907075}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &527746621
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 301.9066, y: 178.5734}
+  m_AnchoredPosition: {x: 274.8, y: 178.5734}
   m_SizeDelta: {x: -424.4, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &527746623
@@ -527,6 +483,7 @@ GameObject:
   - component: {fileID: 1366648742}
   - component: {fileID: 1366648745}
   - component: {fileID: 1366648744}
+  - component: {fileID: 1366648743}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -552,6 +509,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1366648743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1366648741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf23994957b19224389707ad8d54b9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1366648744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -584,14 +552,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in congue
-    justo. Praesent eu rutrum odio. Class aptent taciti sociosqu ad litora torquent
-    per conubia nostra, per inceptos himenaeos. Nulla tempus, ligula vitae ullamcorper
-    pulvinar, neque justo imperdiet libero, sit amet venenatis elit arcu id odio.
-    Sed maximus consectetur neque et lacinia. Proin luctus porttitor odio, tristique
-    porttitor velit consequat ut. Nunc nec magna porta, finibus tortor a, lobortis
-    ex. Etiam et sem vitae tellus varius pulvinar eu a sapien. Proin at egestas ipsum.
-    Etiam finibus cursus nisi.
+  m_Text: Click the character to continue in the dialogue...
 --- !u!222 &1366648745
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -671,13 +632,73 @@ GameObject:
   - component: {fileID: 1723528327}
   - component: {fileID: 1723528326}
   - component: {fileID: 1723528325}
+  - component: {fileID: 1723528323}
+  - component: {fileID: 1723528329}
+  - component: {fileID: 1723528324}
   m_Layer: 0
-  m_Name: Target
+  m_Name: DialogueContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1723528323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1723528322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a484db55b6393b54f9e958267a32c1aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 1366648743}
+  provider: {fileID: 1723528324}
+--- !u!114 &1723528324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1723528322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1d98c677775d14095382da23d9fcbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text:
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in congue justo.
+    Praesent eu rutrum odio. Class aptent taciti sociosqu ad litora torquent per conubia
+    nostra, per inceptos himenaeos. Nulla tempus, ligula vitae ullamcorper pulvinar,
+    neque justo imperdiet libero, sit amet venenatis elit arcu id odio. Sed maximus
+    consectetur neque et lacinia. Proin luctus porttitor odio, tristique porttitor
+    velit consequat ut. Nunc nec magna porta, finibus tortor a, lobortis ex. Etiam
+    et sem vitae tellus varius pulvinar eu a sapien. Proin at egestas ipsum. Etiam
+    finibus cursus nisi.
+  - Ut et purus ullamcorper quam mattis rhoncus. Mauris aliquet purus non metus feugiat
+    semper. Mauris nec nisl varius, lobortis turpis ac, eleifend lectus. Duis nec
+    nibh nulla. Praesent iaculis quis mauris ac feugiat. Vestibulum eleifend efficitur
+    quam ac aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+    habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+  - Donec feugiat risus nibh, in porta mauris congue vitae. Praesent cursus, neque
+    tristique iaculis commodo, nisl lorem commodo lacus, in facilisis eros lacus vitae
+    ipsum. Phasellus at dui et enim aliquam consectetur. Etiam pretium dui et odio
+    bibendum ultricies. Donec eu egestas mauris, ac convallis magna. Donec nec aliquet
+    sem. Suspendisse consectetur efficitur faucibus. Pellentesque vehicula nec lorem
+    in consectetur. Pellentesque habitant morbi tristique senectus et netus et malesuada
+    fames ac turpis egestas. Etiam a nisl nec enim varius efficitur ac sit amet diam.
+    Fusce placerat tristique magna quis scelerisque.
+  - Etiam eget risus tempus, malesuada lectus vitae, elementum ex. Interdum et malesuada
+    fames ac ante ipsum primis in faucibus. Nam eu quam in nunc tristique sagittis.
+    Vivamus eget molestie neque, eget sollicitudin elit. Aliquam maximus leo in auctor
+    lobortis. Etiam auctor neque a porta sagittis. Sed lacinia fermentum porttitor.
+  - Donec dictum tincidunt aliquet. In a malesuada ipsum, vel molestie dolor. Sed
+    sit amet felis est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+    posuere cubilia Curae; Nam eu magna ut ipsum dictum semper. Vivamus consequat
+    feugiat condimentum. Phasellus at ligula enim. Integer convallis libero vitae
+    egestas maximus. Aliquam imperdiet, turpis nec viverra dapibus, arcu lectus pharetra
+    ipsum, vitae vestibulum odio neque ac ipsum. Nam porta in sem nec pharetra. Maecenas
+    gravida leo sit amet sem pulvinar sodales.
 --- !u!136 &1723528325
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -740,9 +761,21 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1723528322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1723528329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1723528322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 992890a512d48a147a404430e5ca7495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 1723528323}
