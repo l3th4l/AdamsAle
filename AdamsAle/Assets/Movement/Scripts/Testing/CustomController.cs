@@ -63,7 +63,8 @@
 
         private void SetMovementInput()
         {
-            this.inputSpeed.x = Input.GetAxis("Horizontal") * this.movementSpeed * Time.deltaTime;
+            if (this.isGrounded)
+                this.inputSpeed.x = Input.GetAxis("Horizontal") * this.movementSpeed * Time.deltaTime;
         }
 
         private void UpdateSpriteFlip()
