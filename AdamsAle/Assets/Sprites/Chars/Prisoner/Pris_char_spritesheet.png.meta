@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 72b48ead13a2a49498380c627a1a2be5
-timeCreated: 1519735932
-licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Pris_char_spritesheet_0
@@ -34,7 +32,7 @@ TextureImporter:
     21300054: Pris_char_spritesheet_27
     21300056: Pris_char_spritesheet_28
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 5
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -74,18 +72,21 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 8192
     resizeAlgorithm: 1
     textureFormat: -1
@@ -95,7 +96,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Standalone
+  - serializedVersion: 2
+    buildTarget: Standalone
     maxTextureSize: 8192
     resizeAlgorithm: 1
     textureFormat: -1
@@ -105,7 +107,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: WebGL
+  - serializedVersion: 2
+    buildTarget: WebGL
     maxTextureSize: 8192
     resizeAlgorithm: 1
     textureFormat: -1
@@ -122,410 +125,590 @@ TextureImporter:
       name: Pris_char_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 156
-        y: 1916
-        width: 288
-        height: 318
+        x: 0
+        y: 1920
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e11459ae97f9a114c90764c148082b35
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 796
-        y: 1916
-        width: 288
-        height: 328
+        x: 640
+        y: 1920
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 92a1218d2224ba9498fef74055bad3f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 1436
-        y: 1916
-        width: 288
-        height: 328
+        x: 1280
+        y: 1920
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8053e6a2f01af3e40aa73f4a4adcd46d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 2716
-        y: 1916
-        width: 268
-        height: 388
+        x: 2560
+        y: 1920
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 75e884dc73c9ef54b8199a519506931a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 3356
-        y: 1926
-        width: 258
-        height: 378
+        x: 3200
+        y: 1920
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e58a12b0d2d9c394dbdf2a3498225ed7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 4044
-        y: 1916
-        width: 218
-        height: 388
+        x: 3840
+        y: 1920
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 43d13135e97003d428c9b780e1171be4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_6
       rect:
         serializedVersion: 2
-        x: 4646
-        y: 1916
-        width: 268
-        height: 378
+        x: 4480
+        y: 1920
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 7db51e6bc8406db43b37ec9ac4972f3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_7
       rect:
         serializedVersion: 2
-        x: 176
-        y: 1276
-        width: 258
-        height: 398
+        x: 0
+        y: 1280
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: b567b4d6f0bf2884b8c3676cdd3f2b96
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_8
       rect:
         serializedVersion: 2
-        x: 836
-        y: 1276
-        width: 238
-        height: 388
+        x: 640
+        y: 1280
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ff68bc710f772ac4c9153afb5026255d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_9
       rect:
         serializedVersion: 2
-        x: 1486
-        y: 1306
-        width: 318
-        height: 518
+        x: 1280
+        y: 1280
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8809daacda5425446be2c6efafd3d7c5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_10
       rect:
         serializedVersion: 2
-        x: 2126
-        y: 1316
-        width: 308
-        height: 518
+        x: 1920
+        y: 1280
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a1a473ada1e5be949bae2e61a0f71f12
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_11
       rect:
         serializedVersion: 2
-        x: 3416
-        y: 1276
-        width: 248
-        height: 288
+        x: 3200
+        y: 1280
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 86a4b297d33a42d46b59543abfb6a425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_12
       rect:
         serializedVersion: 2
-        x: 3966
-        y: 1286
-        width: 308
-        height: 548
+        x: 3840
+        y: 1280
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2cdb321d20cd718439c57f1f8f22db7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_13
       rect:
         serializedVersion: 2
-        x: 4626
-        y: 1326
-        width: 328
-        height: 518
+        x: 4480
+        y: 1280
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4cbc6069a1869b042905c906fcf1a9ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_14
       rect:
         serializedVersion: 2
-        x: 206
-        y: 666
-        width: 318
-        height: 518
+        x: 0
+        y: 640
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: f83b6923280f35d49a19caff62970b71
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_15
       rect:
         serializedVersion: 2
-        x: 736
-        y: 726
-        width: 438
-        height: 408
+        x: 640
+        y: 640
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 654e4256b91c0494d876f02775533295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_16
       rect:
         serializedVersion: 2
-        x: 1456
-        y: 636
-        width: 268
-        height: 478
+        x: 1280
+        y: 640
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: b46f3e7c4c614064e8529657d37e2d17
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_17
       rect:
         serializedVersion: 2
-        x: 2016
-        y: 736
-        width: 448
-        height: 408
+        x: 1920
+        y: 640
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 67b23b1293ddc8843b0c5e16ab8a2b3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_18
       rect:
         serializedVersion: 2
-        x: 2746
-        y: 636
-        width: 238
-        height: 468
+        x: 2560
+        y: 640
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6e0d6d86da6fcc64081988b51418aa72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_19
       rect:
         serializedVersion: 2
-        x: 3296
-        y: 726
-        width: 438
-        height: 368
+        x: 3200
+        y: 640
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: f335d92946650744aa30bd6137ffb3f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_20
       rect:
         serializedVersion: 2
-        x: 4006
-        y: 636
-        width: 298
-        height: 388
+        x: 3840
+        y: 640
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e9f9bfb2957de564d97b4ac8ee760ddc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_21
       rect:
         serializedVersion: 2
-        x: 4576
-        y: 736
-        width: 448
-        height: 388
+        x: 4480
+        y: 640
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: f2deb133139552a42944ce0a11d78602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_22
       rect:
         serializedVersion: 2
-        x: 166
+        x: 0
         y: 0
-        width: 308
-        height: 384
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 3d202ce3d063cc04aa89dc079a2f4cef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_23
       rect:
         serializedVersion: 2
-        x: 1456
+        x: 1280
         y: 0
-        width: 278
-        height: 544
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 74b24778531fa6c4797c9b3fbef7d6c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_24
       rect:
         serializedVersion: 2
-        x: 2106
+        x: 1920
         y: 0
-        width: 258
-        height: 524
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e2b3a6aa0e9712a40890953094da8efb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_25
       rect:
         serializedVersion: 2
-        x: 2746
+        x: 2560
         y: 0
-        width: 208
-        height: 544
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 69e1d398ff9a920439ee81647280b80b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_26
       rect:
         serializedVersion: 2
-        x: 3446
+        x: 3200
         y: 0
-        width: 138
-        height: 564
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 1b8f21ac64156ed43a1869ab9d981529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_27
       rect:
         serializedVersion: 2
-        x: 4026
+        x: 3840
         y: 0
-        width: 298
-        height: 554
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 1e48caaaf54fb8f42ab65bb78aed7fe6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Pris_char_spritesheet_28
       rect:
         serializedVersion: 2
-        x: 4666
+        x: 4480
         y: 0
-        width: 198
-        height: 544
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: bcc02d2366379014c8ad4d21709046af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: b6af9827f808372438e2f3f3a5291763
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
