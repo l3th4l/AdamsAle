@@ -1,5 +1,6 @@
 ﻿namespace Movement
 {
+    using System;
     using CollisionUtility;
     using UnityEngine;
 
@@ -13,14 +14,26 @@
         private Vector2
             inputSpeed,
             velocity;
+        
+        private bool
+            isGrounded,
+            isSprinting,
+            hasJumpQueued;
 
-        private bool isGrounded, hasJumpQueued;
+        private Vector2 lastPosition;
 
         [SerializeField]
         private TriggerHook2D groundedHook;
 
         [SerializeField]
-        private float movementSpeed = 5f, jumpSpeed = 10f, jumpCooldown = 0.5f;
+        private float
+            walkSpeed = 5f,
+            sprintSpeed = 8f,
+            jumpSpeed = 10f;
+
+        [SerializeField]
+        private float
+            jumpCooldown = 0.5f;
 
         private void Reset()
         {
@@ -48,8 +61,7 @@
 
         private void Update()
         {
-            if (this.isGrounded && Input.GetButtonDown("Jump"))
-                this.hasJumpQueued = true;
+            this.UpdateInput();
         }
 
         private void FixedUpdate()
@@ -59,12 +71,32 @@
             this.ApplyGravity();
             this.ApplyJumpInput();
             this.Apply();
+            this.UpdateAnimatorSpeed();
+        }
+
+        private void Jump()
+        {
+            this.velocity += Vector2.up * this.jumpSpeed * Time.deltaTime;
+            this.hasJumpQueued = false;
+
+            this.anim.SetTrigger("Jump");
+        }
+
+        private void UpdateInput()
+        {
+            if (this.isGrounded && Input.GetButtonDown("Jump"))
+                this.hasJumpQueued = true;
+
+            this.isSprinting = Input.GetButton("Sprint");
         }
 
         private void SetMovementInput()
         {
             if (this.isGrounded)
-                this.inputSpeed.x = Input.GetAxis("Horizontal") * this.movementSpeed * Time.deltaTime;
+                this.inputSpeed.x =
+                    Input.GetAxis("Horizontal")
+                    * (this.isSprinting ? this.sprintSpeed : this.walkSpeed)
+                    * Time.deltaTime;
         }
 
         private void UpdateSpriteFlip()
@@ -82,14 +114,22 @@
         {
             if (this.isGrounded && this.hasJumpQueued)
             {
-                this.velocity += Vector2.up * this.jumpSpeed * Time.deltaTime;
-                this.hasJumpQueued = false;
+                Jump();
             }
         }
 
         private void Apply()
         {
             this.rb.MovePosition(this.rb.position + this.inputSpeed + this.velocity);
+        }
+
+        private void UpdateAnimatorSpeed()
+        {
+            float measuredSpeed =
+                Vector2.Distance(this.lastPosition, this.rb.position)
+                * (1f / Time.deltaTime);
+            this.anim.SetFloat("Speed", measuredSpeed);
+            this.lastPosition = this.rb.position;
         }
 
         // This executes after FixedUpdate
