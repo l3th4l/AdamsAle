@@ -44,40 +44,46 @@
             Cursor.visible = !Input.GetButton(WeaponsInput);
 
             if (Input.GetButtonDown(WeaponsInput))
-            {
-                this.FetchIconImages();
-                this.UpdateSelected();
-
-                // Don't want to update too often
-                if (this.cachedSlotCount != this.container.Slots)
-                    this.UpdateDividers();
-
-                this.accumulatedMousePos = Vector2.zero;
-                this.lastMousePos = Input.mousePosition;
-
-                this.cachedSlotCount = this.container.Slots;
-            }
+                this.StartSelection();
 
             if (Input.GetButton(WeaponsInput))
+                this.UpdateSelected();
+        }
+
+        private void StartSelection()
+        {
+            this.FetchIconImages();
+            this.DrawSelected();
+
+            // Don't want to update too often
+            if (this.cachedSlotCount != this.container.Slots)
+                this.UpdateDividers();
+
+            this.accumulatedMousePos = Vector2.zero;
+            this.lastMousePos = Input.mousePosition;
+
+            this.cachedSlotCount = this.container.Slots;
+        }
+
+        private void UpdateSelected()
+        {
+            this.accumulatedMousePos =
+                Vector2.ClampMagnitude(
+                    this.accumulatedMousePos + (Input.mousePosition - this.lastMousePos),
+                    this.selectCircleRadius);
+
+            if (this.accumulatedMousePos != Vector3.zero)
             {
-                this.accumulatedMousePos =
-                    Vector2.ClampMagnitude(
-                        this.accumulatedMousePos + (Input.mousePosition - this.lastMousePos),
-                        this.selectCircleRadius);
+                const float Tau = 2f * Mathf.PI;
+                float rotationPerSlot = Tau / this.container.Slots;
+                float halfRotationPerSlot = rotationPerSlot * 0.5f;
+                float rads = Mathf.Atan2(this.accumulatedMousePos.x, this.accumulatedMousePos.y) + halfRotationPerSlot;
 
-                if (this.accumulatedMousePos != Vector3.zero)
-                {
-                    float rotationPerSlot = (2 * Mathf.PI) / this.container.Slots;
-                    float halfRotationPerSlot = rotationPerSlot * 0.5f;
-                    float rads = Mathf.Atan2(this.accumulatedMousePos.x, this.accumulatedMousePos.y) + halfRotationPerSlot;
-                    const float Tau = 2f * Mathf.PI;
-
-                    this.container.SelectedIndex = (int)((((rads % Tau + Tau) % Tau) / Tau) * this.container.Slots);
-                    this.UpdateSelected();
-                }
-
-                this.lastMousePos = Input.mousePosition;
+                this.container.SelectedIndex = (int)((((rads % Tau + Tau) % Tau) / Tau) * this.container.Slots);
+                this.DrawSelected();
             }
+
+            this.lastMousePos = Input.mousePosition;
         }
 
         private void FetchIconImages()
@@ -115,20 +121,15 @@
                 transform.rotation = Quaternion.Euler(0f, 0f, rotation -= rotationPerSlot);
             }
 
-            this.selection.fillAmount = this.CalculateSelectionFillAmount();
+            this.selection.fillAmount = 1f / this.container.Slots;
         }
 
-        private void UpdateSelected()
+        private void DrawSelected()
         {
             float rotationPerSlot = 360f / this.container.Slots;
             float halfRotationPerSlot = rotationPerSlot * 0.5f;
             var transform = (RectTransform)this.selection.transform;
             transform.rotation = Quaternion.Euler(0f, 0f, -180f + halfRotationPerSlot - this.container.SelectedIndex * rotationPerSlot);
-        }
-
-        private float CalculateSelectionFillAmount()
-        {
-            return 1f / this.container.Slots;
         }
     }
 
