@@ -1,7 +1,5 @@
 ﻿namespace Weapons
 {
-    using System;
-    using System.Linq;
     using UnityEngine;
     using UnityEngine.UI;
 
@@ -125,25 +123,30 @@
             {
                 WeaponWheel.Destroy(this.iconContainer.GetChild(i).gameObject);
             }
-            
-            float degsPerSlot = 360f / this.container.Slots;
-            float degs = 90f;
+
+            const float Tau = 2f * Mathf.PI;
+            float radsPerSlot = Tau / this.container.Slots;
+            float rads = 0.5f * Mathf.PI;
             this.icons = new Image[this.container.Slots];
             for (int i = 0; i < this.container.Slots; i++)
             {
                 this.icons[i] = WeaponWheel.Instantiate(this.iconPrefab, this.iconContainer, false);
                 var transform = (RectTransform)this.icons[i].transform;
-                transform.rotation = Quaternion.Euler(0f, 0f, degs);
-                degs -= degsPerSlot;
+                transform.anchoredPosition =
+                    new Vector3(
+                        Mathf.Cos(rads),
+                        Mathf.Sin(rads))
+                    * transform.anchoredPosition.y;
+                rads -= radsPerSlot;
             }
         }
 
         private void UpdateIcons()
         {
-            int i = 0;
-            foreach (var icon in this.container.Icons)
+            var enumerator = this.container.Icons.GetEnumerator();
+            for (int i = 0; i < this.container.Slots && enumerator.MoveNext(); i++)
             {
-                this.icons[i++].sprite = icon.Sprite;
+                this.icons[i].sprite = enumerator.Current.Sprite;
             }
         }
 

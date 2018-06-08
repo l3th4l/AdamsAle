@@ -7,8 +7,7 @@
     {
         private const int MinSlots = 2, MaxSlots = 8;
 
-        [SerializeField, Range(MinSlots, MaxSlots)]
-        private int slots = 8;
+        private int slots;
 
         [SerializeField, Range(0, MaxSlots - 1)]
         private int selectedIndex;
@@ -44,6 +43,7 @@
         private void UpdateWeapons()
         {
             this.weaponIcons = this.GetComponents<IWeaponIcon>();
+            this.slots = Mathf.Min(this.weaponIcons.Length, MaxSlots);
         }
     }
 }
