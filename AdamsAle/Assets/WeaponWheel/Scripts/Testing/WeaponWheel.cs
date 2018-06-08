@@ -8,7 +8,7 @@
         [SerializeField]
         private WeaponContainer container;
 
-        [Space, SerializeField]
+        [Header("Containers"), SerializeField]
         private Image fullMask;
         
         [SerializeField]
@@ -23,7 +23,7 @@
         [SerializeField]
         private Image iconPrefab;
         
-        [Space, SerializeField]
+        [Header("Selection"), SerializeField]
         private Image selection;
 
         [SerializeField]
