@@ -1,29 +1,36 @@
 ﻿namespace Weapons
 {
+    using System;
     using System.Linq;
     using UnityEngine;
     using UnityEngine.UI;
-    
+
     internal sealed class WeaponWheel : MonoBehaviour
     {
         [SerializeField]
-        private Image fullMask;
-
-        [Space, SerializeField]
         private WeaponContainer container;
 
         [Space, SerializeField]
-        private GameObject dividerPrefab;
-
+        private Image fullMask;
+        
         [SerializeField]
         private Transform dividerContainer;
 
         [SerializeField]
+        private GameObject dividerPrefab;
+
+        [SerializeField]
+        private Transform iconContainer;
+
+        [SerializeField]
+        private Image iconPrefab;
+        
+        [Space, SerializeField]
         private Image selection;
 
-        [Space, SerializeField]
+        [SerializeField]
         private float selectCircleRadius;
-
+        
         private Image[] icons;
 
         private Vector3 lastMousePos, accumulatedMousePos;
@@ -52,19 +59,18 @@
 
         private void StartSelection()
         {
-            this.FetchIconImages();
             this.DrawSelected();
 
             // Don't want to update too often
             if (this.cachedSlotCount != this.container.Slots)
-                this.UpdateDividers();
+                this.UpdateSlots();
 
             this.accumulatedMousePos = Vector2.zero;
             this.lastMousePos = Input.mousePosition;
 
             this.cachedSlotCount = this.container.Slots;
         }
-
+        
         private void UpdateSelected()
         {
             this.accumulatedMousePos =
@@ -86,22 +92,11 @@
             this.lastMousePos = Input.mousePosition;
         }
 
-        private void FetchIconImages()
+        private void UpdateSlots()
         {
-            this.icons =
-                this.GetComponentsInChildren<Image>()
-                .Where(i => i.CompareTag("WeaponIcon"))
-                .ToArray();
-        }
-
-        private void UpdateIcons()
-        {
-            int i = 0;
-            foreach (var icon in this.container.Icons)
-            {
-                if (icon != null)
-                    this.icons[i++].sprite = icon.Sprite;
-            }
+            this.UpdateDividers();
+            this.UpdateIconImages();
+            this.UpdateIcons();
         }
 
         private void UpdateDividers()
@@ -124,6 +119,34 @@
             this.selection.fillAmount = 1f / this.container.Slots;
         }
 
+        private void UpdateIconImages()
+        {
+            for (int i = 0; i < this.iconContainer.childCount; i++)
+            {
+                WeaponWheel.Destroy(this.iconContainer.GetChild(i).gameObject);
+            }
+            
+            float degsPerSlot = 360f / this.container.Slots;
+            float degs = 90f;
+            this.icons = new Image[this.container.Slots];
+            for (int i = 0; i < this.container.Slots; i++)
+            {
+                this.icons[i] = WeaponWheel.Instantiate(this.iconPrefab, this.iconContainer, false);
+                var transform = (RectTransform)this.icons[i].transform;
+                transform.rotation = Quaternion.Euler(0f, 0f, degs);
+                degs -= degsPerSlot;
+            }
+        }
+
+        private void UpdateIcons()
+        {
+            int i = 0;
+            foreach (var icon in this.container.Icons)
+            {
+                this.icons[i++].sprite = icon.Sprite;
+            }
+        }
+
         private void DrawSelected()
         {
             float rotationPerSlot = 360f / this.container.Slots;
@@ -132,5 +155,4 @@
             transform.rotation = Quaternion.Euler(0f, 0f, -180f + halfRotationPerSlot - this.container.SelectedIndex * rotationPerSlot);
         }
     }
-
 }
