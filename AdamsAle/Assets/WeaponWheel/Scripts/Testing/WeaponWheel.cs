@@ -5,6 +5,10 @@
 
     internal sealed class WeaponWheel : MonoBehaviour
     {
+        private const string
+            WeaponsInput = "Weapons",
+            SwapInput = "Fire1";
+
         [SerializeField]
         private WeaponContainer container;
 
@@ -24,16 +28,48 @@
         private Image iconPrefab;
         
         [Header("Selection"), SerializeField]
-        private Image selection;
+        private Image selectionImage;
+
+        [SerializeField]
+        private Image selectionMask;
 
         [SerializeField]
         private float selectCircleRadius;
-        
+
+        [Header("Swapping"), SerializeField]
+        private RectTransform circle;
+
+        [SerializeField]
+        private RectTransform circleMask;
+
+        [SerializeField]
+        private Image swapSelection;
+
+        [SerializeField]
+        private RectTransform outerCircleMask;
+
+        [SerializeField]
+        private float outerPadding = 15f;
+
         private Image[] icons;
 
         private Vector3 lastMousePos, accumulatedMousePos;
+        
+        private int cachedSlotCount, maskedIndex = -1;
 
-        private int cachedSlotCount;
+        private bool IsSwitching
+        {
+            get { return this.selectionMask.enabled; }
+            set { this.selectionMask.enabled = value; }
+        }
+
+        private float SelectionFillAmount
+        {
+            set
+            {
+                this.selectionImage.fillAmount = this.selectionMask.fillAmount = this.swapSelection.fillAmount = value;
+            }
+        }
 
         private void Reset()
         {
@@ -42,14 +78,15 @@
 
         private void Update()
         {
-            const string WeaponsInput = "Weapons";
-
             // Make this an animation later
             this.fullMask.enabled = !Input.GetButton(WeaponsInput);
             Cursor.visible = !Input.GetButton(WeaponsInput);
+            this.IsSwitching = Input.GetButton(SwapInput);
 
             if (Input.GetButtonDown(WeaponsInput))
                 this.StartSelection();
+            else if (Input.GetButtonUp(WeaponsInput))
+                this.maskedIndex = -1;
 
             if (Input.GetButton(WeaponsInput))
                 this.UpdateSelected();
@@ -57,7 +94,8 @@
 
         private void StartSelection()
         {
-            this.DrawSelected();
+            this.SetSelectionRotation((RectTransform)this.selectionImage.transform);
+            this.SetSelectionRotation((RectTransform)this.selectionMask.transform);
 
             // Don't want to update too often
             if (this.cachedSlotCount != this.container.Slots)
@@ -75,7 +113,7 @@
                 Vector2.ClampMagnitude(
                     this.accumulatedMousePos + (Input.mousePosition - this.lastMousePos),
                     this.selectCircleRadius);
-
+            
             if (this.accumulatedMousePos != Vector3.zero)
             {
                 const float Tau = 2f * Mathf.PI;
@@ -84,8 +122,21 @@
                 float rads = Mathf.Atan2(this.accumulatedMousePos.x, this.accumulatedMousePos.y) + halfRotationPerSlot;
 
                 this.container.SelectedIndex = (int)((((rads % Tau + Tau) % Tau) / Tau) * this.container.Slots);
-                this.DrawSelected();
+                this.SetSelectionRotation((RectTransform)this.selectionImage.transform);
+                this.SetSelectionRotation((RectTransform)this.selectionMask.transform, this.maskedIndex);
+
+                this.outerCircleMask.gameObject.SetActive(this.IsSwitching);
+                this.swapSelection.gameObject.SetActive(this.IsSwitching);
+
+                this.SetSelectionRotation((RectTransform)this.swapSelection.transform);
             }
+
+            if (Input.GetButtonDown(SwapInput))
+            {
+                this.maskedIndex = this.container.SelectedIndex;
+            }
+            else if (Input.GetButtonUp(SwapInput))
+                this.maskedIndex = -1;
 
             this.lastMousePos = Input.mousePosition;
         }
@@ -114,7 +165,7 @@
                 transform.rotation = Quaternion.Euler(0f, 0f, rotation -= rotationPerSlot);
             }
 
-            this.selection.fillAmount = 1f / this.container.Slots;
+            this.SelectionFillAmount = 1f / this.container.Slots;
         }
 
         private void UpdateIconImages()
@@ -150,12 +201,16 @@
             }
         }
 
-        private void DrawSelected()
+        private void SetSelectionRotation(RectTransform transform, int index)
         {
             float rotationPerSlot = 360f / this.container.Slots;
             float halfRotationPerSlot = rotationPerSlot * 0.5f;
-            var transform = (RectTransform)this.selection.transform;
-            transform.rotation = Quaternion.Euler(0f, 0f, -180f + halfRotationPerSlot - this.container.SelectedIndex * rotationPerSlot);
+            transform.rotation = Quaternion.Euler(0f, 0f, -180f + halfRotationPerSlot - index * rotationPerSlot);
+        }
+
+        private void SetSelectionRotation(RectTransform transform)
+        {
+            this.SetSelectionRotation(transform, this.container.SelectedIndex);
         }
     }
 }
